@@ -1,0 +1,516 @@
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Federal Emergency Management Agency</origin>
+      <pubdate>20240624</pubdate>
+      <title>Draft FIRM Database - BLE Area 3 Big Sioux, Iowa FY22 DISC-BLE</title>
+      <edition>2.8.5.6</edition>
+      <geoform>FEMA-FIRM-Draft</geoform>
+      <pubinfo>
+          <pubplace>Washington, DC</pubplace>
+        <publish>Federal Emergency Management Agency</publish>
+        </pubinfo>
+      <onlink>https://msc.fema.gov</onlink>
+      <lworkcit>
+          <citeinfo>
+            <origin>Federal Emergency Management Agency</origin>
+          <pubdate>20240624</pubdate>
+          <title>FEMA CASE 23-07-0036S</title>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>The Flood Insurance Rate Map (FIRM) Database depicts flood risk information and supporting data
+          used to develop the risk data. The primary risk classifications used are the 1-percent-annual-chance flood
+          event, the 0.2-percent-annual-chance flood event, and areas of minimal flood risk. The FIRM Database is
+          derived from Flood Insurance Studies (FISs), previously published FIRMs, flood hazard analyses performed
+          in support of the FISs and FIRMs, and new mapping data, where available. The FISs and FIRMs are published
+          by the Federal Emergency Management Agency (FEMA).
+          This file is georeferenced to the Earth's surface using the Geographic Coordinate System (GCS)
+          and North American Datum of 1983.</abstract>
+      <purpose>The FIRM is the basis for floodplain management, mitigation, and insurance
+        activities for the National Flood Insurance Program (NFIP). Insurance applications
+        include enforcement of the mandatory purchase requirement of the Flood Disaster Protection Act, which "...
+        requires the purchase of flood insurance by property owners who are being assisted by Federal programs or
+        by Federally supervised, regulated or insured agencies or institutions in the acquisition or improvement of
+        land facilities located or to be located in identified areas having special flood hazards, " Section 2 (b)
+        (4) of the Flood Disaster Protection Act of 1973. In addition to the identification of Special Flood Hazard
+        Areas (SFHAs), the risk zones shown on the FIRMs are the basis for the establishment of premium rates for
+        flood coverage offered through the NFIP. The FIRM Database presents the flood risk information depicted on
+        the FIRM in a digital format suitable for use in electronic mapping applications. The FIRM Database  serves
+        to archive the information collected during the Flood Risk Project.</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>20240624</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>MIP Submission Date</current>
+    </timeperd>
+    <status>
+      <progress>In work</progress>
+      <update>Unknown</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-97.318</westbc>
+      <eastbc>-95.472</eastbc>
+      <northbc>44.291</northbc>
+      <southbc>42.465</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+      	<themekey>hydrology</themekey>
+      	<themekey>environment</themekey>
+      	<themekey>inlandWaters</themekey>
+      	<themekey>structure</themekey>
+      	<themekey>transportation</themekey>
+      	<themekey>elevation</themekey>
+      </theme>
+      <theme>
+        <themekt>FEMA NFIP Topic Category</themekt>
+      	<themekey>FIRM</themekey>
+      	<themekey>FEMA Flood Hazard Zone</themekey>
+      	<themekey>FIRM Database</themekey>
+      	<themekey>Special Flood Hazard Area</themekey>
+      	<themekey>Flood Insurance Rate Map</themekey>
+      	<themekey>Riverine Flooding</themekey>
+      	<themekey>Coastal Flooding</themekey>
+      	<themekey>NFIP</themekey>
+      	<themekey>Base Flood Elevation</themekey>
+      	<themekey>SFHA</themekey>
+      	<themekey>Floodway</themekey>
+      </theme>
+    <place>
+        <placekt>None</placekt>
+          <placekey>REGION 07</placekey>
+          <placekey>STATE IA</placekey>
+          <placekey>COUNTY LYON</placekey>
+          <placekey>COUNTY-FIPS 119</placekey>
+          <placekey>FEMA-CID 19119C</placekey>
+          <placekey>COUNTY PLYMOUTH</placekey>
+          <placekey>COUNTY-FIPS 149</placekey>
+          <placekey>FEMA-CID 19149C</placekey>
+          <placekey>COUNTY OSCEOLA</placekey>
+          <placekey>COUNTY-FIPS 143</placekey>
+          <placekey>FEMA-CID 19143C</placekey>
+          <placekey>COUNTY O'BRIEN</placekey>
+          <placekey>COUNTY-FIPS 141</placekey>
+          <placekey>FEMA-CID 19141C</placekey>
+          <placekey>COUNTY SIOUX</placekey>
+          <placekey>COUNTY-FIPS 167</placekey>
+          <placekey>FEMA-CID 19167C</placekey>
+          <placekey>COMMUNITY TOWNSHIP OF SILVER LAKE</placekey>
+          <placekey>FEMA-CID 190886</placekey>
+          <placekey>HYDROLOGIC UNIT 101702</placekey>
+          <placekey>HYDROLOGIC UNIT 101702</placekey>
+          <placekey>COMMUNITY ALVORD, CITY OF</placekey>
+          <placekey>COMMUNITY ASHTON, CITY OF</placekey>
+          <placekey>COMMUNITY BOYDEN, CITY OF</placekey>
+          <placekey>COMMUNITY CHATSWORTH, CITY OF</placekey>
+          <placekey>COMMUNITY DOON, CITY OF</placekey>
+          <placekey>COMMUNITY GEORGE, CITY OF</placekey>
+          <placekey>COMMUNITY HAWARDEN, CITY OF</placekey>
+          <placekey>COMMUNITY HULL, CITY OF</placekey>
+          <placekey>COMMUNITY INWOOD, CITY OF</placekey>
+          <placekey>COMMUNITY IRETON, CITY OF</placekey>
+          <placekey>COMMUNITY LARCHWOOD, CITY OF</placekey>
+          <placekey>COMMUNITY LESTER, CITY OF</placekey>
+          <placekey>COMMUNITY LITTLE ROCK, CITY OF</placekey>
+          <placekey>COMMUNITY LYON COUNTY UNINCORPORATED AREAS</placekey>
+          <placekey>COMMUNITY MATLOCK, CITY OF</placekey>
+          <placekey>COMMUNITY MELVIN, CITY OF</placekey>
+          <placekey>COMMUNITY O'BRIEN COUNTY UNINCORPORATED AREAS</placekey>
+          <placekey>COMMUNITY OSCEOLA COUNTY UNINCORPORATED AREAS</placekey>
+          <placekey>COMMUNITY PLYMOUTH COUNTY</placekey>
+          <placekey>COMMUNITY ROCK RAPIDS, CITY OF</placekey>
+          <placekey>COMMUNITY ROCK VALLEY, CITY OF</placekey>
+          <placekey>COMMUNITY SIBLEY, CITY OF</placekey>
+          <placekey>COMMUNITY SIOUX CENTER, CITY OF</placekey>
+          <placekey>COMMUNITY SIOUX CITY, CITY OF</placekey>
+          <placekey>COMMUNITY SIOUX COUNTY UNINCORPORATED AREAS</placekey>
+          <placekey>COMMUNITY WESTFIELD, CITY OF</placekey>
+          <placekey>FEMA-CID 190223</placekey>
+          <placekey>FEMA-CID 190197</placekey>
+          <placekey>FEMA-CID 190217</placekey>
+          <placekey>FEMA-CID 190556</placekey>
+          <placekey>FEMA-CID 190509</placekey>
+          <placekey>FEMA-CID 190446</placekey>
+          <placekey>FEMA-CID 190447</placekey>
+          <placekey>FEMA-CID 190252</placekey>
+          <placekey>FEMA-CID 190595</placekey>
+          <placekey>FEMA-CID 190598</placekey>
+          <placekey>FEMA-CID 190511</placekey>
+          <placekey>FEMA-CID 190605</placekey>
+          <placekey>FEMA-CID 190198</placekey>
+          <placekey>FEMA-CID 190448</placekey>
+          <placekey>FEMA-CID 190886</placekey>
+          <placekey>FEMA-CID 195241</placekey>
+          <placekey>FEMA-CID 190776</placekey>
+          <placekey>FEMA-CID 190895</placekey>
+          <placekey>FEMA-CID 190896</placekey>
+          <placekey>FEMA-CID 190899</placekey>
+          <placekey>FEMA-CID 190199</placekey>
+          <placekey>FEMA-CID 190253</placekey>
+          <placekey>FEMA-CID 190218</placekey>
+          <placekey>FEMA-CID 190658</placekey>
+          <placekey>FEMA-CID 190298</placekey>
+          <placekey>FEMA-CID 190906</placekey>
+          <placekey>FEMA-CID 190482</placekey>
+    </place>
+    </keywords>
+  <accconst>None</accconst>
+  <useconst>The hardcopy FIRM and FIRM Database and the accompanying FIS are the official designation of SFHAs and
+      Base Flood Elevations (BFEs) for the NFIP. For the purposes of the NFIP, changes to the flood risk information
+      published by FEMA may only be performed by FEMA and through the mechanisms established in the NFIP regulations
+      (44 CFR Parts 59-78). These digital data are produced in conjunction with the hardcopy FIRMs and generally
+      match the hardcopy map exactly. Acknowledgement of FEMA would be appreciated in products derived from these
+      data.</useconst>
+  <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Federal Emergency Management Agency</cntorg>
+        </cntorgp>
+      <cntaddr>
+          <addrtype>mailing</addrtype>
+          <address>500 C Street, S.W.</address>
+          <city>Washington</city>
+          <state>District of Columbia</state>
+          <postal>20472</postal>
+          <country>USA</country>
+      </cntaddr>
+      <cntvoice>1-877-336-2627</cntvoice>
+      <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
+    </cntinfo>
+  </ptcontac>
+  <native>Original data development environment may vary.  Finishing of the data is done using Esri's ArcGIS software.The submitted geodatabase was created using ArcGIS version 10.5.</native>
+  <crossref>
+      <citeinfo>
+        <origin>AtkinsRealis</origin>
+        <pubdate>20240624</pubdate>
+        <title>Area 3 Big Sioux, Iowa 06 Draft FIRM Database</title>
+        <geoform>map</geoform>
+        <pubinfo>
+          <pubplace>Washington, DC</pubplace>
+          <publish>Federal Emergency Management Agency</publish>
+        </pubinfo>
+        <onlink>https://msc.fema.gov</onlink>
+      </citeinfo>
+    </crossref>
+ </idinfo>
+ <dataqual>
+    <attracc>
+      <attraccr>The FIRM Database consists of vector files and associated attributes produced in conjunction
+          with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official
+          designation of the SFHAs. As such they are adopted by local communities and form the basis for
+          of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for
+          public review, appeals and corrections of the flood risk information shown to better match real
+          world conditions. As with any engineering analysis of this type, variation from the estimated flood
+          heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood
+          mapping process that produces these data are available in the Guidelines and Standards for Flood Risk
+          Analysis and Mapping. Attribute accuracy was tested by manual comparison of source graphics with hardcopy
+          plots and a symbolized display on an interactive computer graphic system.
+Independent quality control testing of the FIRM Database was also performed.
+To obtain more detailed information in areas where Base Flood Elevations (BFEs) and/or floodways have been determined,
+          users are encouraged to consult the Flood Profiles and Floodway Data and/or Summary of Stillwater Elevations
+          tables contained within the FIS report that accompanies this FIRM Database. Users should be aware that BFEs
+          shown in the S_BFE table may represent rounded whole-foot elevations. These BFEs are intended for flood
+          insurance rating purposes only and should not be used as the sole source of flood elevation information.
+          Accordingly, flood elevation data presented in the FIS report must be used in conjunction with the FIRM
+          for purposes of construction and/or floodplain management. The 1-percent-annual-chance water-surface
+          elevations shown in the S_XS table match the regulatory elevations shown in the FIS report.</attraccr>
+    </attracc>
+  <logic>When FEMA revises an FIS, adjacent studies are checked to ensure agreement between flood elevations at the
+      boundaries. Likewise, flood elevations at the confluence of streams studied independently are checked to ensure
+      agreement at the confluence. The FIRM and the FIS are developed together and care is taken to ensure that the
+      elevations and other features shown on the flood profiles in the FIS agree with the information shown on the FIRM.
+      However, the elevations as shown on the FIRM may represent rounded whole-foot elevations. They must be shown so
+      that a profile recreated from the elevations on the FIRM will match the FIS profiles within one half of one
+      foot.</logic>
+  <complete>Data contained in the FIRM Database files reflect the content of the source materials. Features may have
+      been eliminated or generalized on the source graphic, due to scale and legibility constraints. With new mapping,
+      FEMA plans to maintain full detail in the spatial data it produces. However, older information is often
+      transferred from existing maps where some generalization has taken place. Flood risk data are developed for
+      communities participating in the NFIP for use in insurance rating and for floodplain management. Flood hazard
+      areas are determined using statistical analyses of records of river flow, storm tides, and rainfall; information
+      obtained through consultation with the communities; floodplain topographic surveys; and hydrologic and hydraulic
+      analysis. Generally, regulatory water surface elevations and/or regulatory floodways are published only for
+      developed or developing areas of communities. For areas where little or no development is expected to occur,
+      FEMA may generate flood risk data without published water surface elevations.  Typically, only drainage areas
+      that are greater than one square mile and with an average of one foot of flood depth or greater are
+      studied.</complete>
+  <posacc>
+      <horizpa>
+        <horizpar>The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Horizontal accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM Database was also performed.</horizpar>
+      </horizpa>
+    <vertacc>
+        <vertaccr>The FIRM Database consists of vector files and associated attributes produced in conjunction
+            with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official
+            designation of the SFHAs. As such they are adopted by local communities and form the basis for
+            administration of the NFIP. For these purposes they are authoritative. Provisions exist in the
+            regulations for public review, appeals and corrections of the flood risk information shown to better match
+            real world conditions. As with any engineering analysis of this type, variation from the estimated flood
+            heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood
+            mapping process that produces these data are available in the Guidelines and Standards for Flood Risk
+            Analysis and Mapping.
+
+            The reliability of the floodplain boundary delineation is quantified by comparing the computed flood
+            elevation to the ground elevation at the mapped floodplain boundary.  The tolerance for how precisely
+            the flood elevation and the ground elevation must match varies based on the flood risk class, which is a
+            function of population, population density, and/or anticipated growth in floodplain areas.
+            A horizontal accuracy of +/- 38 feet is used to determine the compliance with the vertical tolerances
+            defined for each risk class.  The range of differences between the ground elevation (defined from the
+            topographic data used for the Flood Risk Project) and the computed flood elevation is between +/- 1.0
+            foot at the 95% confidence interval for areas with high population within the floodplain, and/or high
+            anticipated growth, and Special Flood Hazard Areas (SFHAs) with high flood risk to +/- one-half the
+            contour interval at the 85% confidence interval for areas with low population and densities within the
+            floodplain, and small or no anticipated growth, and SFHAs with low flood risk. Independent quality
+            control testing of the FIRM database was also performed.</vertaccr>
+      </vertacc>
+    </posacc>
+  <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Stantec Consulting Services Inc.</origin>
+          <pubdate>20240501</pubdate>
+          <title>Base Map Data Capture for BLE Area 3: Big Sioux Watershed</title>
+          <geoform>vector digital data</geoform>
+          <pubinfo>
+              <pubplace>Washington, D.C.</pubplace>
+            <publish>Federal Emergency Management Agency</publish>
+            </pubinfo>
+          <othercit>Effective FIS and FIRM for , </othercit>
+          </citeinfo>
+        </srccite>
+      <srcscale>24000</srcscale>
+      <typesrc>Digital</typesrc>
+      <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20240501</caldate>
+            </sngdate>
+          </timeinfo>
+        <srccurr>Publication Date</srccurr>
+        </srctime>
+      <srccitea>BASE3</srccitea>
+      <srccontr>Location of the study area shown on the FIRM; Subbasin boundaries</srccontr>
+      </srcinfo>
+    <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>AtkinsRealis</origin>
+          <pubdate>20240930</pubdate>
+          <title>Iowa Statewide 2D BLE - Area 3B</title>
+          <geoform>vector digital data</geoform>
+          <pubinfo>
+              <pubplace>Calverton, MD</pubplace>
+              <publish>AtkinsRealis</publish>
+            </pubinfo>
+          <othercit>Effective FIS and FIRM for State of Iowa</othercit>
+          </citeinfo>
+        </srccite>
+      <srcscale>24000</srcscale>
+      <typesrc>Online</typesrc>
+      <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20240930</caldate>
+            </sngdate>
+          </timeinfo>
+        <srccurr>Publication Date</srccurr>
+        </srctime>
+      <srccitea>STUDY1</srccitea>
+      <srccontr>S_Fld_Haz_Ar, S_Profil_Basln, S_Subbasins, S_Nodes, S_Submittal_Info, S_Hydro_Reach</srccontr>
+      </srcinfo>
+    <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Stantec Consulting Services Inc.</origin>
+          <pubdate>20230623</pubdate>
+          <title>2020 Western Iowa Lidar</title>
+          <geoform>raster digital data</geoform>
+          <pubinfo>
+              <pubplace>Washington, D.C.</pubplace>
+            <publish>Stantec</publish>
+            </pubinfo>
+          <othercit>Effective FIS and FIRM for , </othercit>
+          </citeinfo>
+        </srccite>
+      <srcscale>24000</srcscale>
+      <typesrc>Online</typesrc>
+      <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20211124</caldate>
+            </sngdate>
+          </timeinfo>
+        <srccurr>Publication Date</srccurr>
+        </srctime>
+      <srccitea>TOPO1</srccitea>
+      <srccontr>Terrain Data for modeling and mapping</srccontr>
+      </srcinfo>
+    <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Stantec Consulting Services Inc.</origin>
+          <pubdate>20220404</pubdate>
+          <title>2020 North-Central Iowa Lidar</title>
+          <geoform>raster digital data</geoform>
+          <pubinfo>
+              <pubplace>Reston, VA</pubplace>
+            <publish>Stantec</publish>
+            </pubinfo>
+          <othercit>Effective FIS and FIRM for , </othercit>
+          </citeinfo>
+        </srccite>
+      <srcscale>24000</srcscale>
+      <typesrc>Online</typesrc>
+      <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20220404</caldate>
+            </sngdate>
+          </timeinfo>
+        <srccurr>Publication Date</srccurr>
+        </srctime>
+      <srccitea>TOPO2</srccitea>
+      <srccontr>Terrain Data for modeling and mapping</srccontr>
+      </srcinfo>
+    <procstep>
+        <procdesc>The FIRM Database is compiled in conjunction with the hardcopy FIRM and the final FIS report. The specifics of the hydrologic and hydraulic analyses performed are detailed in the FIS report. The results of these studies are submitted in digital format to FEMA. These data and unrevised data from effective FIRMs are compiled onto the base map used for FIRM publication and checked for accuracy and compliance with FEMA standards.</procdesc>
+      <procdate>20240624</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+<spref>
+  <horizsys>
+    <geograph>
+      <latres>0.0000000784</latres>
+      <longres>0.0000000784</longres>
+      <geogunit>Decimal degrees</geogunit>
+    </geograph>
+    <geodetic>
+      <horizdn>North American Datum of 1983</horizdn>
+      <ellips>GRS_1980</ellips>
+      <semiaxis>6378137.0000000000</semiaxis>
+      <denflat>0.0033528107</denflat>
+    </geodetic>
+  </horizsys>
+  <vertdef>
+    <altsys>
+      <altdatum>North American Vertical Datum of 1988</altdatum>
+      <altres>0.0001000000</altres>
+      <altunits>Foot_US</altunits>
+      <altenc>Implicit coordinate</altenc>
+    </altsys>
+  </vertdef>
+</spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>S_BFE</enttypl>
+        <enttypd>Location and attributes for base flood elevation lines shown on the FIRM.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>S_Fld_Haz_Ar</enttypl>
+        <enttypd>Location and attributes flood risk zones shown on the FIRM.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>S_Fld_Haz_Ln</enttypl>
+        <enttypd>Location and attributes for boundaries of flood risk zones shown on the FIRM.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>S_Submittal_Info</enttypl>
+        <enttypd>A spatial dataset consisting of polygons depicting the extents of the studied area.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+    </detailed>
+    <overview>
+      <eaover>The FIRM Database is made up of several data themes containing both spatial and attribute information. These data together represent the current flood risk for the subject area as identified by FEMA. The attribute tables include SFHA locations, flood zone designations, BFEs, political entities, cross-section locations, FIRM panel information, and other data related to the NFIP.</eaover>
+      <eadetcit>FEMA's FIRM Database Technical Reference contains a detailed description of each attribute code and a reference to other relevant information.</eadetcit>
+      <eadetcit>The following tables are included in this data set: L_Source_Cit  S_BFE  S_Fld_Haz_Ar  S_Fld_Haz_Ln  S_Submittal_Info</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>FEMA, Flood Map Service Center</cntorg>
+        </cntorgp>
+      <cntaddr>
+          <addrtype>mailing</addrtype>
+        <address>P.O. Box 3617</address>
+        <city>Oakton</city>
+        <state>Virginia</state>
+        <postal>22124</postal>
+        <country>USA</country>
+        </cntaddr>
+      <cntvoice>1-877-336-2627</cntvoice>
+      <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
+      <cntinst>Data requests must include the full name of the community or county and the FIRM panel number(s) covered by the request.</cntinst>
+      </cntinfo>
+    </distrib>
+  <distliab>No warranty expressed or implied is made by FEMA regarding the utility of the data on any other system nor shall the act of distribution constitute any such warranty.</distliab>
+  <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>Esri Shapefile</formname>
+        </digtinfo>
+      <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://msc.fema.gov</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+    <fees>Contact Distributor</fees>
+    </stdorder>
+  </distinfo>
+<metainfo>
+    <metd>20240624</metd>
+  <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>MIPHelp</cntper>
+        <cntorg>Federal Emergency Management Agency</cntorg>
+        </cntperp>
+      <cntpos>Federal Insurance and Mitigation Administration</cntpos>
+      <cntaddr>
+          <addrtype>mailing</addrtype>
+        <address>500 C Street, S.W.</address>
+        <city>Washington</city>
+        <state>District of Columbia</state>
+        <postal>20472</postal>
+        <country>USA</country>
+        </cntaddr>
+      <cntvoice>1-877-336-2627</cntvoice>
+      <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
+      </cntinfo>
+    </metc>
+  <metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+  <metstdv>FGDC-STD-001-1998</metstdv>
+  <metextns>
+     <onlink>https://hazards.fema.gov</onlink>
+     <onlink>https://www.epsg.org</onlink>
+     <metprof>FEMA NFIP Metadata Content and Format Standard</metprof>
+    </metextns>
+  </metainfo>
+</metadata>

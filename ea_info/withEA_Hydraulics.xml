@@ -1,0 +1,409 @@
+<?xml version="1.0" ?>
+<metadata>
+  <idinfo>
+    <idinfo>
+      <citation>
+        <citation>
+          <citeinfo>
+            <citeinfo>
+              <origin>AtkinsRealis</origin>
+              <pubdate>False</pubdate>
+              <title>False</title>
+              <edition>False</edition>
+              <geoform>FEMA-DCS-Hydraulics</geoform>
+              <pubinfo>
+                <pubinfo>
+                  <pubplace>Washington, DC</pubplace>
+                  <publish>Federal Emergency Management Agency</publish>
+                </pubinfo>
+              </pubinfo>
+              <onlink>https://msc.fema.gov</onlink>
+              <lworkcit>
+                <lworkcit>
+                  <citeinfo>
+                    <citeinfo>
+                      <origin>Federal Emergency Management Agency</origin>
+                      <pubdate>False</pubdate>
+                      <title>False</title>
+                    </citeinfo>
+                  </citeinfo>
+                </lworkcit>
+              </lworkcit>
+            </citeinfo>
+          </citeinfo>
+        </citation>
+      </citation>
+      <descript>
+        <descript>
+          <abstract>Recent developments in digital terrain and geospatial database management technology make it possible to protect this investment for existing and future projects to a much greater extent than was possible in the past. The minimum requirement for hydraulics data includes input and output files for all hydraulic models and spatial datasets that are needed to implement the models.(Source: FEMA Guidelines and Standards for Flood Risk Analysis and Mapping.)</abstract>
+          <purpose>Development of a Base Level Engineering (BLE) 2D hydraulic model to provide water-surface elevations and to characterize both pluvial and fluvial hazards contributing to increasing coverage of more comprehensive and graduated hazard identification products.</purpose>
+        </descript>
+      </descript>
+      <timeperd>
+        <timeperd>
+          <timeinfo>
+            <timeinfo>
+              <sngdate>
+                <sngdate>
+                  <caldate>False</caldate>
+                </sngdate>
+              </sngdate>
+            </timeinfo>
+          </timeinfo>
+          <current>MIP Submission Date</current>
+        </timeperd>
+      </timeperd>
+      <status>
+        <status>
+          <progress>In work</progress>
+          <update>Unknown</update>
+        </status>
+      </status>
+      <spdom>
+        <spdom>
+          <bounding>
+            <bounding>
+              <westbc>False</westbc>
+              <eastbc>False</eastbc>
+              <northbc>False</northbc>
+              <southbc>False</southbc>
+            </bounding>
+          </bounding>
+        </spdom>
+      </spdom>
+      <keywords>
+        <keywords>
+          <theme>
+            <theme>
+              <themekt>
+                <themekt/>
+              </themekt>
+              <themekey>False</themekey>
+            </theme>
+          </theme>
+          <place>
+            <place>
+              <placekt>None</placekt>
+              <placekey>False</placekey>
+            </place>
+          </place>
+        </keywords>
+      </keywords>
+      <accconst>None</accconst>
+      <useconst>The hardcopy FIRM and FIRM Database and the accompanying FIS are the official designation of SFHAs and Base Flood Elevations (BFEs) for the NFIP. For the purposes of the NFIP, changes to the flood risk information published by FEMA may only be performed by FEMA and through the mechanisms established in the NFIP regulations (44 CFR Parts 59-78). These digital data are produced in conjunction with the hardcopy FIRMs and generally match the hardcopy map exactly. Acknowledgement of FEMA would be appreciated in products derived from these data.</useconst>
+      <ptcontac>
+        <ptcontac>
+          <cntinfo>
+            <cntinfo>
+              <cntorgp>
+                <cntorgp>
+                  <cntorg>Federal Emergency Management Agency</cntorg>
+                </cntorgp>
+              </cntorgp>
+              <cntaddr>
+                <cntaddr>
+                  <addrtype>mailing</addrtype>
+                  <address>500 C Street, S.W.</address>
+                  <city>Washington</city>
+                  <state>District of Columbia</state>
+                  <postal>20472</postal>
+                  <country>USA</country>
+                </cntaddr>
+              </cntaddr>
+              <cntvoice>1-877-336-2627</cntvoice>
+              <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
+            </cntinfo>
+          </cntinfo>
+        </ptcontac>
+      </ptcontac>
+      <native>Original data development environment may vary. Finishing of the data is done using Esri's ArcGIS software.The submitted geodatabase was created using ArcGIS version 10.5</native>
+      <crossref>
+        <crossref>
+          <citeinfo>
+            <citeinfo>
+              <origin>AtkinsRealis</origin>
+              <pubdate>False</pubdate>
+              <title>False</title>
+              <geoform>map</geoform>
+              <pubinfo>
+                <pubinfo>
+                  <pubplace>Washington, DC</pubplace>
+                  <publish>Federal Emergency Management Agency</publish>
+                </pubinfo>
+              </pubinfo>
+              <onlink>https://msc.fema.gov</onlink>
+            </citeinfo>
+          </citeinfo>
+        </crossref>
+      </crossref>
+    </idinfo>
+  </idinfo>
+  <dataqual>
+    <dataqual>
+      <attracc>
+        <attracc>
+          <attraccr>Hydraulic analysis uses all valid existing flood elevation, survey, hydrologic analysis results, and other pertinent information for the study area. FEMA approved models are used to compute water surface elevations for required flood events. Computed water surface elevations and topographic data are used to delineate flood hazard boundaries. Roughness coefficients are carefully selected to represent the conditions along stream beds and banks. Hydraulics Data Capture submittals match the model output with respect to floodplain boundaries, cross sections, and water surface elevations and their precision. Floodplain boundaries and cross sections are not cartographically modified, and the data may not necessarily agree exactly with the published regulatory FIRM, FIRM Database, flood profiles, and Floodway Data Tables.</attraccr>
+        </attracc>
+      </attracc>
+      <logic>When FEMA revises an FIS, adjacent studies are checked to ensure agreement between flood elevations at the boundaries. Likewise, flood elevations at the confluence of streams studied independently are checked to ensure agreement at the confluence. The FIRM and the FIS are developed together and care is taken to ensure that the elevations and other features shown on the flood profiles in the FIS agree with the information shown on the FIRM. However, the elevations as shown on the FIRM may represent rounded whole-foot elevations. They must be shown so that a profile recreated from the elevations on the FIRM will match the FIS profiles within one half of one foot.</logic>
+      <complete>Hydraulic analysis provides water surface elevations at different locations along the stream and for different flooding events. Hydraulic submittal includes key physical data used in the process, model parameters and model output. Data developed in surveying and hydrologic analysis are incorporated in hydraulic analysis. Results of hydraulic analysis are used to map Special Flood Hazard Area (SFHA) boundaries. Selection of model parameters (e.g., roughness coefficients, expansion and contraction coefficients, etc) is supported by additional information (e.g., landuse, aerial photo, etc). Model boundary conditions are carefully selected and justified. Modeled velocities are checked for potential erosion.</complete>
+      <posacc>
+        <posacc>
+          <horizpa>
+            <horizpa>
+              <horizpar>The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FIS and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Horizontal accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM Database was also performed.</horizpar>
+            </horizpa>
+          </horizpa>
+          <vertacc>
+            <vertacc>
+              <vertaccr>The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Vertical accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM database was also performed.</vertaccr>
+            </vertacc>
+          </vertacc>
+        </posacc>
+      </posacc>
+      <lineage>
+        <lineage>
+          <srcinfo>
+            <srcinfo>
+              <srccite>
+                <srccite>
+                  <citeinfo>
+                    <citeinfo>
+                      <origin>False</origin>
+                      <pubdate>False</pubdate>
+                      <title>False</title>
+                      <geoform>False</geoform>
+                      <pubinfo>
+                        <pubinfo>
+                          <pubplace>False</pubplace>
+                          <publish>False</publish>
+                        </pubinfo>
+                      </pubinfo>
+                      <othercit>False</othercit>
+                    </citeinfo>
+                  </citeinfo>
+                </srccite>
+              </srccite>
+              <srcscale>False</srcscale>
+              <typesrc>False</typesrc>
+              <srctime>
+                <srctime>
+                  <timeinfo>
+                    <timeinfo>
+                      <sngdate>
+                        <sngdate>
+                          <caldate>False</caldate>
+                        </sngdate>
+                      </sngdate>
+                    </timeinfo>
+                  </timeinfo>
+                  <srccurr>False</srccurr>
+                </srctime>
+              </srctime>
+              <srccitea>False</srccitea>
+              <srccontr>False</srccontr>
+            </srcinfo>
+          </srcinfo>
+          <procstep>
+            <procstep>
+              <procdesc>False</procdesc>
+              <procdate>False</procdate>
+            </procstep>
+          </procstep>
+        </lineage>
+      </lineage>
+    </dataqual>
+  </dataqual>
+  <spref>
+    <spref>
+      <horizsys>
+        <horizsys>
+          <geograph>
+            <geograph>
+              <latres>False</latres>
+              <longres>False</longres>
+              <geogunit>False</geogunit>
+            </geograph>
+          </geograph>
+          <geodetic>
+            <geodetic>
+              <horizdn>North American Datum of 1983</horizdn>
+              <ellips>Geodetic Reference System 80</ellips>
+              <semiaxis>False</semiaxis>
+              <denflat>False</denflat>
+            </geodetic>
+          </geodetic>
+          <planar>
+            <planar>
+              <gridsys>
+                <gridsys>
+                  <gridsysn>State Plane Coordinate System 1983</gridsysn>
+                  <spcs>
+                    <spcs>
+                      <transmer>
+                        <transmer>
+                          <sfctrmer>0.3048006096012192</sfctrmer>
+                        </transmer>
+                      </transmer>
+                    </spcs>
+                  </spcs>
+                </gridsys>
+              </gridsys>
+              <planci>
+                <planci>
+                  <plance>coordinate pair</plance>
+                  <plandu>US Feet</plandu>
+                </planci>
+              </planci>
+            </planar>
+          </planar>
+        </horizsys>
+      </horizsys>
+      <vertdef>
+        <vertdef>
+          <altsys>
+            <altsys>
+              <altdatum>North American Vertical Datum of 1988</altdatum>
+              <altres>0.0001000000</altres>
+              <altunits>Foot</altunits>
+              <altenc>Implicit coordinate</altenc>
+            </altsys>
+          </altsys>
+        </vertdef>
+      </vertdef>
+    </spref>
+  </spref>
+  <eainfo>
+    <eainfo>
+      <detailed>
+        <detailed>
+          <enttyp>
+            <enttyp>
+              <enttypl>S_Submittal_Info</enttypl>
+              <enttypd>A spatial data set consisting of polygons depicting the extents of the studied area.</enttypd>
+              <enttypds>FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+            </enttyp>
+            <eaover>The Hydraulic submittal is made up of several data themes containing both spatial and attribute information. These data represent the extent of flooding and the water surface elevations for the subject area. The spatial data files and attribute tables include profile flood hazard boundaries and other data related to the NFIP.</eaover>
+            <eadetcit>FEMA's FIRM Database Technical Reference contains a detailed description of each attribute code and a reference to other relevant information.</eadetcit>
+          </enttyp>
+        </detailed>
+      </detailed>
+      <overview>
+        <overview>
+          <eaover>The Hydraulic submittal is made up of several data themes containing both spatial and attribute information. These data represent the extent of flooding and the water surface elevations for the subject area. The spatial data files and attribute tables include profile flood hazard boundaries and other data related to the NFIP.</eaover>
+          <eadetcit>
+            <eadetcit/>
+          </eadetcit>
+        </overview>
+        <enttypl>S_Submittal_Info</enttypl>
+        <enttypd>A spatial data set consisting of polygons depicting the extents of the studied area.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+        <eadetcit>FEMA's FIRM Database Technical Reference contains a detailed description of each attribute code and a reference to other relevant information.</eadetcit>
+      </overview>
+    </eainfo>
+  </eainfo>
+  <distinfo>
+    <distinfo>
+      <distrib>
+        <distrib>
+          <cntinfo>
+            <cntinfo>
+              <cntorgp>
+                <cntorgp>
+                  <cntorg>FEMA, Flood Map Service Center</cntorg>
+                </cntorgp>
+              </cntorgp>
+              <cntaddr>
+                <cntaddr>
+                  <addrtype>mailing</addrtype>
+                  <address>P.O. Box 3617</address>
+                  <city>Oakton</city>
+                  <state>Virginia</state>
+                  <postal>22124</postal>
+                  <country>USA</country>
+                </cntaddr>
+              </cntaddr>
+              <cntvoice>1-877-336-2627</cntvoice>
+              <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
+              <cntinst>Data requests must include the full name of the community or county and the FIRM panel number(s) covered by the request.</cntinst>
+            </cntinfo>
+          </cntinfo>
+        </distrib>
+      </distrib>
+      <distliab>No warranty expressed or implied is made by FEMA regarding the utility of the data on any other system nor shall the act of distribution constitute any such warranty.</distliab>
+      <stdorder>
+        <stdorder>
+          <digform>
+            <digform>
+              <digtinfo>
+                <digtinfo>
+                  <formname>Esri Shapefile</formname>
+                </digtinfo>
+              </digtinfo>
+              <digtopt>
+                <digtopt>
+                  <onlinopt>
+                    <onlinopt>
+                      <computer>
+                        <computer>
+                          <networka>
+                            <networka>
+                              <networkr>https://msc.fema.gov</networkr>
+                            </networka>
+                          </networka>
+                        </computer>
+                      </computer>
+                    </onlinopt>
+                  </onlinopt>
+                </digtopt>
+              </digtopt>
+            </digform>
+          </digform>
+          <fees>Contact Distributor</fees>
+        </stdorder>
+      </stdorder>
+    </distinfo>
+  </distinfo>
+  <metainfo>
+    <metainfo>
+      <metd>False</metd>
+      <metc>
+        <metc>
+          <cntinfo>
+            <cntinfo>
+              <cntperp>
+                <cntperp>
+                  <cntper>MIPHelp</cntper>
+                  <cntorg>Federal Emergency Management Agency</cntorg>
+                </cntperp>
+              </cntperp>
+              <cntpos>Federal Insurance and Mitigation Administration</cntpos>
+              <cntaddr>
+                <cntaddr>
+                  <addrtype>mailing</addrtype>
+                  <address>500 C Street, S.W.</address>
+                  <city>Washington</city>
+                  <state>District of Columbia</state>
+                  <postal>20472</postal>
+                  <country>USA</country>
+                </cntaddr>
+              </cntaddr>
+              <cntvoice>1-877-336-2627</cntvoice>
+              <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
+            </cntinfo>
+          </cntinfo>
+        </metc>
+      </metc>
+      <metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+      <metstdv>FGDC-STD-001-1998</metstdv>
+      <metextns>
+        <metextns>
+          <onlink>
+            <onlink/>
+          </onlink>
+          <metprof>FEMA NFIP Metadata Content and Format Standard</metprof>
+        </metextns>
+      </metextns>
+    </metainfo>
+  </metainfo>
+</metadata>

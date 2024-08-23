@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<lineage>
+  <srcinfo>
+    <srccite>
+      <citeinfo>
+        <origin>AtkinsRealis</origin>
+        <pubdate>20240830</pubdate>
+        <title>Iowa Statewide 2D BLE - Area 1A</title>
+        <geoform>map</geoform>
+        <pubinfo>
+          <pubplace>Calverton, MD</pubplace>
+          <publish>Federal Emergency Management Agency</publish>
+        </pubinfo>
+        <othercit>Effective FIS and FIRM from State of 19</othercit>
+      </citeinfo>
+    </srccite>
+    <srcscale>24000</srcscale>
+    <typesrc>Digital</typesrc>
+    <srctime>
+      <timeinfo>
+        <sngdate>
+          <caldate>False</caldate>
+        </sngdate>
+      </timeinfo>
+      <srccurr>Publication date</srccurr>
+    </srctime>
+    <srccitea>STUDY23</srccitea>
+    <srccontr>S_BFE, S_FLD_HAZ_AR, S_FLD_HAZ_LN, S_Hydro_Reach, S_Nodes, S_PROFIL_BASLN, S_Subbasins, S_Submittal_Info</srccontr>
+  </srcinfo>
+  <srcinfo>
+    <srccite>
+      <citeinfo>
+        <origin>Iowa Department of Transportation</origin>
+        <pubdate>20240304</pubdate>
+        <title>Political Area Boundaries</title>
+        <geoform>map</geoform>
+        <pubinfo>
+          <pubplace>Des Moines, IA</pubplace>
+          <publish>Federal Emergency Management Agency</publish>
+        </pubinfo>
+        <othercit>Effective FIS and FIRM from State of 19</othercit>
+      </citeinfo>
+    </srccite>
+    <srcscale>24000</srcscale>
+    <typesrc>online</typesrc>
+    <srctime>
+      <timeinfo>
+        <sngdate>
+          <caldate>False</caldate>
+        </sngdate>
+      </timeinfo>
+      <srccurr>Download Date</srccurr>
+    </srctime>
+    <srccitea>BASE1</srccitea>
+    <srccontr>Spatial and attribute information for S_Pol_Ar</srccontr>
+  </srcinfo>
+  <procstep>
+    <procdesc>The FIRM Database is compiled in conjunction with the hardcopy FIRM and the final FIS report. The specifics of the hydrologic and hydraulic analyses performed are detailed in the FIS report. The results of these studies are submitted in digital format to FEMA. These data and unrevised data from effective FIRMs are compiled onto the base map used for FIRM publication and checked for accuracy and compliance with FEMA standards.</procdesc>
+    <procdate>20240830</procdate>
+  </procstep>
+</lineage>

@@ -1,0 +1,244 @@
+{
+   "metadata": {
+      "idinfo": {
+         "citation": {
+            "citeinfo": {
+               "origin": "AtkinsRealis",
+               "pubdate": false,
+               "title": false,
+               "edition": false,
+               "geoform": "FEMA-FIRM-Draft",
+               "pubinfo": {
+                  "pubplace": "Washington, DC",
+                  "publish": "Federal Emergency Management Agency"
+               },
+               "onlink": "https://msc.fema.gov",
+               "lworkcit": {
+                  "citeinfo": {
+                     "origin": "Federal Emergency Management Agency",
+                     "pubdate": false,
+                     "title": false
+                  }
+               }
+            }
+         },
+         "descript": {
+            "abstract": "The Flood Insurance Rate Map (FIRM) Database depicts flood risk information and supporting data used to develop the risk data. The primary risk classifications used are the 1-percent-annual-chance flood event, the 0.2-percent-annual-chance flood event, and areas of minimal flood risk. The FIRM Database is derived from Flood Insurance Studies (FISs), previously published FIRMs, flood hazard analyses performed in support of the FISs and FIRMs, and new mapping data, where available. The FISs and FIRMs are published by the Federal Emergency Management Agency (FEMA). This file is georeferenced to the Earth's surface using the Geographic Coordinate System (GCS) and North American Datum of 1983.",
+            "purpose": "The FIRM is the basis for floodplain management, mitigation, and insurance activities for the National Flood Insurance Program (NFIP). Insurance applications include enforcement of the mandatory purchase requirement of the Flood Disaster Protection Act, which requires the purchase of flood insurance by property owners who are being assisted by Federal programs or by Federally supervised, regulated or insured agencies or institutions in the acquisition or improvement of land facilities located or to be located in identified areas having special flood hazards, Section 2 (b) (4) of the Flood Disaster Protection Act of 1973. In addition to the identification of Special Flood Hazard Areas (SFHAs), the risk zones shown on the FIRMs are the basis for the establishment of premium rates for flood coverage offered through the NFIP. The FIRM Database presents the flood risk information depicted on the FIRM in a digital format suitable for use in electronic mapping applications. The FIRM Database serves to archive the information collected during the Flood Risk Project."
+         },
+         "timeperd": {
+            "timeinfo": {
+               "sngdate": {
+                  "caldate": false
+               }
+            },
+            "current": "MIP Submission Date"
+         },
+         "status": {
+            "progress": "In work",
+            "update": "Unknown"
+         },
+         "spdom": {
+            "bounding": {
+               "westbc": false,
+               "eastbc": false,
+               "northbc": false,
+               "southbc": false
+            }
+         },
+         "keywords": {
+            "theme": {
+               "themekt": {},
+               "themekey": false
+            },
+            "place": {
+               "placekt": "None",
+               "placekey": false
+            }
+         },
+         "accconst": "None",
+         "useconst": "The hardcopy FIRM and FIRM Database and the accompanying FIS are the official designation of SFHAs and Base Flood Elevations (BFEs) for the NFIP. For the purposes of the NFIP, changes to the flood risk information published by FEMA may only be performed by FEMA and through the mechanisms established in the NFIP regulations (44 CFR Parts 59-78). These digital data are produced in conjunction with the hardcopy FIRMs and generally match the hardcopy map exactly. Acknowledgement of FEMA would be appreciated in products derived from these data.",
+         "ptcontac": {
+            "cntinfo": {
+               "cntorgp": {
+                  "cntorg": "Federal Emergency Management Agency"
+               },
+               "cntaddr": {
+                  "addrtype": "mailing",
+                  "address": "500 C Street, S.W.",
+                  "city": "Washington",
+                  "state": "District of Columbia",
+                  "postal": "20472",
+                  "country": "USA"
+               },
+               "cntvoice": "1-877-336-2627",
+               "cntemail": "fema-riskmap-ithelp@fema.dhs.gov"
+            }
+         },
+         "native": "Original data development environment may vary. Finishing of the data is done using Esri's ArcGIS software.The submitted geodatabase was created using ArcGIS version 10.5",
+         "crossref": {
+            "citeinfo": {
+               "origin": "AtkinsRealis",
+               "pubdate": false,
+               "title": false,
+               "geoform": "map",
+               "pubinfo": {
+                  "pubplace": "Washington, DC",
+                  "publish": "Federal Emergency Management Agency"
+               },
+               "onlink": "https://msc.fema.gov"
+            }
+         }
+      },
+      "dataqual": {
+         "attracc": {
+            "attraccr": "The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Attribute accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM Database was also performed. To obtain more detailed information in areas where Base Flood Elevations (BFEs) andor floodways have been determined, users are encouraged to consult the Flood Profiles and Floodway Data andor Summary of Stillwater Elevations tables contained within the FIS report that accompanies this FIRM Database. Users should be aware that BFEs shown in the S_BFE table may represent rounded whole-foot elevations. These BFEs are intended for flood insurance rating purposes only and should not be used as the sole source of flood elevation information. Accordingly, flood elevation data presented in the FIS report must be used in conjunction with the FIRM for purposes of construction andor floodplain management. The 1-percent-annual-chance water-surface elevations shown in the S_XS table match the regulatory elevations shown in the FIS report."
+         },
+         "logic": "When FEMA revises an FIS, adjacent studies are checked to ensure agreement between flood elevations at the boundaries. Likewise, flood elevations at the confluence of streams studied independently are checked to ensure agreement at the confluence. The FIRM and the FIS are developed together and care is taken to ensure that the elevations and other features shown on the flood profiles in the FIS agree with the information shown on the FIRM. However, the elevations as shown on the FIRM may represent rounded whole-foot elevations. They must be shown so that a profile recreated from the elevations on the FIRM will match the FIS profiles within one half of one foot.",
+         "complete": "Data contained in the FIRM Database files reflect the content of the source materials. Features may have been eliminated or generalized on the source graphic, due to scale and legibility constraints. With new mapping, FEMA plans to maintain full detail in the spatial data it produces. However, older information is often transferred from existing maps where some generalization has taken place. Flood risk data are developed for communities participating in the NFIP for use in insurance rating and for floodplain management. Flood hazard areas are determined using statistical analyses of records of river flow, storm tides, and rainfall; information obtained through consultation with the communities; floodplain topographic surveys; and hydrologic and hydraulic analysis. Generally, regulatory water surface elevations andor regulatory floodways are published only for developed or developing areas of communities. For areas where little or no development is expected to occur, FEMA may generate flood risk data without published water surface elevations. Typically, only drainage areas that are greater than one square mile and with an average of one foot of flood depth or greater are studied.",
+         "posacc": {
+            "horizpa": {
+               "horizpar": "The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FIS and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Horizontal accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM Database was also performed."
+            },
+            "vertacc": {
+               "vertaccr": "The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Vertical accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM database was also performed."
+            }
+         },
+         "lineage": {
+            "srcinfo": {
+               "srccite": {
+                  "citeinfo": {
+                     "origin": false,
+                     "pubdate": false,
+                     "title": false,
+                     "geoform": false,
+                     "pubinfo": {
+                        "pubplace": false,
+                        "publish": false
+                     },
+                     "othercit": false
+                  }
+               },
+               "srcscale": false,
+               "typesrc": false,
+               "srctime": {
+                  "timeinfo": {
+                     "sngdate": {
+                        "caldate": false
+                     }
+                  },
+                  "srccurr": false
+               },
+               "srccitea": false,
+               "srccontr": false
+            },
+            "procstep": {
+               "procdesc": false,
+               "procdate": false
+            }
+         }
+      },
+      "spref": {
+         "horizsys": {
+            "geograph": {
+               "latres": "0.0000000784",
+               "longres": "0.0000000784",
+               "geogunit": "Decimal degrees"
+            },
+            "geodetic": {
+               "horizdn": "North American Datum of 1983",
+               "ellips": "GRS_1980",
+               "semiaxis": "6378137.0000000000",
+               "denflat": "0.003352810"
+            }
+         },
+         "vertdef": {
+            "altsys": {
+               "altdatum": "North American Vertical Datum of 1988",
+               "altres": "0.0001000000",
+               "altunits": "Foot",
+               "altenc": "Implicit coordinate"
+            }
+         }
+      },
+      "eainfo": {
+         "detailed": {
+            "enttyp": {
+               "enttypl": false,
+               "enttypd": false,
+               "enttypds": false
+            }
+         },
+         "overview": {
+            "eaover": "The FIRM Database is made up of several data themes containing both spatial and attribute information. These data together represent the current flood risk for the subject area as identified by FEMA. The attribute tables include SFHA locations, flood zone designations, BFEs, political entities, cross-section locations, FIRM panel information, and other data related to the NFIP.",
+            "eadetcit": {}
+         }
+      },
+      "distinfo": {
+         "distrib": {
+            "cntinfo": {
+               "cntorgp": {
+                  "cntorg": "FEMA, Flood Map Service Center"
+               },
+               "cntaddr": {
+                  "addrtype": "mailing",
+                  "address": "P.O. Box 3617",
+                  "city": "Oakton",
+                  "state": "Virginia",
+                  "postal": "22124",
+                  "country": "USA"
+               },
+               "cntvoice": "1-877-336-2627",
+               "cntemail": "fema-riskmap-ithelp@fema.dhs.gov",
+               "cntinst": "Data requests must include the full name of the community or county and the FIRM panel number(s) covered by the request."
+            }
+         },
+         "distliab": "No warranty expressed or implied is made by FEMA regarding the utility of the data on any other system nor shall the act of distribution constitute any such warranty.",
+         "stdorder": {
+            "digform": {
+               "digtinfo": {
+                  "formname": "Esri Shapefile"
+               },
+               "digtopt": {
+                  "onlinopt": {
+                     "computer": {
+                        "networka": {
+                           "networkr": "https://msc.fema.gov"
+                        }
+                     }
+                  }
+               }
+            },
+            "fees": "Contact Distributor"
+         }
+      },
+      "metainfo": {
+         "metd": false,
+         "metc": {
+            "cntinfo": {
+               "cntperp": {
+                  "cntper": "MIPHelp",
+                  "cntorg": "Federal Emergency Management Agency"
+               },
+               "cntpos": "Federal Insurance and Mitigation Administration",
+               "cntaddr": {
+                  "addrtype": "mailing",
+                  "address": "500 C Street, S.W.",
+                  "city": "Washington",
+                  "state": "District of Columbia",
+                  "postal": "20472",
+                  "country": "USA"
+               },
+               "cntvoice": "1-877-336-2627",
+               "cntemail": "fema-riskmap-ithelp@fema.dhs.gov"
+            }
+         },
+         "metstdn": "FGDC Content Standards for Digital Geospatial Metadata",
+         "metstdv": "FGDC-STD-001-1998",
+         "metextns": {
+            "onlink": {},
+            "metprof": "FEMA NFIP Metadata Content and Format Standard"
+         }
+      }
+   }
+}

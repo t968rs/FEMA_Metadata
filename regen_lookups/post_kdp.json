@@ -1,0 +1,244 @@
+{
+   "metadata": {
+      "idinfo": {
+         "citation": {
+            "citeinfo": {
+               "origin": {},
+               "pubdate": {},
+               "title": {},
+               "edition": {},
+               "geoform": "FEMA-FIRM-Draft",
+               "pubinfo": {
+                  "pubplace": {},
+                  "publish": {}
+               },
+               "onlink": {},
+               "lworkcit": {
+                  "citeinfo": {
+                     "origin": {},
+                     "pubdate": {},
+                     "title": {}
+                  }
+               }
+            }
+         },
+         "descript": {
+            "abstract": "The Flood Insurance Rate Map (FIRM) Database depicts flood risk information and supporting data\n          used to develop the risk data. The primary risk classifications used are the 1-percent-annual-chance flood\n          event, the 0.2-percent-annual-chance flood event, and areas of minimal flood risk. The FIRM Database is\n          derived from Flood Insurance Studies (FISs), previously published FIRMs, flood hazard analyses performed\n          in support of the FISs and FIRMs, and new mapping data, where available. The FISs and FIRMs are published\n          by the Federal Emergency Management Agency (FEMA).\n          This file is georeferenced to the Earth's surface using the Geographic Coordinate System (GCS)\n          and North American Datum of 1983.",
+            "purpose": "The FIRM is the basis for floodplain management, mitigation, and insurance\n        activities for the National Flood Insurance Program (NFIP). Insurance applications\n        include enforcement of the mandatory purchase requirement of the Flood Disaster Protection Act, which \"...\n        requires the purchase of flood insurance by property owners who are being assisted by Federal programs or\n        by Federally supervised, regulated or insured agencies or institutions in the acquisition or improvement of\n        land facilities located or to be located in identified areas having special flood hazards, \" Section 2 (b)\n        (4) of the Flood Disaster Protection Act of 1973. In addition to the identification of Special Flood Hazard\n        Areas (SFHAs), the risk zones shown on the FIRMs are the basis for the establishment of premium rates for\n        flood coverage offered through the NFIP. The FIRM Database presents the flood risk information depicted on\n        the FIRM in a digital format suitable for use in electronic mapping applications. The FIRM Database  serves\n        to archive the information collected during the Flood Risk Project."
+         },
+         "timeperd": {
+            "timeinfo": {
+               "sngdate": {
+                  "caldate": {}
+               }
+            },
+            "current": {}
+         },
+         "status": {
+            "progress": {},
+            "update": {}
+         },
+         "spdom": {
+            "bounding": {
+               "westbc": {},
+               "eastbc": {},
+               "northbc": {},
+               "southbc": {}
+            }
+         },
+         "keywords": {
+            "theme": {
+               "themekt": {},
+               "themekey": {}
+            },
+            "place": {
+               "placekt": {},
+               "placekey": {}
+            }
+         },
+         "accconst": {},
+         "useconst": "The hardcopy FIRM and FIRM Database and the accompanying FIS are the official designation of SFHAs and\n      Base Flood Elevations (BFEs) for the NFIP. For the purposes of the NFIP, changes to the flood risk information\n      published by FEMA may only be performed by FEMA and through the mechanisms established in the NFIP regulations\n      (44 CFR Parts 59-78). These digital data are produced in conjunction with the hardcopy FIRMs and generally\n      match the hardcopy map exactly. Acknowledgement of FEMA would be appreciated in products derived from these\n      data.",
+         "ptcontac": {
+            "cntinfo": {
+               "cntorgp": {
+                  "cntorg": {}
+               },
+               "cntaddr": {
+                  "addrtype": {},
+                  "address": {},
+                  "city": {},
+                  "state": {},
+                  "postal": {},
+                  "country": {}
+               },
+               "cntvoice": {},
+               "cntemail": {}
+            }
+         },
+         "native": {},
+         "crossref": {
+            "citeinfo": {
+               "origin": {},
+               "pubdate": {},
+               "title": {},
+               "geoform": {},
+               "pubinfo": {
+                  "pubplace": {},
+                  "publish": {}
+               },
+               "onlink": {}
+            }
+         }
+      },
+      "dataqual": {
+         "attracc": {
+            "attraccr": "The FIRM Database consists of vector files and associated attributes produced in conjunction\n          with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official\n          designation of the SFHAs. As such they are adopted by local communities and form the basis for\n          of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for\n          public review, appeals and corrections of the flood risk information shown to better match real\n          world conditions. As with any engineering analysis of this type, variation from the estimated flood\n          heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood\n          mapping process that produces these data are available in the Guidelines and Standards for Flood Risk\n          Analysis and Mapping. Attribute accuracy was tested by manual comparison of source graphics with hardcopy\n          plots and a symbolized display on an interactive computer graphic system.\nIndependent quality control testing of the FIRM Database was also performed.\nTo obtain more detailed information in areas where Base Flood Elevations (BFEs) and/or floodways have been determined,\n          users are encouraged to consult the Flood Profiles and Floodway Data and/or Summary of Stillwater Elevations\n          tables contained within the FIS report that accompanies this FIRM Database. Users should be aware that BFEs\n          shown in the S_BFE table may represent rounded whole-foot elevations. These BFEs are intended for flood\n          insurance rating purposes only and should not be used as the sole source of flood elevation information.\n          Accordingly, flood elevation data presented in the FIS report must be used in conjunction with the FIRM\n          for purposes of construction and/or floodplain management. The 1-percent-annual-chance water-surface\n          elevations shown in the S_XS table match the regulatory elevations shown in the FIS report."
+         },
+         "logic": "When FEMA revises an FIS, adjacent studies are checked to ensure agreement between flood elevations at the\n      boundaries. Likewise, flood elevations at the confluence of streams studied independently are checked to ensure\n      agreement at the confluence. The FIRM and the FIS are developed together and care is taken to ensure that the\n      elevations and other features shown on the flood profiles in the FIS agree with the information shown on the FIRM.\n      However, the elevations as shown on the FIRM may represent rounded whole-foot elevations. They must be shown so\n      that a profile recreated from the elevations on the FIRM will match the FIS profiles within one half of one\n      foot.",
+         "complete": "Data contained in the FIRM Database files reflect the content of the source materials. Features may have\n      been eliminated or generalized on the source graphic, due to scale and legibility constraints. With new mapping,\n      FEMA plans to maintain full detail in the spatial data it produces. However, older information is often\n      transferred from existing maps where some generalization has taken place. Flood risk data are developed for\n      communities participating in the NFIP for use in insurance rating and for floodplain management. Flood hazard\n      areas are determined using statistical analyses of records of river flow, storm tides, and rainfall; information\n      obtained through consultation with the communities; floodplain topographic surveys; and hydrologic and hydraulic\n      analysis. Generally, regulatory water surface elevations and/or regulatory floodways are published only for\n      developed or developing areas of communities. For areas where little or no development is expected to occur,\n      FEMA may generate flood risk data without published water surface elevations.  Typically, only drainage areas\n      that are greater than one square mile and with an average of one foot of flood depth or greater are\n      studied.",
+         "posacc": {
+            "horizpa": {
+               "horizpar": "The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Horizontal accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM Database was also performed"
+            },
+            "vertacc": {
+               "vertaccr": "The FIRM Database consists of vector files and associated attributes produced in conjunction\n            with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official\n            designation of the SFHAs. As such they are adopted by local communities and form the basis for\n            administration of the NFIP. For these purposes they are authoritative. Provisions exist in the\n            regulations for public review, appeals and corrections of the flood risk information shown to better match\n            real world conditions. As with any engineering analysis of this type, variation from the estimated flood\n            heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood\n            mapping process that produces these data are available in the Guidelines and Standards for Flood Risk\n            Analysis and Mapping.\n\n            The reliability of the floodplain boundary delineation is quantified by comparing the computed flood\n            elevation to the ground elevation at the mapped floodplain boundary.  The tolerance for how precisely\n            the flood elevation and the ground elevation must match varies based on the flood risk class, which is a\n            function of population, population density, and/or anticipated growth in floodplain areas.\n            A horizontal accuracy of +/- 38 feet is used to determine the compliance with the vertical tolerances\n            defined for each risk class.  The range of differences between the ground elevation (defined from the\n            topographic data used for the Flood Risk Project) and the computed flood elevation is between +/- 1.0\n            foot at the 95% confidence interval for areas with high population within the floodplain, and/or high\n            anticipated growth, and Special Flood Hazard Areas (SFHAs) with high flood risk to +/- one-half the\n            contour interval at the 85% confidence interval for areas with low population and densities within the\n            floodplain, and small or no anticipated growth, and SFHAs with low flood risk. Independent quality\n            control testing of the FIRM database was also performed."
+            }
+         },
+         "lineage": {
+            "srcinfo": {
+               "srccite": {
+                  "citeinfo": {
+                     "origin": {},
+                     "pubdate": {},
+                     "title": {},
+                     "geoform": {},
+                     "pubinfo": {
+                        "pubplace": {},
+                        "publish": {}
+                     },
+                     "othercit": {}
+                  }
+               },
+               "srcscale": {},
+               "typesrc": {},
+               "srctime": {
+                  "timeinfo": {
+                     "sngdate": {
+                        "caldate": {}
+                     }
+                  },
+                  "srccurr": {}
+               },
+               "srccitea": {},
+               "srccontr": {}
+            },
+            "procstep": {
+               "procdesc": {},
+               "procdate": {}
+            }
+         }
+      },
+      "spref": {
+         "horizsys": {
+            "geograph": {
+               "latres": "0.0000000784",
+               "longres": "0.0000000784",
+               "geogunit": "Decimal degrees"
+            },
+            "geodetic": {
+               "horizdn": "North American Datum of 1983",
+               "ellips": "GRS_1980",
+               "semiaxis": "6378137.0000000000",
+               "denflat": "0.003352810"
+            }
+         },
+         "vertdef": {
+            "altsys": {
+               "altdatum": "North American Vertical Datum of 1988",
+               "altres": "0.0001000000",
+               "altunits": "Foot",
+               "altenc": "Implicit coordinate"
+            }
+         }
+      },
+      "eainfo": {
+         "detailed": {
+            "enttyp": {
+               "enttypl": {},
+               "enttypd": {},
+               "enttypds": {}
+            }
+         },
+         "overview": {
+            "eaover": {},
+            "eadetcit": {}
+         }
+      },
+      "distinfo": {
+         "distrib": {
+            "cntinfo": {
+               "cntorgp": {
+                  "cntorg": {}
+               },
+               "cntaddr": {
+                  "addrtype": {},
+                  "address": {},
+                  "city": {},
+                  "state": {},
+                  "postal": {},
+                  "country": {}
+               },
+               "cntvoice": {},
+               "cntemail": {},
+               "cntinst": {}
+            }
+         },
+         "distliab": {},
+         "stdorder": {
+            "digform": {
+               "digtinfo": {
+                  "formname": {}
+               },
+               "digtopt": {
+                  "onlinopt": {
+                     "computer": {
+                        "networka": {
+                           "networkr": {}
+                        }
+                     }
+                  }
+               }
+            },
+            "fees": {}
+         }
+      },
+      "metainfo": {
+         "metd": {},
+         "metc": {
+            "cntinfo": {
+               "cntperp": {
+                  "cntper": {},
+                  "cntorg": {}
+               },
+               "cntpos": {},
+               "cntaddr": {
+                  "addrtype": {},
+                  "address": {},
+                  "city": {},
+                  "state": {},
+                  "postal": {},
+                  "country": {}
+               },
+               "cntvoice": {},
+               "cntemail": {}
+            }
+         },
+         "metstdn": {},
+         "metstdv": {},
+         "metextns": {
+            "onlink": {},
+            "metprof": {}
+         }
+      }
+   }
+}

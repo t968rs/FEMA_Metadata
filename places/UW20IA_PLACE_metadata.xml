@@ -1,0 +1,172 @@
+<?xml version="1.0" ?>
+<idinfo>
+  <keywords>
+    <keywords>
+      <theme>
+        <theme>
+          <themekt>
+            <themekt/>
+          </themekt>
+          <themekey>False</themekey>
+        </theme>
+      </theme>
+      <place>
+        <place>
+          <placekt>None</placekt>
+          <placekey>False</placekey>
+        </place>
+      </place>
+    </keywords>
+    <place>
+      <placekt/>
+      <placekey>REGION 07</placekey>
+      <placekey>STATE IA</placekey>
+      <placekey>FEMA-CID UW20IA</placekey>
+      <placekey>COUNTY FAYETTE</placekey>
+      <placekey>COUNTY-FIPS 19065</placekey>
+      <placekey>COUNTY BUCHANAN</placekey>
+      <placekey>COUNTY-FIPS 19019</placekey>
+      <placekey>COUNTY MITCHELL</placekey>
+      <placekey>COUNTY-FIPS 19131</placekey>
+      <placekey>COUNTY JONES</placekey>
+      <placekey>COUNTY-FIPS 19105</placekey>
+      <placekey>COUNTY FLOYD</placekey>
+      <placekey>COUNTY-FIPS 19067</placekey>
+      <placekey>COUNTY LINN</placekey>
+      <placekey>COUNTY-FIPS 19113</placekey>
+      <placekey>COUNTY HOWARD</placekey>
+      <placekey>COUNTY-FIPS 19089</placekey>
+      <placekey>COUNTY BLACK HAWK</placekey>
+      <placekey>COUNTY-FIPS 19013</placekey>
+      <placekey>COUNTY BREMER</placekey>
+      <placekey>COUNTY-FIPS 19017</placekey>
+      <placekey>COUNTY DELAWARE</placekey>
+      <placekey>COUNTY-FIPS 19055</placekey>
+      <placekey>COUNTY CHICKASAW</placekey>
+      <placekey>COUNTY-FIPS 19037</placekey>
+      <placekey>COMMUNITY DUNKERTON, CITY OF</placekey>
+      <placekey>BLACK HAWK COUNTY UNINCORPORATED AREAS</placekey>
+      <placekey>COMMUNITY FREDERIKA, CITY OF</placekey>
+      <placekey>COMMUNITY SUMNER, CITY OF</placekey>
+      <placekey>COMMUNITY READLYN, CITY OF</placekey>
+      <placekey>COMMUNITY TRIPOLI, CITY OF</placekey>
+      <placekey>BREMER COUNTY UNINCORPORATED AREAS</placekey>
+      <placekey>COMMUNITY INDEPENDENCE, CITY OF</placekey>
+      <placekey>COMMUNITY FAIRBANK, CITY OF</placekey>
+      <placekey>COMMUNITY HAZLETON, CITY OF</placekey>
+      <placekey>COMMUNITY QUASQUETON, CITY OF</placekey>
+      <placekey>COMMUNITY STANLEY, CITY OF</placekey>
+      <placekey>COMMUNITY WINTHROP, CITY OF</placekey>
+      <placekey>COMMUNITY AURORA, CITY OF</placekey>
+      <placekey>COMMUNITY ROWLEY, CITY OF</placekey>
+      <placekey>BUCHANAN COUNTY UNINCORPORATED AREAS</placekey>
+      <placekey>COMMUNITY ALTA VISTA, CITY OF</placekey>
+      <placekey>COMMUNITY FREDERICKSBURG, CITY OF</placekey>
+      <placekey>COMMUNITY NEW HAMPTON, CITY OF</placekey>
+      <placekey>CHICKASAW COUNTY UNINCORPORATED AREAS</placekey>
+      <placekey>COMMUNITY IONIA, CITY OF</placekey>
+      <placekey>COMMUNITY NORTH WASHINGTON, CITY OF</placekey>
+      <placekey>DELAWARE COUNTY UNINCORPORATED AREAS</placekey>
+      <placekey>COMMUNITY OELWEIN, CITY OF</placekey>
+      <placekey>COMMUNITY WESTGATE, CITY OF</placekey>
+      <placekey>FAYETTE COUNTY UNINCORPORATED AREAS</placekey>
+      <placekey>FLOYD COUNTY UNINCORPORATED AREAS</placekey>
+      <placekey>COMMUNITY ELMA, CITY OF</placekey>
+      <placekey>COMMUNITY RICEVILLE, CITY OF</placekey>
+      <placekey>HOWARD COUNTY UNINCORPORATED AREAS</placekey>
+      <placekey>COMMUNITY ANAMOSA, CITY OF</placekey>
+      <placekey>JONES COUNTY UNINCORPORATED AREAS</placekey>
+      <placekey>COMMUNITY PRAIRIEBURG, CITY OF</placekey>
+      <placekey>COMMUNITY CENTRAL CITY, CITY OF</placekey>
+      <placekey>COMMUNITY COGGON, CITY OF</placekey>
+      <placekey>LINN COUNTY UNINCORPORATED AREAS</placekey>
+      <placekey>COMMUNITY MCINTIRE, CITY OF</placekey>
+      <placekey>MITCHELL COUNTY UNINCORPORATED AREAS</placekey>
+      <placekey>FEMA-CID 190018</placekey>
+      <placekey>FEMA-CID 190535</placekey>
+      <placekey>FEMA-CID 190027</placekey>
+      <placekey>FEMA-CID 190029</placekey>
+      <placekey>FEMA-CID 190645</placekey>
+      <placekey>FEMA-CID 190669</placekey>
+      <placekey>FEMA-CID 190847</placekey>
+      <placekey>FEMA-CID 190031</placekey>
+      <placekey>FEMA-CID 190329</placekey>
+      <placekey>FEMA-CID 190330</placekey>
+      <placekey>FEMA-CID 190332</placekey>
+      <placekey>FEMA-CID 190333</placekey>
+      <placekey>FEMA-CID 190690</placekey>
+      <placekey>FEMA-CID 190698</placekey>
+      <placekey>FEMA-CID 190798</placekey>
+      <placekey>FEMA-CID 190848</placekey>
+      <placekey>FEMA-CID 190065</placekey>
+      <placekey>FEMA-CID 190066</placekey>
+      <placekey>FEMA-CID 190069</placekey>
+      <placekey>FEMA-CID 190855</placekey>
+      <placekey>FEMA-CID 190967</placekey>
+      <placekey>FEMA-CID 190971</placekey>
+      <placekey>FEMA-CID 190863</placekey>
+      <placekey>FEMA-CID 190126</placekey>
+      <placekey>FEMA-CID 190823</placekey>
+      <placekey>FEMA-CID 190866</placekey>
+      <placekey>FEMA-CID 190127</placekey>
+      <placekey>FEMA-CID 190416</placekey>
+      <placekey>FEMA-CID 190418</placekey>
+      <placekey>FEMA-CID 190875</placekey>
+      <placekey>FEMA-CID 190174</placekey>
+      <placekey>FEMA-CID 190919</placekey>
+      <placekey>FEMA-CID 190130</placekey>
+      <placekey>FEMA-CID 190188</placekey>
+      <placekey>FEMA-CID 190189</placekey>
+      <placekey>FEMA-CID 190829</placekey>
+      <placekey>FEMA-CID 190458</placekey>
+      <placekey>FEMA-CID 190892</placekey>
+    </place>
+  </keywords>
+  <accconst>None</accconst>
+  <useconst>The hardcopy FIRM and FIRM Database and the accompanying FIS are the official designation of SFHAs and Base Flood Elevations (BFEs) for the NFIP. For the purposes of the NFIP, changes to the flood risk information published by FEMA may only be performed by FEMA and through the mechanisms established in the NFIP regulations (44 CFR Parts 59-78). These digital data are produced in conjunction with the hardcopy FIRMs and generally match the hardcopy map exactly. Acknowledgement of FEMA would be appreciated in products derived from these data.</useconst>
+  <ptcontac>
+    <ptcontac>
+      <cntinfo>
+        <cntinfo>
+          <cntorgp>
+            <cntorgp>
+              <cntorg>Federal Emergency Management Agency</cntorg>
+            </cntorgp>
+          </cntorgp>
+          <cntaddr>
+            <cntaddr>
+              <addrtype>mailing</addrtype>
+              <address>500 C Street, S.W.</address>
+              <city>Washington</city>
+              <state>District of Columbia</state>
+              <postal>20472</postal>
+              <country>USA</country>
+            </cntaddr>
+          </cntaddr>
+          <cntvoice>1-877-336-2627</cntvoice>
+          <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
+        </cntinfo>
+      </cntinfo>
+    </ptcontac>
+  </ptcontac>
+  <native>Original data development environment may vary. Finishing of the data is done using Esri's ArcGIS software.The submitted geodatabase was created using ArcGIS version 10.5</native>
+  <crossref>
+    <crossref>
+      <citeinfo>
+        <citeinfo>
+          <origin>AtkinsRealis</origin>
+          <pubdate>False</pubdate>
+          <title>False</title>
+          <geoform>map</geoform>
+          <pubinfo>
+            <pubinfo>
+              <pubplace>Washington, DC</pubplace>
+              <publish>Federal Emergency Management Agency</publish>
+            </pubinfo>
+          </pubinfo>
+          <onlink>https://msc.fema.gov</onlink>
+        </citeinfo>
+      </citeinfo>
+    </crossref>
+  </crossref>
+</idinfo>

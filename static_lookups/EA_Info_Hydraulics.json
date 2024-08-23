@@ -1,0 +1,48 @@
+[
+{
+"enttypl": "S_Hydro_Reach",
+"enttypd": "Location and attributes for lines that represent the connectivity between the subbasins and flow direction between nodes within the study area. ",
+"enttypds": "FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+},
+{
+"enttypl": "S_Fld_Haz_Ar",
+"enttypd": "A spatial data set consisting of polygons that represent the extent of the flood zones.",
+"enttypds": "FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+},
+{
+"enttypl": "S_Gen_Struct",
+"enttypd": "A spatial data set consisting of lines that depict the location of structures.",
+"enttypds": "FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+},
+{
+"enttypl": "S_Nodes",
+"enttypd": "A spatial dataset consisting of points that represent sub basin outlets, juctions, reservoirs, structures or diversions.",
+"enttypds": "FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+},
+{
+"enttypl": "S_Levee",
+"enttypd": "A spatial dataset consisting of lines that represent the centerlines of levees.",
+"enttypds": "FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+},
+{
+"enttypl": "S_Profil_BasLn",
+"enttypd": "A spatial data set consisting of lines showing the flow path used for floodplain modeling and mapping.",
+"enttypds": "FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+},
+{
+"enttypl": "S_Subbasins",
+"enttypd": "A spatial dataset consisting of polygons representing watershed or subwatershed areas contributing runoff to the discharge points used in the hydrologic analysis. ",
+"enttypds": "FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+},
+{
+"enttypl": "S_Submittal_Info",
+"enttypd": "A spatial data set consisting of polygons depicting the extents of the studied area.",
+"enttypds": "FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+},
+{
+"eaover": "The Hydraulic submittal is made up of several data themes containing both spatial and attribute information. These data represent the extent of flooding and the water surface elevations for the subject area. The spatial data files and attribute tables include profile flood hazard boundaries and other data related to the NFIP.",
+"eadetcit": [
+"FEMA's FIRM Database Technical Reference contains a detailed description of each attribute code and a reference to other relevant information."
+]
+}
+]
