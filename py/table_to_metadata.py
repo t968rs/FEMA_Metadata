@@ -10,6 +10,24 @@ from helpers import *
 TO_INSERT = ["place", "lineage"]
 
 
+def update_ea_info(tree, data: list) -> ET.ElementTree:
+    # Find the <eainfo> tag in the XML template
+    root = tree.getroot()
+    eainfo_elem = root.find(".//eainfo")
+
+    # Update the XML template with data from JSON
+    for item in data:
+        detailed_elem = eainfo_elem.find(".//detailed")
+        if detailed_elem is not None:
+            enttyp_elem = detailed_elem.find(".//enttyp")
+            if enttyp_elem is not None:
+                update_xml_from_dict(enttyp_elem, item)
+        overview_elem = eainfo_elem.find(".//overview")
+        if overview_elem is not None:
+            update_xml_from_dict(overview_elem, item)
+    return tree
+
+
 class CreateFEMAxml:
     def __init__(self):
         self.excel_path = "../Area_1A_Purchase_Geographies_ADDS.xlsx"
@@ -20,6 +38,7 @@ class CreateFEMAxml:
         self.fips_lookup = excel_to_df(self.excel_path, sheet_name="FIPS Lookup")
         self.dfirm_lookup = excel_to_df(self.excel_path, sheet_name="Purchase CID Lookup")
         self.sources_lookup = self._init_sources_lookup()
+        self.extents_lookup = excel_to_df(self.excel_path, sheet_name="HUC8_Extents")
 
         print(self.sources_lookup['SOURCE_CIT'].unique().tolist())
         unique_dates = list(
@@ -311,22 +330,29 @@ class CreateFEMAxml:
 
         return tree
 
-    def update_ea_info(self, tree, data: list) -> ET.ElementTree:
-        # Find the <eainfo> tag in the XML template
-        root = tree.getroot()
-        eainfo_elem = root.find(".//eainfo")
+    def create_extents_xml(self, area_id, field_with_area) -> ET.ElementTree:
+        start_str = "spdom"
+        # Create a new tree with root element "lineage"
+        root = ET.Element(start_str)
+        this_df = self.extents_lookup.loc[self.extents_lookup[field_with_area] == area_id]
 
-        # Update the XML template with data from JSON
-        for item in data:
-            detailed_elem = eainfo_elem.find(".//detailed")
-            if detailed_elem is not None:
-                enttyp_elem = detailed_elem.find(".//enttyp")
-                if enttyp_elem is not None:
-                    update_xml_from_dict(enttyp_elem, item)
-            overview_elem = eainfo_elem.find(".//overview")
-            if overview_elem is not None:
-                update_xml_from_dict(overview_elem, item)
-        return tree
+        westbc = ET.SubElement(root, 'westbc')
+        westbc.text = str(round(this_df['westbc'].values[0], 3))
+        southbc = ET.SubElement(root, 'southbc')
+        southbc.text = str(round(this_df['southbc'].values[0], 3))
+        eastbc = ET.SubElement(root, 'eastbc')
+        eastbc.text = str(round(this_df['eastbc'].values[0], 3))
+        northbc = ET.SubElement(root, 'northbc')
+        northbc.text = str(round(this_df['northbc'].values[0], 3))
+
+        tree = ET.ElementTree(root)
+        test_tree = ET.tostring(tree.getroot(), encoding='utf-8').decode('utf-8')
+        xml_str = remove_extraneous_spacing(test_tree)
+        xml_str = pretty_print_xml(xml_str)
+        print(f"Section 292: {xml_str}")
+        pprint(xml_str)
+
+        return ET.ElementTree(root)
 
     def create_fema_metadata(self):
         w_dict = self.get_places_dict(self.purchases_df)
@@ -348,12 +374,12 @@ class CreateFEMAxml:
                 with open(ea_path, "r") as ea:
                     ea_list = json.load(ea)
                 if ea_list:
-                    template_tree = self.update_ea_info(template_tree, ea_list)
+                    template_tree = update_ea_info(template_tree, ea_list)
                     out_folder = "../ea_info/"
                     os.makedirs(out_folder, exist_ok=True)
                     write_xml(template_tree, f"{out_folder}withEA_{stage}.xml")
 
-                matching_rows = self.dfirm_lookup.loc[self.dfirm_lookup['HUC-8'] == watershed]
+                matching_rows = self.dfirm_lookup.loc[self.dfirm_lookup['HUC8'] == watershed]
                 if matching_rows.empty:
                     continue
                 DFIRM_ID = matching_rows['DFIRM_ID'].values[0]
@@ -370,6 +396,12 @@ class CreateFEMAxml:
 
                 sources_tree = self.create_sources_xml(**{"DFIRM ID": DFIRM_ID,
                                                           "SOURCE_CIT": SOURCE_CIT})
+
+                extents_tree = self.create_extents_xml(watershed, "HUC8")
+                out_folder = "../extents/"
+                os.makedirs(out_folder, exist_ok=True)
+                output_file = f"{out_folder}{DFIRM_ID}_EXTENTS.xml"
+                write_xml(extents_tree, output_file)
 
                 out_folder = "../source_cit/"
                 os.makedirs(out_folder, exist_ok=True)

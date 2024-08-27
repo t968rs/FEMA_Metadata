@@ -40,12 +40,12 @@
             <update>Unknown</update>
         </status>
         <spdom>
-      <bounding>
-        <westbc>-90.851</westbc>
-        <eastbc>-89.704</eastbc>
-        <northbc>42.757</northbc>
-        <southbc>41.874</southbc>
-      </bounding>
+          <bounding>
+            <westbc>-90.851</westbc>
+            <eastbc>-89.704</eastbc>
+            <northbc>42.757</northbc>
+            <southbc>41.874</southbc>
+          </bounding>
         </spdom>
         <keywords>
             <theme>

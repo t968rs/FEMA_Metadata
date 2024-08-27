@@ -188,6 +188,14 @@ def stack_xml(xml_str1, xml_str2):
     return ET.tostring(new_root, encoding='unicode')
 
 
+# Function to overwrite or add elements
+def overwrite_or_add(parent, element):
+    existing = parent.find(element.tag)
+    if existing is not None:
+        parent.remove(existing)
+    parent.append(element)
+
+
 def write_xml(xml_tree, outpath):
     if os.path.exists(outpath):
         os.remove(outpath)

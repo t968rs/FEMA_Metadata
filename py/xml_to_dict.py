@@ -71,7 +71,7 @@ def parse_eainfo(xml_file):
     return eainfo_list
 
 
-xml_path = "../Hydraulics/AP20IA_Hydraulics_metadata.xml"
+xml_path = "../static_lookups/_DRAFT_metadata.xml"
 tag_dict = parse_xml_to_dict(xml_path)
 tag_tf = parse_xml_and_identify_tags(xml_path)
 ea_info = parse_eainfo(xml_path)

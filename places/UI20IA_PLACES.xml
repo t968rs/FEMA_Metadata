@@ -22,14 +22,14 @@
       <placekey>REGION 07</placekey>
       <placekey>STATE IA</placekey>
       <placekey>FEMA-CID UI20IA</placekey>
-      <placekey>COUNTY HOWARD</placekey>
-      <placekey>COUNTY-FIPS 19089</placekey>
-      <placekey>COUNTY MITCHELL</placekey>
-      <placekey>COUNTY-FIPS 19131</placekey>
       <placekey>COUNTY WINNESHIEK</placekey>
       <placekey>COUNTY-FIPS 19191</placekey>
       <placekey>COUNTY ALLAMAKEE</placekey>
       <placekey>COUNTY-FIPS 19005</placekey>
+      <placekey>COUNTY MITCHELL</placekey>
+      <placekey>COUNTY-FIPS 19131</placekey>
+      <placekey>COUNTY HOWARD</placekey>
+      <placekey>COUNTY-FIPS 19089</placekey>
       <placekey>ALLAMAKEE COUNTY UNINCORPORATED AREAS</placekey>
       <placekey>COMMUNITY CHESTER, CITY OF</placekey>
       <placekey>COMMUNITY TOWN OF LIME SPRINGS, CITY OF</placekey>
