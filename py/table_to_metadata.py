@@ -10,22 +10,36 @@ from helpers import *
 TO_INSERT = ["place", "lineage"]
 
 
-def update_ea_info(tree, data: list) -> ET.ElementTree:
-    # Find the <eainfo> tag in the XML template
-    root = tree.getroot()
-    eainfo_elem = root.find(".//eainfo")
+def get_places_dict(df):
+    watershed_dict = {}
 
-    # Update the XML template with data from JSON
-    for item in data:
-        detailed_elem = eainfo_elem.find(".//detailed")
-        if detailed_elem is not None:
-            enttyp_elem = detailed_elem.find(".//enttyp")
-            if enttyp_elem is not None:
-                update_xml_from_dict(enttyp_elem, item)
-        overview_elem = eainfo_elem.find(".//overview")
-        if overview_elem is not None:
-            update_xml_from_dict(overview_elem, item)
-    return tree
+    # Step 3: Iterate through the DataFrame
+    for index, row in df.iterrows():
+        hucid = row['Watershed']
+        county = row['County'].replace(' County', '')
+        fips_code = row['FIPS']
+        cid = row['CID']
+        if "unincorporated" in row['Community'].lower():
+            community = row['Community'].upper()
+        else:
+            community = row['Community'].upper()
+            community = f"COMMUNITY {community.replace('CITY OF ', '')}, CITY OF"
+
+        if hucid not in watershed_dict:
+            watershed_dict[hucid] = {
+                'counties': [],
+                'fips_codes': [],
+                'cids': [],
+                'communities': []
+            }
+
+        watershed_dict[hucid]['counties'].append(county)
+        watershed_dict[hucid]['fips_codes'].append(fips_code)
+        watershed_dict[hucid]['cids'].append(cid)
+        watershed_dict[hucid]['communities'].append(community)
+        unique_counties = list(set(watershed_dict[hucid]['counties']))
+        watershed_dict[hucid]['counties'] = unique_counties
+    return watershed_dict
 
 
 class CreateFEMAxml:
@@ -67,115 +81,6 @@ class CreateFEMAxml:
 
         other_rows = self.sources_lookup.loc[self.sources_lookup['AUTHOR'] != self.author]
         return pd.concat([new_rows, other_rows], ignore_index=True)
-    def get_places_dict(self, df):
-        watershed_dict = {}
-
-        # Step 3: Iterate through the DataFrame
-        for index, row in df.iterrows():
-            hucid = row['Watershed']
-            county = row['County'].replace(' County', '')
-            fips_code = row['FIPS']
-            cid = row['CID']
-            if "unincorporated" in row['Community'].lower():
-                community = row['Community'].upper()
-            else:
-                community = row['Community'].upper()
-                community = f"COMMUNITY {community.replace('CITY OF ', '')}, CITY OF"
-
-            if hucid not in watershed_dict:
-                watershed_dict[hucid] = {
-                    'counties': [],
-                    'fips_codes': [],
-                    'cids': [],
-                    'communities': []
-                }
-
-            watershed_dict[hucid]['counties'].append(county)
-            watershed_dict[hucid]['fips_codes'].append(fips_code)
-            watershed_dict[hucid]['cids'].append(cid)
-            watershed_dict[hucid]['communities'].append(community)
-            unique_counties = list(set(watershed_dict[hucid]['counties']))
-            watershed_dict[hucid]['counties'] = unique_counties
-        return watershed_dict
-
-    def remove_nan_srcinfo(self, tree: ET.ElementTree, start_str=None) -> ET.ElementTree:
-        start_str = "lineage"
-        tree = extract_subtree_within_tag(tree, start_str)
-        root = tree.getroot()
-        start_tag = root.find(start_str)
-        if start_tag is None:
-            start_tag = ET.Element(start_str)
-            root.append(start_tag)
-
-        # Create a dictionary to map existing srcinfo elements by a unique identifier (e.g., srccitea)
-        existing_srcinfo = {srcinfo.find('srccitea').text: srcinfo for srcinfo in start_tag.findall('srcinfo')}
-
-        # Iterate over the dictionary and remove elements with "nan" srccitea
-        for key, srcinfo in existing_srcinfo.items():
-            if key in ["", " ", None, "nan", np.nan]:
-                start_tag.remove(srcinfo)
-
-        return tree
-
-    def consolidate_subs_trees(self, tree: ET.ElementTree, umbrella_tag: str, tag_bookend: str) -> ET.ElementTree:
-        root = tree.getroot()
-        umbrella = root.find(f'.//{umbrella_tag}')
-        if umbrella is None:
-            raise ValueError(umbrella_tag, " not found in the XML tree")
-
-        # Find all procstep elements
-        tag_many = umbrella.findall(tag_bookend)
-
-        if not tag_many:
-            return tree
-
-        # Create a new procstep element
-        tag_dedupe = ET.Element(tag_bookend)
-
-        # Append all child elements of the found procstep elements to the new procstep element
-        for procstep in tag_many:
-            for child in list(procstep):
-                tag_dedupe.append(child)
-
-        # Remove the old procstep elements from the XML tree
-        for procstep in tag_many:
-            umbrella.remove(procstep)
-
-        # Append the new procstep element to the XML tree
-        umbrella.append(tag_dedupe)
-
-        return tree
-
-    def extract_subtree_within_tag(self, tree, tag):
-        root = tree.getroot()
-        start_element = root.find(f".//{tag}")
-
-        if start_element is None:
-            print(f"TREE: {ET.tostring(root, encoding='utf-8')}")
-            raise ValueError(f"Tag '{tag}' not found in the XML tree")
-
-        # Find the parent of the start element
-        parent_map = {c: p for p in tree.iter() for c in p}
-        parent = parent_map.get(start_element)
-
-        # Extract elements within the start tag
-        extracted_elements = []
-        found_start = False
-        for elem in parent:
-            if elem == start_element:
-                found_start = True
-            if found_start:
-                extracted_elements.append(elem)
-            if elem.tag == tag and elem != start_element:
-                break
-
-        # Create a new tree with the extracted elements
-        new_root = ET.Element(parent.tag)
-        for elem in extracted_elements:
-            if elem not in new_root:
-                new_root.append(elem)
-
-        return ET.ElementTree(new_root)
 
     def create_places_sub_xml(self, inf_dict, tree: ET.ElementTree, **kwargs) -> ET.ElementTree:
         start_str = "keywords"
@@ -224,6 +129,37 @@ class CreateFEMAxml:
         tree = ET.ElementTree(sec_element)
 
         return tree
+
+    def update_ea_info(self, ea_list: list[dict]) -> ET.ElementTree:
+        eainfo = ET.Element("eainfo")
+        overview = ET.SubElement(eainfo, 'overview')
+        detailed = ET.SubElement(eainfo, 'detailed')
+        for ea_dict in ea_list:
+            if "enttypl" not in ea_dict and "eaover" in ea_dict:
+
+                eaover = ET.SubElement(overview, 'eaover')
+                eaover.text = ea_dict['eaover'].strip()
+                print(f"EA OVER: {ea_dict['eaover']}")
+                if isinstance(ea_dict.get('eadetcit'), list):
+                    for cit in ea_dict['eadetcit']:
+                        eadetcit = ET.SubElement(eaover, 'eadetcit')
+                        eadetcit.text = cit.strip()
+                else:
+                    eadetcit = ET.SubElement(eaover, 'eadetcit')
+                    eadetcit.text = ea_dict.get('eadetcit', 'False')
+            elif "enttypl" in ea_dict:
+
+                enttyp = ET.SubElement(detailed, 'enttyp')
+                enttypl = ET.SubElement(enttyp, 'enttypl')
+                enttypl.text = ea_dict['enttypl']
+                enttypd = ET.SubElement(enttyp, 'enttypd')
+                enttypd.text = ea_dict['enttypd']
+                enttypds = ET.SubElement(enttyp, 'enttypds')
+                enttypds.text = ea_dict['enttypds']
+            else:
+                raise ValueError(f"Invalid EA Info: {ea_dict}")
+
+        return ET.ElementTree(eainfo)
 
     def create_sources_xml(self, **kwargs) -> ET.ElementTree:
         start_str = "lineage"
@@ -358,7 +294,7 @@ class CreateFEMAxml:
         return ET.ElementTree(root)
 
     def create_fema_metadata(self):
-        w_dict = self.get_places_dict(self.purchases_df)
+        w_dict = get_places_dict(self.purchases_df)
         #
         xml_files = [self.lookup_folder + f for f in os.listdir(self.lookup_folder) if f.endswith(".xml")]
         print(f"XML Files: {xml_files}")
@@ -377,10 +313,23 @@ class CreateFEMAxml:
                 with open(ea_path, "r") as ea:
                     ea_list = json.load(ea)
                 if ea_list:
-                    template_tree = update_ea_info(template_tree, ea_list)
+                    cleaned_ea_list = []
+                    for ea_dict in ea_list:
+                        new_dict = {}
+                        for k, v in ea_dict.items():
+                            if isinstance(v, list):
+                                clean_list = []
+                                for item in v:
+                                    clean_list.append(remove_whitespace(item))
+                                new_dict[k] = clean_list
+                            else:
+                                clean_string = remove_whitespace(v)
+                                new_dict[k] = clean_string
+                        cleaned_ea_list.append(new_dict)
+                    eainfo_tree = self.update_ea_info(cleaned_ea_list)
                     out_folder = "../ea_info/"
                     os.makedirs(out_folder, exist_ok=True)
-                    write_xml(template_tree, f"{out_folder}withEA_{stage}.xml")
+                    write_xml(eainfo_tree, f"{out_folder}{stage}_EA.xml")
 
                 matching_rows = self.dfirm_lookup.loc[self.dfirm_lookup['HUC8'] == watershed]
                 if matching_rows.empty:

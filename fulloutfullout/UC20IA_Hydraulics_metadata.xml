@@ -7,12 +7,12 @@
         <pubdate>20240830</pubdate>
         <title>BLE AREA 1A, IA FY20/21 DISC-BLE</title>
         <edition>False</edition>
-        <geoform>FEMA-FIRM-Draft</geoform>
+        <geoform>FEMA-DCS-Hydraulics</geoform>
         <pubinfo>
           <pubplace>Washington, DC</pubplace>
           <publish>Federal Emergency Management Agency</publish>
         </pubinfo>
-        <onlink>https://msc.fema.gov</onlink>
+        <onlink>https://www.epsg.org</onlink>
         <lworkcit>
           <citeinfo>
             <origin>Federal Emergency Management Agency</origin>
@@ -23,8 +23,8 @@
       </citeinfo>
     </citation>
     <descript>
-      <abstract>The Flood Insurance Rate Map (FIRM) Database depicts flood risk information and supporting data used to develop the risk data. The primary risk classifications used are the 1-percent-annual-chance flood event, the 0.2-percent-annual-chance flood event, and areas of minimal flood risk. The FIRM Database is derived from Flood Insurance Studies (FISs), previously published FIRMs, flood hazard analyses performed in support of the FISs and FIRMs, and new mapping data, where available. The FISs and FIRMs are published by the Federal Emergency Management Agency (FEMA). This file is georeferenced to the Earth's surface using the Geographic Coordinate System (GCS) and North American Datum of 1983.</abstract>
-      <purpose>The FIRM is the basis for floodplain management, mitigation, and insurance activities for the National Flood Insurance Program (NFIP). Insurance applications include enforcement of the mandatory purchase requirement of the Flood Disaster Protection Act, which requires the purchase of flood insurance by property owners who are being assisted by Federal programs or by Federally supervised, regulated or insured agencies or institutions in the acquisition or improvement of land facilities located or to be located in identified areas having special flood hazards, Section 2 (b) (4) of the Flood Disaster Protection Act of 1973. In addition to the identification of Special Flood Hazard Areas (SFHAs), the risk zones shown on the FIRMs are the basis for the establishment of premium rates for flood coverage offered through the NFIP. The FIRM Database presents the flood risk information depicted on the FIRM in a digital format suitable for use in electronic mapping applications. The FIRM Database serves to archive the information collected during the Flood Risk Project.</purpose>
+      <abstract>Recent developments in digital terrain and geospatial database management technology make it possible to protect this investment for existing and future projects to a much greater extent than was possible in the past. The minimum requirement for hydraulics data includes input and output files for all hydraulic models and spatial datasets that are needed to implement the models.(Source: FEMA Guidelines and Standards for Flood Risk Analysis and Mapping.)</abstract>
+      <purpose>Development of a Base Level Engineering (BLE) 2D hydraulic model to provide water-surface elevations and to characterize both pluvial and fluvial hazards contributing to increasing coverage of more comprehensive and graduated hazard identification products.</purpose>
     </descript>
     <timeperd>
       <timeinfo>
@@ -40,10 +40,10 @@
     </status>
     <spdom>
       <spdom/>
-      <westbc>-91.688</westbc>
-      <southbc>41.283</southbc>
-      <eastbc>-90.7</eastbc>
-      <northbc>42.212</northbc>
+      <westbc>-93.228</westbc>
+      <southbc>42.602</southbc>
+      <eastbc>-92.283</eastbc>
+      <northbc>43.5</northbc>
     </spdom>
     <keywords>
       <theme>
@@ -104,10 +104,10 @@
   </idinfo>
   <dataqual>
     <attracc>
-      <attraccr>The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Attribute accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM Database was also performed. To obtain more detailed information in areas where Base Flood Elevations (BFEs) andor floodways have been determined, users are encouraged to consult the Flood Profiles and Floodway Data andor Summary of Stillwater Elevations tables contained within the FIS report that accompanies this FIRM Database. Users should be aware that BFEs shown in the S_BFE table may represent rounded whole-foot elevations. These BFEs are intended for flood insurance rating purposes only and should not be used as the sole source of flood elevation information. Accordingly, flood elevation data presented in the FIS report must be used in conjunction with the FIRM for purposes of construction andor floodplain management. The 1-percent-annual-chance water-surface elevations shown in the S_XS table match the regulatory elevations shown in the FIS report.</attraccr>
+      <attraccr>Hydraulic analysis uses all valid existing flood elevation, survey, hydrologic analysis results, and other pertinent information for the study area. FEMA approved models are used to compute water surface elevations for required flood events. Computed water surface elevations and topographic data are used to delineate flood hazard boundaries. Roughness coefficients are carefully selected to represent the conditions along stream beds and banks. Hydraulics Data Capture submittals match the model output with respect to floodplain boundaries, cross sections, and water surface elevations and their precision. Floodplain boundaries and cross sections are not cartographically modified, and the data may not necessarily agree exactly with the published regulatory FIRM, FIRM Database, flood profiles, and Floodway Data Tables.</attraccr>
     </attracc>
     <logic>When FEMA revises an FIS, adjacent studies are checked to ensure agreement between flood elevations at the boundaries. Likewise, flood elevations at the confluence of streams studied independently are checked to ensure agreement at the confluence. The FIRM and the FIS are developed together and care is taken to ensure that the elevations and other features shown on the flood profiles in the FIS agree with the information shown on the FIRM. However, the elevations as shown on the FIRM may represent rounded whole-foot elevations. They must be shown so that a profile recreated from the elevations on the FIRM will match the FIS profiles within one half of one foot.</logic>
-    <complete>Data contained in the FIRM Database files reflect the content of the source materials. Features may have been eliminated or generalized on the source graphic, due to scale and legibility constraints. With new mapping, FEMA plans to maintain full detail in the spatial data it produces. However, older information is often transferred from existing maps where some generalization has taken place. Flood risk data are developed for communities participating in the NFIP for use in insurance rating and for floodplain management. Flood hazard areas are determined using statistical analyses of records of river flow, storm tides, and rainfall; information obtained through consultation with the communities; floodplain topographic surveys; and hydrologic and hydraulic analysis. Generally, regulatory water surface elevations andor regulatory floodways are published only for developed or developing areas of communities. For areas where little or no development is expected to occur, FEMA may generate flood risk data without published water surface elevations. Typically, only drainage areas that are greater than one square mile and with an average of one foot of flood depth or greater are studied.</complete>
+    <complete>Hydraulic analysis provides water surface elevations at different locations along the stream and for different flooding events. Hydraulic submittal includes key physical data used in the process, model parameters and model output. Data developed in surveying and hydrologic analysis are incorporated in hydraulic analysis. Results of hydraulic analysis are used to map Special Flood Hazard Area (SFHA) boundaries. Selection of model parameters (e.g., roughness coefficients, expansion and contraction coefficients, etc) is supported by additional information (e.g., landuse, aerial photo, etc). Model boundary conditions are carefully selected and justified. Modeled velocities are checked for potential erosion.</complete>
     <posacc>
       <horizpa>
         <horizpar>The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FIS and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Horizontal accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM Database was also performed.</horizpar>
@@ -141,7 +141,7 @@
           </timeinfo>
           <srccurr>Publication date</srccurr>
         </srctime>
-        <srccitea>STUDY21</srccitea>
+        <srccitea>STUDY32</srccitea>
         <srccontr>S_BFE, S_FLD_HAZ_AR, S_FLD_HAZ_LN, S_Hydro_Reach, S_Nodes, S_PROFIL_BASLN, S_Subbasins, S_Submittal_Info</srccontr>
       </srcinfo>
       <srcinfo>
@@ -180,16 +180,30 @@
   <spref>
     <horizsys>
       <geograph>
-        <latres>0.0000000784</latres>
-        <longres>0.0000000784</longres>
-        <geogunit>Decimal degrees</geogunit>
+        <latres>False</latres>
+        <longres>False</longres>
+        <geogunit>False</geogunit>
       </geograph>
       <geodetic>
         <horizdn>North American Datum of 1983</horizdn>
-        <ellips>GRS_1980</ellips>
-        <semiaxis>6378137.0000000000</semiaxis>
-        <denflat>0.003352810</denflat>
+        <ellips>Geodetic Reference System 80</ellips>
+        <semiaxis>False</semiaxis>
+        <denflat>False</denflat>
       </geodetic>
+      <planar>
+        <gridsys>
+          <gridsysn>State Plane Coordinate System 1983</gridsysn>
+          <spcs>
+            <transmer>
+              <sfctrmer>0.3048006096012192</sfctrmer>
+            </transmer>
+          </spcs>
+        </gridsys>
+        <planci>
+          <plance>coordinate pair</plance>
+          <plandu>US Feet</plandu>
+        </planci>
+      </planar>
     </horizsys>
     <vertdef>
       <altsys>
@@ -202,32 +216,56 @@
   </spref>
   <eainfo>
     <overview>
+      <eaover>The FIRM Database is made up of several data themes containing both spatial and attribute information. These data together represent the current flood risk for the subject area as identified by FEMA. The attribute tables include SFHA locations, flood zone designations, BFEs, political entities, cross-section locations, FIRM panel information, and other data related to the NFIP.</eaover>
+      <eadetcit>FEMA's FIRM Database Technical Reference contains a detailed description of each attribute code and a reference to other relevant information.</eadetcit>
+      <eadetcit>The following tables are included in this data set: L_Source_Cit S_BFE S_Fld_Haz_Ar S_Fld_Haz_Ln S_Submittal_Info</eadetcit>
+    </overview>
+    <overview>
       <eaover>
-        The FIRM Database is made up of several data themes containing both spatial and attribute information. These data together represent the current flood risk for the subject area as identified by FEMA. The attribute tables include SFHA locations, flood zone designations, BFEs, political entities, cross-section locations, FIRM panel information, and other data related to the NFIP.
+        The Hydraulic submittal is made up of several data themes containing both spatial and attribute information. These data represent the extent of flooding and the water surface elevations for the subject area. The spatial data files and attribute tables include profile flood hazard boundaries and other data related to the NFIP.
         <eadetcit>FEMA's FIRM Database Technical Reference contains a detailed description of each attribute code and a reference to other relevant information.</eadetcit>
-        <eadetcit>The following tables are included in this data set: L_Source_Cit S_BFE S_Fld_Haz_Ar S_Fld_Haz_Ln S_Submittal_Info</eadetcit>
       </eaover>
     </overview>
     <detailed>
       <enttyp>
-        <enttypl>S_BFE</enttypl>
-        <enttypd>Location and attributes for base flood elevation lines shown on the FIRM.</enttypd>
-        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+        <enttypl>S_Hydro_Reach</enttypl>
+        <enttypd>Location and attributes for lines that represent the connectivity between the subbasins and flow direction between nodes within the study area.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
       </enttyp>
       <enttyp>
         <enttypl>S_Fld_Haz_Ar</enttypl>
-        <enttypd>Location and attributes flood risk zones shown on the FIRM.</enttypd>
-        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+        <enttypd>A spatial data set consisting of polygons that represent the extent of the flood zones.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
       </enttyp>
       <enttyp>
-        <enttypl>S_Fld_Haz_Ln</enttypl>
-        <enttypd>Location and attributes for boundaries of flood risk zones shown on the FIRM.</enttypd>
-        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+        <enttypl>S_Gen_Struct</enttypl>
+        <enttypd>A spatial data set consisting of lines that depict the location of structures.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+      <enttyp>
+        <enttypl>S_Nodes</enttypl>
+        <enttypd>A spatial dataset consisting of points that represent sub basin outlets, juctions, reservoirs, structures or diversions.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+      <enttyp>
+        <enttypl>S_Levee</enttypl>
+        <enttypd>A spatial dataset consisting of lines that represent the centerlines of levees.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+      <enttyp>
+        <enttypl>S_Profil_BasLn</enttypl>
+        <enttypd>A spatial data set consisting of lines showing the flow path used for floodplain modeling and mapping.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+      <enttyp>
+        <enttypl>S_Subbasins</enttypl>
+        <enttypd>A spatial dataset consisting of polygons representing watershed or subwatershed areas contributing runoff to the discharge points used in the hydrologic analysis.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
       </enttyp>
       <enttyp>
         <enttypl>S_Submittal_Info</enttypl>
-        <enttypd>A spatial dataset consisting of polygons depicting the extents of the studied area.</enttypd>
-        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+        <enttypd>A spatial data set consisting of polygons depicting the extents of the studied area.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at http://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
       </enttyp>
     </detailed>
   </eainfo>
@@ -293,8 +331,7 @@
     <metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
     <metstdv>FGDC-STD-001-1998</metstdv>
     <metextns>
-      <onlink>https://hazards.fema.gov</onlink>
-      <onlink>https://www.epsg.org</onlink>
+      <onlink>['https://www.epsg.org', 'https://www.epsg.org']</onlink>
       <metprof>FEMA NFIP Metadata Content and Format Standard</metprof>
     </metextns>
   </metainfo>

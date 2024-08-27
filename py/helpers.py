@@ -1,9 +1,127 @@
 from xml.dom import minidom
 import pandas as pd
 import os
+import numpy as np
 import xml.etree.ElementTree as ET
+from collections import defaultdict
+import re
 
 TAG_KEYWORDS = {"srcinfo": ["STUDY", "BASE", "TOPO", "FIRM"]}
+
+
+def remove_nan_srcinfo(tree: ET.ElementTree, start_str=None) -> ET.ElementTree:
+    start_str = "lineage"
+    tree = extract_subtree_within_tag(tree, start_str)
+    root = tree.getroot()
+    start_tag = root.find(start_str)
+    if start_tag is None:
+        start_tag = ET.Element(start_str)
+        root.append(start_tag)
+
+    # Create a dictionary to map existing srcinfo elements by a unique identifier (e.g., srccitea)
+    existing_srcinfo = {srcinfo.find('srccitea').text: srcinfo for srcinfo in start_tag.findall('srcinfo')}
+
+    # Iterate over the dictionary and remove elements with "nan" srccitea
+    for key, srcinfo in existing_srcinfo.items():
+        if key in ["", " ", None, "nan", np.nan]:
+            start_tag.remove(srcinfo)
+
+    return tree
+
+
+def remove_whitespace(text):
+    # Remove all whitespace, tabs, and newlines
+    cleaned_text = re.sub(r'\s+', ' ', text).strip()
+    cleaned_text = re.sub(r'\s+', ' ', cleaned_text).strip()
+    cleaned_text = cleaned_text.replace("\n", " ").replace("\t", " ")
+    cleaned_text = cleaned_text.strip()
+    return cleaned_text
+
+
+def find_repeated_elements(root):
+    # Dictionary to count occurrences of each tag
+    tag_count = defaultdict(int)
+
+    # Traverse the tree and count tags
+    def traverse(element):
+        tag_count[element.tag] += 1
+        for child in element:
+            traverse(child)
+
+    traverse(root)
+
+    # Find tags that are repeated beyond their own closing tag
+    repeated_tags = {tag: count for tag, count in tag_count.items() if count > 1}
+    for tag, count in repeated_tags.items():
+        print(f"Repeated tag '{tag}' {count} times")
+    return repeated_tags
+
+
+def re_root_elements(root, repeated_tags):
+    def clean(element, parent=None):
+        seen_tags = set()
+        for child in list(element):
+            if child.tag in repeated_tags:
+                # print(f"{child.tag} is repeated")  # Debugging print
+                #if child.tag in seen_tags:
+                print(f"Re-rooting {child.tag}")  # Debugging print
+                for grandchild in list(child):
+                    element.append(grandchild)
+                element.remove(child)
+                #else:
+                #seen_tags.add(child.tag)
+                #clean(child, element)
+            else:
+                clean(child, element)
+
+    clean(root)
+
+
+def clean_metadata_tree(tree) -> ET.ElementTree:
+    # Parse the XML file
+    root = tree.getroot()
+
+    # Ensure the root is "metadata"
+    if root.tag != "metadata":
+        raise ValueError("Root element is not 'metadata'")
+
+    # Find repeated elements
+    repeated_tags = find_repeated_elements(root)
+
+    # Remove repeated elements
+    re_root_elements(root, repeated_tags)
+
+    return tree
+
+
+def consolidate_subs_trees(tree: ET.ElementTree, umbrella_tag: str, tag_bookend: str) -> ET.ElementTree:
+    root = tree.getroot()
+    umbrella = root.find(f'.//{umbrella_tag}')
+    if umbrella is None:
+        raise ValueError(umbrella_tag, " not found in the XML tree")
+
+    # Find all procstep elements
+    tag_many = umbrella.findall(tag_bookend)
+
+    if not tag_many:
+        return tree
+
+    # Create a new procstep element
+    tag_dedupe = ET.Element(tag_bookend)
+
+    # Append all child elements of the found procstep elements to the new procstep element
+    for procstep in tag_many:
+        for child in list(procstep):
+            tag_dedupe.append(child)
+
+    # Remove the old procstep elements from the XML tree
+    for procstep in tag_many:
+        umbrella.remove(procstep)
+
+    # Append the new procstep element to the XML tree
+    umbrella.append(tag_dedupe)
+
+    return tree
 
 
 def excel_to_df(excel_file, sheet_name=None, **kwargs):

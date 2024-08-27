@@ -48,8 +48,6 @@ def generate_xml_from_dict(root_tag="metadata", data_dict=None) -> str:
         data_dict = {}
     if not isinstance(data_dict, dict):
         raise ValueError("data_dict must be a dictionary")
-    if root_tag not in data_dict or not isinstance(data_dict[root_tag], dict):
-        raise ValueError(f"data_dict must contain a dictionary under the key '{root_tag}'")
     root = dict_to_xml(root_tag, data_dict[root_tag])
     return ET.tostring(root, encoding='unicode')
 
@@ -59,12 +57,23 @@ def dict_to_xml(tag, d):
         raise ValueError("Expected a dictionary")
     elem = ET.Element(tag)
     for key, val in d.items():
-        child = ET.Element(key)
         if isinstance(val, dict):
-            child.append(dict_to_xml(key, val))
+            if key == tag:
+                # Merge child elements with the same name as the parent
+                for sub_key, sub_val in val.items():
+                    child = ET.Element(sub_key)
+                    if isinstance(sub_val, dict):
+                        child.append(dict_to_xml(sub_key, sub_val))
+                    else:
+                        child.text = str(sub_val)
+                    elem.append(child)
+            else:
+                child = dict_to_xml(key, val)
+                elem.append(child)
         else:
+            child = ET.Element(key)
             child.text = str(val)
-        elem.append(child)
+            elem.append(child)
     return elem
 
 
@@ -108,8 +117,7 @@ def write_xml(xml_tree, output_file):
 
 def generate_nested_dict(dict_unique_keys, order_lookup=None):
     # Sort keys based on order_lookup
-    sorted_keys = sorted(dict_unique_keys.keys(), key=lambda k: order_lookup.get(k, float('inf')),
-                         reverse=False)
+    sorted_keys = sorted(dict_unique_keys.keys(), key=lambda k: order_lookup.get(k, float('inf')), reverse=False)
 
     nested_keys = {}
     for key in sorted_keys:
@@ -122,10 +130,53 @@ def generate_nested_dict(dict_unique_keys, order_lookup=None):
             d = d[k]
 
         if isinstance(d, dict):
-            d[key_parts[-1]] = value if isinstance(value, T.Union[bool, str]) else {}
+            if isinstance(value, list):
+                d[key_parts[-1]] = value
+            else:
+                d[key_parts[-1]] = value if isinstance(value, (bool, str)) else {}
         else:
-            raise TypeError(f"Expected a dictionary at {key_parts[:-1]}, but found {type(d)}")
+            raise TypeError(f"Expected a dictionary at {key_parts[:-1]}, got {type(d)}")
+
     return nested_keys
+
+
+def convert_list_to_multiple_elements(tree):
+    list_elements = {}
+    root = tree.getroot()
+    for elem in root.iter():
+        if elem.text and "]" in elem.text:
+            cleaned_list = elem.text.strip("[]").split(", ")
+            cleaned_list = [element.strip().strip("'\"") for element in cleaned_list]
+            print(f"Elements: {cleaned_list}, \n  {elem.tag}")
+            for e in cleaned_list:
+                list_elements[e] = elem.tag
+
+    print(f'\nList Elements:')
+    for k, v in list_elements.items():
+        print(f"{k}: {v}")
+
+    populated_tags = []
+    for e_text, e_tag in list_elements.items():
+        print(f"\nElement: {e_tag}, {e_text}")
+        try:
+            parent = root.find(f".//{e_tag}/..")
+            if parent is None:
+                print(f"Parent not found for tag: {e_tag}")
+                continue
+            print(f"Parent: {parent.tag} of {e_tag}: {e_text}")
+            existing = parent.find(f".//{e_tag}")
+            if e_tag not in populated_tags:
+                populated_tags.append(e_tag)
+                existing.text = e_text
+                print(f"  First Element: {existing.tag}, {e_text}")
+                print(f"  Populated: {populated_tags}")
+            else:
+                print(f" New Element: {e_tag}, {e_text}")
+                new_elem = ET.SubElement(parent, e_tag)
+                new_elem.text = e_text
+        except KeyError:
+            print(f"KeyError: {e_text}, {e_tag}")
+    return tree
 
 
 order_dict = json_to_dict("../regen_lookups/ORDER_unnested.json")
@@ -144,7 +195,8 @@ for stage in ["Hydraulics", "DRAFT"]:
     # Convert dictionary to xml
     xml_string = generate_xml_from_dict(data_dict=nested_kdp)
     xml = ET.ElementTree(ET.fromstring(xml_string))
+    new_tree = convert_list_to_multiple_elements(xml)
 
     # Write the xml to file
     outpath = f"../regen_lookups/post_kdp_{stage}.xml"
-    write_xml(xml, outpath)
+    write_xml(new_tree, outpath)

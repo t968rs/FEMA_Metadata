@@ -21,9 +21,6 @@
 },
 {
 "eaover": "The FIRM Database is made up of several data themes containing both spatial and attribute information. These data together represent the current flood risk for the subject area as identified by FEMA. The attribute tables include SFHA locations, flood zone designations, BFEs, political entities, cross-section locations, FIRM panel information, and other data related to the NFIP.",
-"eadetcit": [
-"FEMA's FIRM Database Technical Reference contains a detailed description of each attribute code and a reference to other relevant information.",
-"The following tables are included in this data set: L_Source_Cit  S_BFE  S_Fld_Haz_Ar  S_Fld_Haz_Ln  S_Submittal_Info"
-]
+"eadetcit": ["FEMA's FIRM Database Technical Reference contains a detailed description of each attribute code and a reference to other relevant information.","The following tables are included in this data set: L_Source_Cit  S_BFE  S_Fld_Haz_Ar  S_Fld_Haz_Ln  S_Submittal_Info"]
 }
 ]

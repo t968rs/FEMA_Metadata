@@ -7,12 +7,12 @@
         <pubdate>False</pubdate>
         <title>False</title>
         <edition>False</edition>
-        <geoform>FEMA-FIRM-Draft</geoform>
+        <geoform>FEMA-FIRM-Floodplain</geoform>
         <pubinfo>
           <pubplace>Washington, DC</pubplace>
           <publish>Federal Emergency Management Agency</publish>
         </pubinfo>
-        <onlink>https://www.epsg.org</onlink>
+        <onlink>https://msc.fema.gov</onlink>
         <lworkcit>
           <citeinfo>
             <origin>Federal Emergency Management Agency</origin>
@@ -49,8 +49,25 @@
     <keywords>
       <theme>
         <themekt>ISO 19115 Topic Category</themekt>
-        <themekey>False</themekey>
+          <themekey>hydrology</themekey>
+          <themekey>environment</themekey>
+          <themekey>inlandWaters</themekey>
+          <themekey>structure</themekey>
+          <themekey>transportation</themekey>
+          <themekey>elevation</themekey>
+
         <themekt>FEMA NFIP Topic Category</themekt>
+          <themekey>FIRM</themekey>
+          <themekey>FEMA Flood Hazard Zone</themekey>
+          <themekey>FIRM Database</themekey>
+          <themekey>Special Flood Hazard Area</themekey>
+          <themekey>Flood Insurance Rate Map</themekey>
+          <themekey>Riverine Flooding</themekey>
+          <themekey>Coastal Flooding</themekey>
+          <themekey>NFIP</themekey>
+          <themekey>Base Flood Elevation</themekey>
+          <themekey>SFHA</themekey>
+          <themekey>Floodway</themekey>
       </theme>
       <place>
         <placekt>None</placekt>
@@ -170,11 +187,6 @@
         <enttypds>False</enttypds>
       </enttyp>
     </detailed>
-    <overview>
-      <eaover>The FIRM Database is made up of several data themes containing both spatial and attribute information. These data together represent the current flood risk for the subject area as identified by FEMA. The attribute tables include SFHA locations, flood zone designations, BFEs, political entities, cross-section locations, FIRM panel information, and other data related to the NFIP.</eaover>
-      <eadetcit>FEMA's FIRM Database Technical Reference contains a detailed description of each attribute code and a reference to other relevant information.</eadetcit>
-      <eadetcit>The following tables are included in this data set: L_Source_Cit  S_BFE  S_Fld_Haz_Ar  S_Fld_Haz_Ln  S_Submittal_Info</eadetcit>
-    </overview>
   </eainfo>
   <distinfo>
     <distrib>
@@ -214,33 +226,33 @@
       <fees>Contact Distributor</fees>
     </stdorder>
   </distinfo>
-    <metainfo>
-        <metd>False</metd>
-        <metc>
-            <cntinfo>
-                <cntperp>
-                    <cntper>MIPHelp</cntper>
-                    <cntorg>Federal Emergency Management Agency</cntorg>
-                </cntperp>
-                <cntpos>Federal Insurance and Mitigation Administration</cntpos>
-                <cntaddr>
-                    <addrtype>mailing</addrtype>
-                    <address>500 C Street, S.W.</address>
-                    <city>Washington</city>
-                    <state>District of Columbia</state>
-                    <postal>20472</postal>
-                    <country>USA</country>
-                </cntaddr>
-                <cntvoice>1-877-336-2627</cntvoice>
-                <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
-            </cntinfo>
-        </metc>
-        <metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
-        <metstdv>FGDC-STD-001-1998</metstdv>
+  <metainfo>
+    <metd>False</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>MIPHelp</cntper>
+          <cntorg>Federal Emergency Management Agency</cntorg>
+        </cntperp>
+        <cntpos>Federal Insurance and Mitigation Administration</cntpos>
+        <cntaddr>
+          <addrtype>mailing</addrtype>
+          <address>500 C Street, S.W.</address>
+          <city>Washington</city>
+          <state>District of Columbia</state>
+          <postal>20472</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>1-877-336-2627</cntvoice>
+        <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
         <metextns>
             <onlink>https://hazards.fema.gov</onlink>
             <onlink>https://www.epsg.org</onlink>
             <metprof>FEMA NFIP Metadata Content and Format Standard</metprof>
         </metextns>
-    </metainfo>
+  </metainfo>
 </metadata>
