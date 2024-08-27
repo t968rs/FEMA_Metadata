@@ -39,6 +39,7 @@ class CreateFEMAxml:
         self.dfirm_lookup = excel_to_df(self.excel_path, sheet_name="Purchase CID Lookup")
         self.sources_lookup = self._init_sources_lookup()
         self.extents_lookup = excel_to_df(self.excel_path, sheet_name="HUC8_Extents")
+        self.state_fips = excel_to_df(self.excel_path, sheet_name="State_FIPS_Refs")
 
         print(self.sources_lookup['SOURCE_CIT'].unique().tolist())
         unique_dates = list(
@@ -230,13 +231,15 @@ class CreateFEMAxml:
         root = ET.Element(start_str)
 
         # Get state from FIPS codes
-        state = None
+        state_fips = None
         fips_unique = self.purchases_df['FIPS'].unique().tolist()
         states_unique = list(set([str(fips)[:2] for fips in fips_unique]))
         if len(states_unique) > 1:
             raise ValueError(f"Multiple states found in FIPS codes: {states_unique}")
         else:
-            state = states_unique[0]
+            state_fips = int(states_unique[0])
+        state_name = self.state_fips.loc[self.state_fips['FIPS'] == state_fips, 'State'].values[0]
+        print(f"State {state_fips}: {state_name}")
 
         unique_non_study = self.sources_lookup['SOURCE_CIT'].unique().tolist()
         unique_non_study = [s for s in unique_non_study if "STUDY" not in s]
@@ -270,7 +273,7 @@ class CreateFEMAxml:
             publish.text = "Federal Emergency Management Agency"
 
             othercit = ET.SubElement(citeinfo, 'othercit')
-            othercit.text = f"Effective FIS and FIRM from State of {state}"  # get from MIP purchase GEOGRAPHIES
+            othercit.text = f"Effective FIS and FIRM from State of {state_name}"  # get from MIP purchase GEOGRAPHIES
 
             srcscale = ET.SubElement(srcinfo, 'srcscale')
             srcscale.text = row.get('srcscale', '1:24000').split(":")[1]
@@ -282,7 +285,7 @@ class CreateFEMAxml:
             timeinfo = ET.SubElement(srctime, 'timeinfo')
             sngdate = ET.SubElement(timeinfo, 'sngdate')
             caldate = ET.SubElement(sngdate, 'caldate')
-            caldate.text = row.get('caldate', 'False')
+            caldate.text = row.get("PUB_DATE", 'False')
 
             srccurr = ET.SubElement(srctime, 'srccurr')
             srccurr.text = row.get('DATE_REF', 'Publication Date')

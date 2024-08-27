@@ -11,7 +11,7 @@
           <pubplace>Calverton, MD</pubplace>
           <publish>Federal Emergency Management Agency</publish>
         </pubinfo>
-        <othercit>Effective FIS and FIRM from State of 19</othercit>
+        <othercit>Effective FIS and FIRM from State of Iowa</othercit>
       </citeinfo>
     </srccite>
     <srcscale>24000</srcscale>
@@ -19,7 +19,7 @@
     <srctime>
       <timeinfo>
         <sngdate>
-          <caldate>False</caldate>
+          <caldate>20240830</caldate>
         </sngdate>
       </timeinfo>
       <srccurr>Publication date</srccurr>
@@ -38,7 +38,7 @@
           <pubplace>Des Moines, IA</pubplace>
           <publish>Federal Emergency Management Agency</publish>
         </pubinfo>
-        <othercit>Effective FIS and FIRM from State of 19</othercit>
+        <othercit>Effective FIS and FIRM from State of Iowa</othercit>
       </citeinfo>
     </srccite>
     <srcscale>24000</srcscale>
@@ -46,7 +46,7 @@
     <srctime>
       <timeinfo>
         <sngdate>
-          <caldate>False</caldate>
+          <caldate>20240304</caldate>
         </sngdate>
       </timeinfo>
       <srccurr>Download Date</srccurr>

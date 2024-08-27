@@ -4,16 +4,9 @@ from helpers import *
 import os
 
 
-def create_watershed_xml(watershed_lookup, template_tree, source_cit_tree, place_tree, extent_tree=None):
-    # Create a deep copy of the root element
-    new_root = ET.ElementTree(ET.fromstring(ET.tostring(template_tree.getroot())))
-
-    # Find and remove the source_cit and place sections
-    for elem in new_root.iter():
-        for child in list(elem):
-            if child.tag in ['srcinfo', 'place']:
-                elem.remove(child)
-    # write_xml(new_root, f"{watershed_lookup['DFIRM_ID']}_TEST_CLEARED.xml")
+def create_watershed_xml(tree, source_cit_tree, place_tree, extent_tree=None):
+    # Create a new XML document from the template
+    root = tree.getroot()
 
     # Get the srcinfo and place sections from the source_cit, place, and extent XML files
     source_cit_root = source_cit_tree.getroot()
@@ -24,7 +17,7 @@ def create_watershed_xml(watershed_lookup, template_tree, source_cit_tree, place
     # Extent insertion
     if extent_tree is not None:
         extent_root = extent_tree.getroot()
-        spdom_elem = new_root.find('.//spdom')
+        spdom_elem = root.find('.//spdom')
         if spdom_elem is not None:
             for child in spdom_elem:
                 spdom_elem.remove(child)
@@ -38,7 +31,7 @@ def create_watershed_xml(watershed_lookup, template_tree, source_cit_tree, place
             new_child.text = coord.text
 
     # Find the lineage tag
-    lineage = new_root.find('.//lineage')
+    lineage = root.find('.//lineage')
     # Extract and append the srcinfo sections
     if lineage is not None:
         for i, srcinfo in enumerate(source_cit_root.findall(f'.//srcinfo')):
@@ -48,34 +41,33 @@ def create_watershed_xml(watershed_lookup, template_tree, source_cit_tree, place
 
     # Extract and append the place sections
     for place in place_root.findall('place'):
-        new_root.getroot().append(place)
+        root.append(place)
 
-    # Save the new XML document
-    new_tree = ET.ElementTree(new_root.getroot())
-    outfolder = "../fulloutfullout/"
-    outxml = f"{outfolder}{watershed_lookup['DFIRM_ID']}_DRAFT_metadata.xml"
-    write_xml(new_tree, outxml)
-    print(f" Saved {outxml}")
+    print(f"Type: {type(tree)}")
+    return tree
 
 
 def open_df_and_populate_xml(excel_path, xml_path):
-    purchases_df = excel_to_df(excel_path, sheet_name="MIP Purchase Geographies")
-    fips_lookup = excel_to_df(excel_path, sheet_name="FIPS Lookup")
     dfirm_lookup = excel_to_df(excel_path, sheet_name="Purchase CID Lookup")
     sources_lookup = excel_to_df(excel_path, sheet_name="SOURCE_CIT_STATEWIDE", dtype=str)
-    extents_lookup = excel_to_df(excel_path, sheet_name="HUC8_Extents")
 
     print(sources_lookup['PUBLISHER'])
-    unique_dates = list(
-        set(sources_lookup['SRC_DATE'].dropna().unique()).union(set(sources_lookup['PUB_DATE'].dropna().unique())))
-
     # Read the base XML template
-    tree = ET.parse(xml_path)
-    root = tree.getroot()
+    template_tree = ET.parse(xml_path)
 
     # Iterate through the watersheds DataFrame and create XML files
     # Create watershed dictionary from the DataFrame
     for _, row in dfirm_lookup.iterrows():
+        # Create a deep copy of the root element
+        new_tree = ET.ElementTree(ET.fromstring(ET.tostring(template_tree.getroot())))
+        new_root = new_tree.getroot()
+
+        # Find and remove the source_cit and place sections
+        for elem in new_root.iter():
+            for child in list(elem):
+                if child.tag in ['srcinfo', 'place']:
+                    elem.remove(child)
+
         w_dict = row.to_dict()
         for k, v in w_dict.items():
             if pd.isna(v):
@@ -95,7 +87,6 @@ def open_df_and_populate_xml(excel_path, xml_path):
         # Populate study-specific values (DFIRM_ID, SOURCE_CIT, etc.)
         this_source = sources_lookup[sources_lookup['SOURCE_CIT'].isnull() | (sources_lookup['SOURCE_CIT'] == 'nan')]
         other_sources = sources_lookup[~sources_lookup['SOURCE_CIT'].isnull() & (sources_lookup['SOURCE_CIT'] != 'nan')]
-        source_huc8 = w_dict['HUC8']
 
         if not this_source.empty:
             this_source.loc[:, 'SOURCE_CIT'] = row['SOURCE_CIT']
@@ -104,17 +95,60 @@ def open_df_and_populate_xml(excel_path, xml_path):
         else:
             print(f'No source for {row["SOURCE_CIT"]}')
         all_sources = pd.concat([this_source, other_sources], ignore_index=True)
-        print(all_sources['SOURCE_CIT'].unique().tolist())
         all_sources['DFIRM_ID'] = row['DFIRM_ID']
 
         # Get the date
         date = all_sources.loc[all_sources['SOURCE_CIT'] == w_dict['SOURCE_CIT'], 'SRC_DATE'].values[0]
         w_dict['pubdate'] = date
 
+        # Insert project-specific values into the XML
+        # Insert the title and pubdate
+        cit_section = new_root.find('.//citeinfo')
+        origin = cit_section.find('.//origin')
+        origin.text = w_dict["SUBMIT_BY"]
+        title = cit_section.find('.//title')
+        title.text = w_dict["CASE_DESC"]
+        pubdate = cit_section.find('.//pubdate')
+        pubdate.text = w_dict["pubdate"]
+
+        # LWORKS Section
+        lworks = new_root.find('.//lworkcit')
+        title = lworks.find('.//title')
+        title.text = f'FEMA CASE {w_dict["CASE_NO"]}'
+        pubdate = lworks.find('.//pubdate')
+        pubdate.text = w_dict["pubdate"]
+
+        # Crossref section
+        crossref = new_root.find('.//crossref')
+        origin = crossref.find('.//origin')
+        origin.text = w_dict["SUBMIT_BY"]
+        title = crossref.find('.//title')
+        title.text = w_dict["CASE_DESC"]
+        pubdate = crossref.find('.//pubdate')
+        pubdate.text = w_dict["pubdate"]
+
+        # Update the metad info section
+        metainfo = new_root.find('.//metainfo')
+        metad = metainfo.find('.//metd')
+        metad.text = w_dict["pubdate"]
+
+        # Update time period section
+        timeperd = new_root.find('.//timeperd')
+        caldate = timeperd.find('.//caldate')
+        caldate.text = w_dict["pubdate"]
+
+        # Insert the source_cit and place sections
         source_cit_tree = ET.parse(sources_path)
         place_tree = ET.parse(places_path)
         extent_tree = ET.parse(extents_path)
-        create_watershed_xml(w_dict, tree, source_cit_tree, place_tree, extent_tree)
+
+        new_tree = create_watershed_xml(new_tree, source_cit_tree, place_tree, extent_tree)
+
+        # Write the new XML file
+        outfolder = "../fulloutfullout/"
+        outxml = f"{outfolder}{w_dict['DFIRM_ID']}_DRAFT_metadata.xml"
+        write_xml(new_tree, outxml)
+        print(f" Saved {outxml}")
 
 
 # Load the watersheds DataFrame

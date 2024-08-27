@@ -5,7 +5,7 @@
       <citeinfo>
         <origin>AtkinsRealis</origin>
         <pubdate>20240830</pubdate>
-        <title>Draft FIRM Database - BLE AREA 1A, IA FY20/21 DISC-BLE</title>
+        <title>BLE AREA 1A, IA FY20/21 DISC-BLE</title>
         <edition>2.8.5.6</edition>
         <geoform>FEMA-FIRM-Draft</geoform>
         <pubinfo>
@@ -103,8 +103,8 @@
         <citeinfo>
           <citeinfo>
             <origin>AtkinsRealis</origin>
-            <pubdate>False</pubdate>
-            <title>False</title>
+            <pubdate>20240830</pubdate>
+            <title>BLE AREA 1A, IA FY20/21 DISC-BLE</title>
             <geoform>map</geoform>
             <pubinfo>
               <pubinfo>
@@ -150,7 +150,7 @@
               <pubplace>Calverton, MD</pubplace>
               <publish>Federal Emergency Management Agency</publish>
             </pubinfo>
-            <othercit>Effective FIS and FIRM from State of 19</othercit>
+            <othercit>Effective FIS and FIRM from State of Iowa</othercit>
           </citeinfo>
         </srccite>
         <srcscale>24000</srcscale>
@@ -158,7 +158,7 @@
         <srctime>
           <timeinfo>
             <sngdate>
-              <caldate>False</caldate>
+              <caldate>20240830</caldate>
             </sngdate>
           </timeinfo>
           <srccurr>Publication date</srccurr>
@@ -177,7 +177,7 @@
               <pubplace>Des Moines, IA</pubplace>
               <publish>Federal Emergency Management Agency</publish>
             </pubinfo>
-            <othercit>Effective FIS and FIRM from State of 19</othercit>
+            <othercit>Effective FIS and FIRM from State of Iowa</othercit>
           </citeinfo>
         </srccite>
         <srcscale>24000</srcscale>
@@ -185,7 +185,7 @@
         <srctime>
           <timeinfo>
             <sngdate>
-              <caldate>False</caldate>
+              <caldate>20240304</caldate>
             </sngdate>
           </timeinfo>
           <srccurr>Download Date</srccurr>
