@@ -1,115 +1,53 @@
 <?xml version="1.0" ?>
-<idinfo>
-  <keywords>
-    <theme>
-      <themekt>ISO 19115 Topic Category</themekt>
-      <themekey>hydrology</themekey>
-      <themekey>environment</themekey>
-      <themekey>inlandWaters</themekey>
-      <themekey>structure</themekey>
-      <themekey>transportation</themekey>
-      <themekey>elevation</themekey>
-      <themekt>FEMA NFIP Topic Category</themekt>
-      <themekey>FIRM</themekey>
-      <themekey>FEMA Flood Hazard Zone</themekey>
-      <themekey>FIRM Database</themekey>
-      <themekey>Special Flood Hazard Area</themekey>
-      <themekey>Flood Insurance Rate Map</themekey>
-      <themekey>Riverine Flooding</themekey>
-      <themekey>Coastal Flooding</themekey>
-      <themekey>NFIP</themekey>
-      <themekey>Base Flood Elevation</themekey>
-      <themekey>SFHA</themekey>
-      <themekey>Floodway</themekey>
-    </theme>
-    <place>
-      <placekt>None</placekt>
-      <placekey>False</placekey>
-    </place>
-    <place>
-      <placekt/>
-      <placekey>REGION 07</placekey>
-      <placekey>STATE IA</placekey>
-      <placekey>FEMA-CID CD20IA</placekey>
-      <placekey>COUNTY CLINTON</placekey>
-      <placekey>COUNTY-FIPS 19045</placekey>
-      <placekey>COUNTY SCOTT</placekey>
-      <placekey>COUNTY-FIPS 19163</placekey>
-      <placekey>COUNTY LOUISA</placekey>
-      <placekey>COUNTY-FIPS 19115</placekey>
-      <placekey>COUNTY MUSCATINE</placekey>
-      <placekey>COUNTY-FIPS 19139</placekey>
-      <placekey>COMMUNITY CAMANCHE, CITY OF</placekey>
-      <placekey>COMMUNITY CLINTON, CITY OF</placekey>
-      <placekey>COMMUNITY LOW MOOR, CITY OF</placekey>
-      <placekey>CLINTON COUNTY UNINCORPORATED AREAS</placekey>
-      <placekey>LOUISA COUNTY UNINCORPORATED AREAS</placekey>
-      <placekey>COMMUNITY GRANDVIEW, CITY OF</placekey>
-      <placekey>COMMUNITY FRUITLAND, CITY OF</placekey>
-      <placekey>COMMUNITY MUSCATINE, CITY OF</placekey>
-      <placekey>MUSCATINE COUNTY UNINCORPORATED AREAS</placekey>
-      <placekey>SCOTT COUNTY UNINCORPORATED AREAS</placekey>
-      <placekey>COMMUNITY BETTENDORF, CITY OF</placekey>
-      <placekey>COMMUNITY BUFFALO, CITY OF</placekey>
-      <placekey>COMMUNITY DAVENPORT, CITY OF</placekey>
-      <placekey>COMMUNITY LE CLAIRE, CITY OF</placekey>
-      <placekey>COMMUNITY PRINCETON, CITY OF</placekey>
-      <placekey>COMMUNITY RIVERDALE, CITY OF</placekey>
-      <placekey>COMMUNITY PANORAMA PARK, CITY OF</placekey>
-      <placekey>COMMUNITY BLUE GRASS, CITY OF</placekey>
-      <placekey>COMMUNITY ELDRIDGE, CITY OF</placekey>
-      <placekey>FEMA-CID 190086</placekey>
-      <placekey>FEMA-CID 190088</placekey>
-      <placekey>FEMA-CID 190766</placekey>
-      <placekey>FEMA-CID 190859</placekey>
-      <placekey>FEMA-CID 190193</placekey>
-      <placekey>FEMA-CID 190937</placekey>
-      <placekey>FEMA-CID 190212</placekey>
-      <placekey>FEMA-CID 190213</placekey>
-      <placekey>FEMA-CID 190836</placekey>
-      <placekey>FEMA-CID 190239</placekey>
-      <placekey>FEMA-CID 190240</placekey>
-      <placekey>FEMA-CID 190241</placekey>
-      <placekey>FEMA-CID 190242</placekey>
-      <placekey>FEMA-CID 190243</placekey>
-      <placekey>FEMA-CID 190244</placekey>
-      <placekey>FEMA-CID 190245</placekey>
-      <placekey>FEMA-CID 190506</placekey>
-      <placekey>FEMA-CID 190554</placekey>
-      <placekey>FEMA-CID 190574</placekey>
-    </place>
-  </keywords>
-  <accconst>None</accconst>
-  <useconst>The hardcopy FIRM and FIRM Database and the accompanying FIS are the official designation of SFHAs and Base Flood Elevations (BFEs) for the NFIP. For the purposes of the NFIP, changes to the flood risk information published by FEMA may only be performed by FEMA and through the mechanisms established in the NFIP regulations (44 CFR Parts 59-78). These digital data are produced in conjunction with the hardcopy FIRMs and generally match the hardcopy map exactly. Acknowledgement of FEMA would be appreciated in products derived from these data.</useconst>
-  <ptcontac>
-    <cntinfo>
-      <cntorgp>
-        <cntorg>Federal Emergency Management Agency</cntorg>
-      </cntorgp>
-      <cntaddr>
-        <addrtype>mailing</addrtype>
-        <address>500 C Street, S.W.</address>
-        <city>Washington</city>
-        <state>District of Columbia</state>
-        <postal>20472</postal>
-        <country>USA</country>
-      </cntaddr>
-      <cntvoice>1-877-336-2627</cntvoice>
-      <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
-    </cntinfo>
-  </ptcontac>
-  <native>Original data development environment may vary. Finishing of the data is done using Esri's ArcGIS software.The submitted geodatabase was created using ArcGIS version 10.5</native>
-  <crossref>
-    <citeinfo>
-      <origin>AtkinsRealis</origin>
-      <pubdate>False</pubdate>
-      <title>False</title>
-      <geoform>map</geoform>
-      <pubinfo>
-        <pubplace>Washington, DC</pubplace>
-        <publish>Federal Emergency Management Agency</publish>
-      </pubinfo>
-      <onlink>https://msc.fema.gov</onlink>
-    </citeinfo>
-  </crossref>
-</idinfo>
+<place>
+  <placekt>None</placekt>
+  <placekey>REGION 07</placekey>
+  <placekey>STATE IA</placekey>
+  <placekey>FEMA-CID CD20IA</placekey>
+  <placekey>COUNTY CLINTON</placekey>
+  <placekey>COUNTY-FIPS 19045</placekey>
+  <placekey>COUNTY SCOTT</placekey>
+  <placekey>COUNTY-FIPS 19163</placekey>
+  <placekey>COUNTY LOUISA</placekey>
+  <placekey>COUNTY-FIPS 19115</placekey>
+  <placekey>COUNTY MUSCATINE</placekey>
+  <placekey>COUNTY-FIPS 19139</placekey>
+  <placekey>COMMUNITY CAMANCHE, CITY OF</placekey>
+  <placekey>COMMUNITY CLINTON, CITY OF</placekey>
+  <placekey>COMMUNITY LOW MOOR, CITY OF</placekey>
+  <placekey>CLINTON COUNTY UNINCORPORATED AREAS</placekey>
+  <placekey>LOUISA COUNTY UNINCORPORATED AREAS</placekey>
+  <placekey>COMMUNITY GRANDVIEW, CITY OF</placekey>
+  <placekey>COMMUNITY FRUITLAND, CITY OF</placekey>
+  <placekey>COMMUNITY MUSCATINE, CITY OF</placekey>
+  <placekey>MUSCATINE COUNTY UNINCORPORATED AREAS</placekey>
+  <placekey>SCOTT COUNTY UNINCORPORATED AREAS</placekey>
+  <placekey>COMMUNITY BETTENDORF, CITY OF</placekey>
+  <placekey>COMMUNITY BUFFALO, CITY OF</placekey>
+  <placekey>COMMUNITY DAVENPORT, CITY OF</placekey>
+  <placekey>COMMUNITY LE CLAIRE, CITY OF</placekey>
+  <placekey>COMMUNITY PRINCETON, CITY OF</placekey>
+  <placekey>COMMUNITY RIVERDALE, CITY OF</placekey>
+  <placekey>COMMUNITY PANORAMA PARK, CITY OF</placekey>
+  <placekey>COMMUNITY BLUE GRASS, CITY OF</placekey>
+  <placekey>COMMUNITY ELDRIDGE, CITY OF</placekey>
+  <placekey>FEMA-CID 190086</placekey>
+  <placekey>FEMA-CID 190088</placekey>
+  <placekey>FEMA-CID 190766</placekey>
+  <placekey>FEMA-CID 190859</placekey>
+  <placekey>FEMA-CID 190193</placekey>
+  <placekey>FEMA-CID 190937</placekey>
+  <placekey>FEMA-CID 190212</placekey>
+  <placekey>FEMA-CID 190213</placekey>
+  <placekey>FEMA-CID 190836</placekey>
+  <placekey>FEMA-CID 190239</placekey>
+  <placekey>FEMA-CID 190240</placekey>
+  <placekey>FEMA-CID 190241</placekey>
+  <placekey>FEMA-CID 190242</placekey>
+  <placekey>FEMA-CID 190243</placekey>
+  <placekey>FEMA-CID 190244</placekey>
+  <placekey>FEMA-CID 190245</placekey>
+  <placekey>FEMA-CID 190506</placekey>
+  <placekey>FEMA-CID 190554</placekey>
+  <placekey>FEMA-CID 190574</placekey>
+</place>

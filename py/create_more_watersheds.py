@@ -24,10 +24,11 @@ def create_watershed_xml(tree, source_cit_tree, place_tree, extent_tree=None, ea
         else:
             raise ValueError("No spdom element found in the template XML")
 
+        bounding = ET.SubElement(spdom_elem, 'bounding')
         for coord in extent_root.iter():
             print(f"Coord: {coord.text}")
             # Create a new child element with the tag name equal to coord.tag
-            new_child = ET.SubElement(spdom_elem, coord.tag)
+            new_child = ET.SubElement(bounding, coord.tag)
             new_child.text = coord.text
 
     # Find the lineage tag
@@ -49,8 +50,8 @@ def create_watershed_xml(tree, source_cit_tree, place_tree, extent_tree=None, ea
     lineage.insert(source_count + 1, procstep)
 
     # Extract and append the place sections
-    for place in place_root.findall('place'):
-        root.append(place)
+    keywords = root.find('.//keywords')
+    keywords.append(place_root)
 
     # Extract and append the ea_info sections
     if ea_tree is not None:
@@ -61,7 +62,8 @@ def create_watershed_xml(tree, source_cit_tree, place_tree, extent_tree=None, ea
         for child in eainfo:
             print(f"Child: {child.tag}")
             eainfo_existing.append(child)
-
+    # Remove empty tags
+    remove_empty_tags(tree)
     print(f"Type: {type(tree)}")
     return tree
 
@@ -74,8 +76,8 @@ def open_df_and_populate_xml(excel_path, xml_path):
     # Read the base XML template
     template_tree = ET.parse(xml_path)
     type_stage = "DRAFT" if "DRAFT" in xml_path else "Hydraulics"
-    if "Mapping" in xml_path:
-        type_stage = "Floodplain Mapping"
+    if "Floodplain" in xml_path:
+        type_stage = "Floodplain"
 
     # Iterate through the watersheds DataFrame and create XML files
     # Create watershed dictionary from the DataFrame
@@ -101,9 +103,9 @@ def open_df_and_populate_xml(excel_path, xml_path):
         print(w_dict)
 
         sources_path = f"../source_cit/{w_dict['DFIRM_ID']}_SOURCE_CIT.xml"
-        places_path = f"../places/{w_dict['DFIRM_ID']}_PLACE_metadata.xml"
+        places_path = f"../places/{w_dict['DFIRM_ID']}_PLACES.xml"
         extents_path = f"../extents/{w_dict['DFIRM_ID']}_EXTENTS.xml"
-        ea_path = f"../ea_info/{type_stage}_EA.xml"
+        ea_path = f"../ea_info/EA.xml"
         if (not os.path.exists(sources_path) or not os.path.exists(places_path) or
                 not os.path.exists(extents_path) or not os.path.exists(ea_path)):
             continue
@@ -139,6 +141,9 @@ def open_df_and_populate_xml(excel_path, xml_path):
             pubdate = cit_section.find('.//pubdate')
             if pubdate is not None:
                 pubdate.text = w_dict["pubdate"]
+            edition = cit_section.find('.//edition')
+            if edition is not None:
+                edition.text = "2.8.5.6"
         else:
             raise ValueError("No citation section found in the template XML")
 
@@ -188,15 +193,16 @@ def open_df_and_populate_xml(excel_path, xml_path):
                     child.text = new_text
 
         # Write the new XML file
-        outfolder = "../fulloutfullout/"
+        outfolder = f"../fulloutfullout/{type_stage}/"
+        os.makedirs(outfolder, exist_ok=True)
         outxml = f"{outfolder}{w_dict['DFIRM_ID']}_{type_stage}_metadata.xml"
         write_xml(new_tree, outxml)
         print(f" Saved {outxml}")
 
 
 # Load the watersheds DataFrame
-# Load the watersheds DataFrame
 excelpath = "../Area_1A_Purchase_Geographies_ADDS.xlsx"
-template_xml = "../static_lookups/_DRAFT_metadata.xml"
 
-open_df_and_populate_xml(excelpath, template_xml)
+for kdp in ["DRAFT", "Hydraulics", "Floodplain"]:
+    template_xml = f"../static_lookups/_{kdp}_metadata.xml"
+    open_df_and_populate_xml(excelpath, template_xml)

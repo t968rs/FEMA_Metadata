@@ -180,7 +180,7 @@ def convert_list_to_multiple_elements(tree):
 
 
 order_dict = json_to_dict("../regen_lookups/ORDER_unnested.json")
-for stage in ["Hydraulics", "DRAFT"]:
+for stage in ["Hydraulics", "DRAFT", "Floodplain"]:
     json_path = f'../regen_lookups/post_KDP_{stage}_unnested.json'
     if not os.path.exists(json_path):
         raise FileNotFoundError(f"File not found: {json_path}")

@@ -82,17 +82,12 @@ class CreateFEMAxml:
         other_rows = self.sources_lookup.loc[self.sources_lookup['AUTHOR'] != self.author]
         return pd.concat([new_rows, other_rows], ignore_index=True)
 
-    def create_places_sub_xml(self, inf_dict, tree: ET.ElementTree, **kwargs) -> ET.ElementTree:
-        start_str = "keywords"
-        tree = extract_subtree_within_tag(tree, start_str)
-        root = tree.getroot()
-        start_tag = root.find(start_str)
-        if start_tag is None:
-            start_tag = ET.Element(start_str)
+    def create_places_sub_xml(self, inf_dict, **kwargs) -> ET.ElementTree:
+        place = ET.Element("place")
+        tree = ET.ElementTree(place)
 
-        place = ET.SubElement(start_tag, 'place')
         placekt = ET.SubElement(place, 'placekt')
-        placekt.text = ""
+        placekt.text = "None"
         for k in ["REGION 07", "STATE IA"]:
             placekey = ET.SubElement(place, 'placekey')
             placekey.text = k
@@ -130,10 +125,9 @@ class CreateFEMAxml:
 
         return tree
 
-    def update_ea_info(self, ea_list: list[dict]) -> ET.ElementTree:
+    def create_ea_info(self, ea_list: list[dict]) -> ET.ElementTree:
         eainfo = ET.Element("eainfo")
         overview = ET.SubElement(eainfo, 'overview')
-        detailed = ET.SubElement(eainfo, 'detailed')
         for ea_dict in ea_list:
             if "enttypl" not in ea_dict and "eaover" in ea_dict:
 
@@ -142,13 +136,13 @@ class CreateFEMAxml:
                 print(f"EA OVER: {ea_dict['eaover']}")
                 if isinstance(ea_dict.get('eadetcit'), list):
                     for cit in ea_dict['eadetcit']:
-                        eadetcit = ET.SubElement(eaover, 'eadetcit')
+                        eadetcit = ET.SubElement(overview, 'eadetcit')
                         eadetcit.text = cit.strip()
                 else:
                     eadetcit = ET.SubElement(eaover, 'eadetcit')
                     eadetcit.text = ea_dict.get('eadetcit', 'False')
             elif "enttypl" in ea_dict:
-
+                detailed = ET.SubElement(eainfo, 'detailed')
                 enttyp = ET.SubElement(detailed, 'enttyp')
                 enttypl = ET.SubElement(enttyp, 'enttypl')
                 enttypl.text = ea_dict['enttypl']
@@ -162,9 +156,9 @@ class CreateFEMAxml:
         return ET.ElementTree(eainfo)
 
     def create_sources_xml(self, **kwargs) -> ET.ElementTree:
-        start_str = "lineage"
+
         # Create a new tree with root element "lineage"
-        root = ET.Element(start_str)
+        lineage = ET.Element("lineage")
 
         # Get state from FIPS codes
         state_fips = None
@@ -184,7 +178,7 @@ class CreateFEMAxml:
         sources_to_add = pd.concat([target_row, other_rows], ignore_index=True)
 
         for index, row in sources_to_add.iterrows():
-            srcinfo = ET.SubElement(root, 'srcinfo')
+            srcinfo = ET.SubElement(lineage, 'srcinfo')
 
             srccite = ET.SubElement(srcinfo, 'srccite')
             citeinfo = ET.SubElement(srccite, 'citeinfo')
@@ -232,7 +226,7 @@ class CreateFEMAxml:
             srccontr = ET.SubElement(srcinfo, 'srccontr')
             srccontr.text = row.get('CONTRIB', '')
 
-        test_tree = ET.ElementTree(root)
+        test_tree = ET.ElementTree(lineage)
         write_xml(test_tree, "SOURCES_test.xml")
 
         # Get source info for this source only
@@ -241,7 +235,7 @@ class CreateFEMAxml:
         print(f"{kwargs.get("SOURCE_CIT")} NOTES: {notes}, type: {type(notes)}, len: {len(notes)}")
 
         # Create procstep element
-        procstep = ET.SubElement(root, 'procstep')
+        procstep = ET.SubElement(lineage, 'procstep')
         procdesc = ET.SubElement(procstep, 'procdesc')
         if notes:
             procdesc.text = notes[0]
@@ -251,16 +245,7 @@ class CreateFEMAxml:
         procdate.text = self.sources_lookup.loc[self.sources_lookup['SOURCE_CIT'] ==
                                                 kwargs.get("SOURCE_CIT"), 'SRC_DATE'].values[0]
 
-        # Extract the sources from the XML tree
-        # all_sources = extract_all_of_tag(ET.tostring(tree.getroot(), encoding='utf-8'), "srcinfo")
-        # all_sources = list(set(all_sources))
-        # print(f"  {len(all_sources)} Sources")
-
-        # Create a dictionary to map existing srcinfo elements by a unique identifier (e.g., title)
-        # lineage_tree = add_parent_tag_to_tree(tree, start_str)
-        # clean_tree = remove_nan_srcinfo(lineage_tree)
-
-        tree = ET.ElementTree(root)
+        tree = ET.ElementTree(lineage)
         tree_str = ET.tostring(tree.getroot(), encoding='utf-8').decode('utf-8')
         sec_element = ET.fromstring(remove_extraneous_spacing(tree_str))
         print(f"Section 264: {ET.tostring(sec_element, encoding='utf-8')}")
@@ -274,14 +259,14 @@ class CreateFEMAxml:
         # Create a new tree with root element "lineage"
         root = ET.Element(start_str)
         this_df = self.extents_lookup.loc[self.extents_lookup[field_with_area] == area_id]
-
-        westbc = ET.SubElement(root, 'westbc')
+        bounding = ET.SubElement(root, 'bounding')
+        westbc = ET.SubElement(bounding, 'westbc')
         westbc.text = str(round(this_df['westbc'].values[0], 3))
-        southbc = ET.SubElement(root, 'southbc')
+        southbc = ET.SubElement(bounding, 'southbc')
         southbc.text = str(round(this_df['southbc'].values[0], 3))
-        eastbc = ET.SubElement(root, 'eastbc')
+        eastbc = ET.SubElement(bounding, 'eastbc')
         eastbc.text = str(round(this_df['eastbc'].values[0], 3))
-        northbc = ET.SubElement(root, 'northbc')
+        northbc = ET.SubElement(bounding, 'northbc')
         northbc.text = str(round(this_df['northbc'].values[0], 3))
 
         tree = ET.ElementTree(root)
@@ -296,71 +281,58 @@ class CreateFEMAxml:
     def create_fema_metadata(self):
         w_dict = get_places_dict(self.purchases_df)
         #
-        xml_files = [self.lookup_folder + f for f in os.listdir(self.lookup_folder) if f.endswith(".xml")]
-        print(f"XML Files: {xml_files}")
+        for watershed, details in w_dict.items():
 
-        for template_path in xml_files:
-            stage = "DRAFT" if "DRAFT" in template_path else "Hydraulics"
-            for watershed, details in w_dict.items():
-                try:
-                    template_tree = ET.parse(template_path)
-                except ET.ParseError:
-                    raise f"Error parsing {template_path}"
-
-                ea_path = f"{self.lookup_folder}EA_Info_{stage}.json"
-                if not os.path.exists(ea_path):
-                    raise ValueError(f"EA Info file not found: {ea_path}")
-                with open(ea_path, "r") as ea:
-                    ea_list = json.load(ea)
-                if ea_list:
-                    cleaned_ea_list = []
-                    for ea_dict in ea_list:
-                        new_dict = {}
-                        for k, v in ea_dict.items():
-                            if isinstance(v, list):
-                                clean_list = []
-                                for item in v:
-                                    clean_list.append(remove_whitespace(item))
-                                new_dict[k] = clean_list
-                            else:
-                                clean_string = remove_whitespace(v)
-                                new_dict[k] = clean_string
-                        cleaned_ea_list.append(new_dict)
-                    eainfo_tree = self.update_ea_info(cleaned_ea_list)
-                    out_folder = "../ea_info/"
-                    os.makedirs(out_folder, exist_ok=True)
-                    write_xml(eainfo_tree, f"{out_folder}{stage}_EA.xml")
-
-                matching_rows = self.dfirm_lookup.loc[self.dfirm_lookup['HUC8'] == watershed]
-                if matching_rows.empty:
-                    continue
-                DFIRM_ID = matching_rows['DFIRM_ID'].values[0]
-                SOURCE_CIT = matching_rows['SOURCE_CIT'].values[0]
-                print(f'\nTemplate: {template_path}\n{watershed}: {DFIRM_ID}, {SOURCE_CIT}')
-                self.sources_lookup = fill_df_with_values(self.sources_lookup, ["DFIRM_ID", "SOURCE_CIT"],
-                                                          **{"DFIRM_ID": DFIRM_ID, "SOURCE_CIT": SOURCE_CIT})
-
-                place_tree = self.create_places_sub_xml(details, template_tree, **{"DFIRM ID": DFIRM_ID})
-                print(f"Section: {ET.tostring(place_tree.getroot(), encoding='utf-8')}")
-                out_folder = "../places/"
-                out_xml = out_folder + f"{DFIRM_ID}_PLACES.xml"
-                write_xml(place_tree, out_xml)
-
-                sources_tree = self.create_sources_xml(**{"DFIRM ID": DFIRM_ID,
-                                                          "SOURCE_CIT": SOURCE_CIT})
-
-                extents_tree = self.create_extents_xml(watershed, "HUC8")
-                out_folder = "../extents/"
+            ea_path = f"{self.lookup_folder}EA_Info.json"
+            with open(ea_path, "r") as ea:
+                ea_list = json.load(ea)
+            if ea_list:
+                cleaned_ea_list = []
+                for ea_dict in ea_list:
+                    new_dict = {}
+                    for k, v in ea_dict.items():
+                        if isinstance(v, list):
+                            clean_list = []
+                            for item in v:
+                                clean_list.append(remove_whitespace(item))
+                            new_dict[k] = clean_list
+                        else:
+                            clean_string = remove_whitespace(v)
+                            new_dict[k] = clean_string
+                    cleaned_ea_list.append(new_dict)
+                eainfo_tree = self.create_ea_info(cleaned_ea_list)
+                out_folder = "../ea_info/"
                 os.makedirs(out_folder, exist_ok=True)
-                output_file = f"{out_folder}{DFIRM_ID}_EXTENTS.xml"
-                write_xml(extents_tree, output_file)
+                write_xml(eainfo_tree, f"{out_folder}EA.xml")
 
-                out_folder = "../source_cit/"
-                os.makedirs(out_folder, exist_ok=True)
-                output_file = f"{out_folder}{DFIRM_ID}_SOURCE_CIT.xml"
-                write_xml(sources_tree, output_file)
+            matching_rows = self.dfirm_lookup.loc[self.dfirm_lookup['HUC8'] == watershed]
+            if matching_rows.empty:
+                continue
+            DFIRM_ID = matching_rows['DFIRM_ID'].values[0]
+            SOURCE_CIT = matching_rows['SOURCE_CIT'].values[0]
+            print(f'\n{watershed}: {DFIRM_ID}, {SOURCE_CIT}')
+            self.sources_lookup = fill_df_with_values(self.sources_lookup, ["DFIRM_ID", "SOURCE_CIT"],
+                                                      **{"DFIRM_ID": DFIRM_ID, "SOURCE_CIT": SOURCE_CIT})
 
-                del template_tree
+            place_tree = self.create_places_sub_xml(details, **{"DFIRM ID": DFIRM_ID})
+            print(f"Section: {ET.tostring(place_tree.getroot(), encoding='utf-8')}")
+            out_folder = "../places/"
+            out_xml = out_folder + f"{DFIRM_ID}_PLACES.xml"
+            write_xml(place_tree, out_xml)
+
+            sources_tree = self.create_sources_xml(**{"DFIRM ID": DFIRM_ID,
+                                                      "SOURCE_CIT": SOURCE_CIT})
+
+            extents_tree = self.create_extents_xml(watershed, "HUC8")
+            out_folder = "../extents/"
+            os.makedirs(out_folder, exist_ok=True)
+            output_file = f"{out_folder}{DFIRM_ID}_EXTENTS.xml"
+            write_xml(extents_tree, output_file)
+
+            out_folder = "../source_cit/"
+            os.makedirs(out_folder, exist_ok=True)
+            output_file = f"{out_folder}{DFIRM_ID}_SOURCE_CIT.xml"
+            write_xml(sources_tree, output_file)
 
 
 if __name__ == "__main__":

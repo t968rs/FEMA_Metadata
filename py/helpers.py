@@ -9,6 +9,24 @@ import re
 TAG_KEYWORDS = {"srcinfo": ["STUDY", "BASE", "TOPO", "FIRM"]}
 
 
+def remove_empty_tags(tree: ET.ElementTree) -> ET.ElementTree:
+    root = tree.getroot()
+
+    # Function to recursively remove empty tags
+    def remove_empty_elements(element):
+        for child in list(element):
+            if len(child) == 0 and (child.text is None or not child.text.strip()):
+                element.remove(child)
+            else:
+                remove_empty_elements(child)
+
+    # Remove empty elements
+    remove_empty_elements(root)
+
+    # Return the cleaned XML string
+    return ET.tostring(root, encoding='unicode')
+
+
 def remove_nan_srcinfo(tree: ET.ElementTree, start_str=None) -> ET.ElementTree:
     start_str = "lineage"
     tree = extract_subtree_within_tag(tree, start_str)

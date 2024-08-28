@@ -1,103 +1,41 @@
 <?xml version="1.0" ?>
-<idinfo>
-  <keywords>
-    <theme>
-      <themekt>ISO 19115 Topic Category</themekt>
-      <themekey>hydrology</themekey>
-      <themekey>environment</themekey>
-      <themekey>inlandWaters</themekey>
-      <themekey>structure</themekey>
-      <themekey>transportation</themekey>
-      <themekey>elevation</themekey>
-      <themekt>FEMA NFIP Topic Category</themekt>
-      <themekey>FIRM</themekey>
-      <themekey>FEMA Flood Hazard Zone</themekey>
-      <themekey>FIRM Database</themekey>
-      <themekey>Special Flood Hazard Area</themekey>
-      <themekey>Flood Insurance Rate Map</themekey>
-      <themekey>Riverine Flooding</themekey>
-      <themekey>Coastal Flooding</themekey>
-      <themekey>NFIP</themekey>
-      <themekey>Base Flood Elevation</themekey>
-      <themekey>SFHA</themekey>
-      <themekey>Floodway</themekey>
-    </theme>
-    <place>
-      <placekt>None</placekt>
-      <placekey>False</placekey>
-    </place>
-    <place>
-      <placekt/>
-      <placekey>REGION 07</placekey>
-      <placekey>STATE IA</placekey>
-      <placekey>FEMA-CID AP20IA</placekey>
-      <placekey>COUNTY CLINTON</placekey>
-      <placekey>COUNTY-FIPS 19045</placekey>
-      <placekey>COUNTY JACKSON</placekey>
-      <placekey>COUNTY-FIPS 19097</placekey>
-      <placekey>COUNTY DUBUQUE</placekey>
-      <placekey>COUNTY-FIPS 19061</placekey>
-      <placekey>COMMUNITY ANDOVER, CITY OF</placekey>
-      <placekey>COMMUNITY CLINTON, CITY OF</placekey>
-      <placekey>CLINTON COUNTY UNINCORPORATED AREAS</placekey>
-      <placekey>COMMUNITY ASBURY, CITY OF</placekey>
-      <placekey>COMMUNITY PEOSTA, CITY OF</placekey>
-      <placekey>COMMUNITY CENTRALIA, CITY OF</placekey>
-      <placekey>DUBUQUE COUNTY UNINCORPORATED AREAS</placekey>
-      <placekey>COMMUNITY DUBUQUE, CITY OF</placekey>
-      <placekey>COMMUNITY SPRINGBROOK, CITY OF</placekey>
-      <placekey>COMMUNITY ST. DONATUS, CITY OF</placekey>
-      <placekey>COMMUNITY BELLEVUE, CITY OF</placekey>
-      <placekey>COMMUNITY SABULA, CITY OF</placekey>
-      <placekey>COMMUNITY MILES, CITY OF</placekey>
-      <placekey>JACKSON COUNTY UNINCORPORATED AREAS</placekey>
-      <placekey>FEMA-CID 190034</placekey>
-      <placekey>FEMA-CID 190088</placekey>
-      <placekey>FEMA-CID 190859</placekey>
-      <placekey>FEMA-CID 190053</placekey>
-      <placekey>FEMA-CID 190079</placekey>
-      <placekey>FEMA-CID 190500</placekey>
-      <placekey>FEMA-CID 190534</placekey>
-      <placekey>FEMA-CID 195180</placekey>
-      <placekey>FEMA-CID 190047</placekey>
-      <placekey>FEMA-CID 190106</placekey>
-      <placekey>FEMA-CID 190158</placekey>
-      <placekey>FEMA-CID 190162</placekey>
-      <placekey>FEMA-CID 190779</placekey>
-      <placekey>FEMA-CID 190879</placekey>
-    </place>
-  </keywords>
-  <accconst>None</accconst>
-  <useconst>The hardcopy FIRM and FIRM Database and the accompanying FIS are the official designation of SFHAs and Base Flood Elevations (BFEs) for the NFIP. For the purposes of the NFIP, changes to the flood risk information published by FEMA may only be performed by FEMA and through the mechanisms established in the NFIP regulations (44 CFR Parts 59-78). These digital data are produced in conjunction with the hardcopy FIRMs and generally match the hardcopy map exactly. Acknowledgement of FEMA would be appreciated in products derived from these data.</useconst>
-  <ptcontac>
-    <cntinfo>
-      <cntorgp>
-        <cntorg>Federal Emergency Management Agency</cntorg>
-      </cntorgp>
-      <cntaddr>
-        <addrtype>mailing</addrtype>
-        <address>500 C Street, S.W.</address>
-        <city>Washington</city>
-        <state>District of Columbia</state>
-        <postal>20472</postal>
-        <country>USA</country>
-      </cntaddr>
-      <cntvoice>1-877-336-2627</cntvoice>
-      <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
-    </cntinfo>
-  </ptcontac>
-  <native>Original data development environment may vary. Finishing of the data is done using Esri's ArcGIS software.The submitted geodatabase was created using ArcGIS version 10.5</native>
-  <crossref>
-    <citeinfo>
-      <origin>AtkinsRealis</origin>
-      <pubdate>False</pubdate>
-      <title>False</title>
-      <geoform>map</geoform>
-      <pubinfo>
-        <pubplace>Washington, DC</pubplace>
-        <publish>Federal Emergency Management Agency</publish>
-      </pubinfo>
-      <onlink>https://msc.fema.gov</onlink>
-    </citeinfo>
-  </crossref>
-</idinfo>
+<place>
+  <placekt>None</placekt>
+  <placekey>REGION 07</placekey>
+  <placekey>STATE IA</placekey>
+  <placekey>FEMA-CID AP20IA</placekey>
+  <placekey>COUNTY CLINTON</placekey>
+  <placekey>COUNTY-FIPS 19045</placekey>
+  <placekey>COUNTY DUBUQUE</placekey>
+  <placekey>COUNTY-FIPS 19061</placekey>
+  <placekey>COUNTY JACKSON</placekey>
+  <placekey>COUNTY-FIPS 19097</placekey>
+  <placekey>COMMUNITY ANDOVER, CITY OF</placekey>
+  <placekey>COMMUNITY CLINTON, CITY OF</placekey>
+  <placekey>CLINTON COUNTY UNINCORPORATED AREAS</placekey>
+  <placekey>COMMUNITY ASBURY, CITY OF</placekey>
+  <placekey>COMMUNITY PEOSTA, CITY OF</placekey>
+  <placekey>COMMUNITY CENTRALIA, CITY OF</placekey>
+  <placekey>DUBUQUE COUNTY UNINCORPORATED AREAS</placekey>
+  <placekey>COMMUNITY DUBUQUE, CITY OF</placekey>
+  <placekey>COMMUNITY SPRINGBROOK, CITY OF</placekey>
+  <placekey>COMMUNITY ST. DONATUS, CITY OF</placekey>
+  <placekey>COMMUNITY BELLEVUE, CITY OF</placekey>
+  <placekey>COMMUNITY SABULA, CITY OF</placekey>
+  <placekey>COMMUNITY MILES, CITY OF</placekey>
+  <placekey>JACKSON COUNTY UNINCORPORATED AREAS</placekey>
+  <placekey>FEMA-CID 190034</placekey>
+  <placekey>FEMA-CID 190088</placekey>
+  <placekey>FEMA-CID 190859</placekey>
+  <placekey>FEMA-CID 190053</placekey>
+  <placekey>FEMA-CID 190079</placekey>
+  <placekey>FEMA-CID 190500</placekey>
+  <placekey>FEMA-CID 190534</placekey>
+  <placekey>FEMA-CID 195180</placekey>
+  <placekey>FEMA-CID 190047</placekey>
+  <placekey>FEMA-CID 190106</placekey>
+  <placekey>FEMA-CID 190158</placekey>
+  <placekey>FEMA-CID 190162</placekey>
+  <placekey>FEMA-CID 190779</placekey>
+  <placekey>FEMA-CID 190879</placekey>
+</place>

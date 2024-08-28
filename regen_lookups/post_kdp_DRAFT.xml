@@ -214,33 +214,32 @@
       <fees>Contact Distributor</fees>
     </stdorder>
   </distinfo>
-    <metainfo>
-        <metd>False</metd>
-        <metc>
-            <cntinfo>
-                <cntperp>
-                    <cntper>MIPHelp</cntper>
-                    <cntorg>Federal Emergency Management Agency</cntorg>
-                </cntperp>
-                <cntpos>Federal Insurance and Mitigation Administration</cntpos>
-                <cntaddr>
-                    <addrtype>mailing</addrtype>
-                    <address>500 C Street, S.W.</address>
-                    <city>Washington</city>
-                    <state>District of Columbia</state>
-                    <postal>20472</postal>
-                    <country>USA</country>
-                </cntaddr>
-                <cntvoice>1-877-336-2627</cntvoice>
-                <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
-            </cntinfo>
-        </metc>
-        <metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
-        <metstdv>FGDC-STD-001-1998</metstdv>
-        <metextns>
-            <onlink>https://hazards.fema.gov</onlink>
-            <onlink>https://www.epsg.org</onlink>
-            <metprof>FEMA NFIP Metadata Content and Format Standard</metprof>
-        </metextns>
-    </metainfo>
+  <metainfo>
+    <metd>False</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>MIPHelp</cntper>
+          <cntorg>Federal Emergency Management Agency</cntorg>
+        </cntperp>
+        <cntpos>Federal Insurance and Mitigation Administration</cntpos>
+        <cntaddr>
+          <addrtype>mailing</addrtype>
+          <address>500 C Street, S.W.</address>
+          <city>Washington</city>
+          <state>District of Columbia</state>
+          <postal>20472</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>1-877-336-2627</cntvoice>
+        <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <metextns>
+      <onlink>['https://www.epsg.org', 'https://www.epsg.org']</onlink>
+      <metprof>FEMA NFIP Metadata Content and Format Standard</metprof>
+    </metextns>
+  </metainfo>
 </metadata>

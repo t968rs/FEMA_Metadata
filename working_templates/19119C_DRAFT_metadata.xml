@@ -56,10 +56,10 @@
     </status>
     <spdom>
       <bounding>
-        <westbc>-97.318</westbc>
-      <eastbc>-95.472</eastbc>
-      <northbc>44.291</northbc>
-      <southbc>42.465</southbc>
+          <westbc>-97.318</westbc>
+          <eastbc>-95.472</eastbc>
+          <northbc>44.291</northbc>
+          <southbc>42.465</southbc>
       </bounding>
     </spdom>
     <keywords>

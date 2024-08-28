@@ -1,0 +1,51 @@
+[
+  {
+    "enttypl": "S_BFE",
+    "enttypd": "Location and attributes for base flood elevation lines shown on the FIRM.",
+    "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+  },
+  {
+    "enttypl": "S_Fld_Haz_Ar",
+    "enttypd": "Location and attributes flood risk zones shown on the FIRM.",
+    "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+  },
+  {
+    "enttypl": "S_Fld_Haz_Ln",
+    "enttypd": "Location and attributes for boundaries of flood risk zones shown on the FIRM.",
+    "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+  },
+  {
+    "enttypl": "S_Submittal_Info",
+    "enttypd": "A spatial dataset consisting of polygons depicting the extents of the studied area.",
+    "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+  },
+  {
+    "enttypl": "S_Hydro_Reach",
+    "enttypd": "Location and attributes for lines that represent the connectivity between the subbasins and flow direction between nodes within the study area.",
+    "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+  },
+  {
+    "enttypl": "S_Nodes",
+    "enttypd": "Location and attributes of points that depict locations of computed discharges for the 10-, 4-, 2-, 1-, and 0.2-percent-annual-chance floods.",
+    "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+  },
+  {
+    "enttypl": "S_Pol_Ar",
+    "enttypd": "Location and attributes for political jurisdictions shown on the FIRM.",
+    "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+  },
+  {
+    "enttypl": "S_Profil_Basln",
+    "enttypd": "A spatial dataset consisting of lines showing the flow path used for floodplain modeling and mapping.",
+    "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+  },
+  {
+    "enttypl": "S_Subbasins",
+    "enttypd": "A spatial dataset consisting of polygons representing watershed or subwatershed areas contributing runoff to the discharge points used in the hydrologic analysis.",
+    "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+  },
+  {
+    "eaover": "The FIRM Database is made up of several data themes containing both spatial and attribute information. These data together represent the current flood risk for the subject area as identified by FEMA. The attribute tables include SFHA locations, flood zone designations, BFEs, political entities, cross-section locations, FIRM panel information, and other data related to the NFIP.",
+    "eadetcit": ["FEMA's FIRM Database Technical Reference contains a detailed description of each attribute code and a reference to other relevant information.","The following tables are included in this data set: L_Source_Cit  S_BFE  S_Fld_Haz_Ar  S_Fld_Haz_Ln  S_Submittal_Info"]
+  }
+]
