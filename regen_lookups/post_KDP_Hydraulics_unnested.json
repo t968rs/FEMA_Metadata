@@ -69,8 +69,8 @@
 "metadata/spref/horizsys/geograph/latres": false,
 "metadata/spref/horizsys/geograph/longres": false,
 "metadata/spref/horizsys/geograph/geogunit": false,
-"metadata/spref/horizsys/geodetic/horizdn": "North American Datum of 1983",
-"metadata/spref/horizsys/geodetic/ellips": "Geodetic Reference System 80",
+"metadata/spref/horizsys/geodetic/horizdn": false,
+"metadata/spref/horizsys/geodetic/ellips": false,
 "metadata/spref/horizsys/geodetic/semiaxis": false,
 "metadata/spref/horizsys/geodetic/denflat": false,
 "metadata/spref/vertdef/altsys/altdatum": "North American Vertical Datum of 1988",
@@ -118,8 +118,5 @@
 "https://www.epsg.org"
 ],
 "metadata/metainfo/metextns/metprof": "FEMA NFIP Metadata Content and Format Standard",
-"metadata/spref/horizsys/planar/gridsys/gridsysn": "State Plane Coordinate System 1983",
-"metadata/spref/horizsys/planar/gridsys/spcs/transmer/sfctrmer": "0.3048006096012192",
-"metadata/spref/horizsys/planar/planci/plance": "coordinate pair",
-"metadata/spref/horizsys/planar/planci/plandu": "US Feet"
+"metadata/spref/horizsys/planar/gridsys/gridsysn": "State Plane Coordinate System 1983"
 }

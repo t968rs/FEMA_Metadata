@@ -143,7 +143,7 @@ def consolidate_subs_trees(tree: ET.ElementTree, umbrella_tag: str, tag_bookend:
 
 
 def excel_to_df(excel_file, sheet_name=None, **kwargs):
-    df = pd.read_excel(excel_file, sheet_name)
+    df = pd.read_excel(excel_file, sheet_name, dtype={"HUC8": str})
     df = convert_timestamps_to_strings(df)
     if "dtype" in kwargs:
         df = df.astype(kwargs['dtype'])
@@ -281,7 +281,7 @@ def convert_timestamps_to_strings(df):
     return df
 
 
-def pretty_print_xml(xml_str):
+def pretty_print_xml(xml_str) -> str:
     dom = minidom.parseString(xml_str)
     return dom.toprettyxml(indent="  ")
 

@@ -147,24 +147,15 @@
         <geogunit>False</geogunit>
       </geograph>
       <geodetic>
-        <horizdn>North American Datum of 1983</horizdn>
-        <ellips>Geodetic Reference System 80</ellips>
+        <horizdn>False</horizdn>
+        <ellips>False</ellips>
         <semiaxis>False</semiaxis>
         <denflat>False</denflat>
       </geodetic>
       <planar>
         <gridsys>
           <gridsysn>State Plane Coordinate System 1983</gridsysn>
-          <spcs>
-            <transmer>
-              <sfctrmer>0.3048006096012192</sfctrmer>
-            </transmer>
-          </spcs>
         </gridsys>
-        <planci>
-          <plance>coordinate pair</plance>
-          <plandu>US Feet</plandu>
-        </planci>
       </planar>
     </horizsys>
     <vertdef>

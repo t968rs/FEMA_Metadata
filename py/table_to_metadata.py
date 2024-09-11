@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
+from pyproj import CRS
+import requests
 import json
 from pprint import pprint
 from helpers import *
@@ -15,7 +17,7 @@ def get_places_dict(df):
 
     # Step 3: Iterate through the DataFrame
     for index, row in df.iterrows():
-        hucid = row['Watershed']
+        hucid = row['HUC8'][:8]
         county = row['County'].replace(' County', '')
         fips_code = row['FIPS']
         cid = row['CID']
@@ -44,7 +46,7 @@ def get_places_dict(df):
 
 class CreateFEMAxml:
     def __init__(self):
-        self.excel_path = "../Area_1A_Purchase_Geographies_ADDS.xlsx"
+        self.excel_path = "../NE_Metadata_Tables.xlsx"
         self.lookup_folder = "../static_lookups/"
         self.author = "AtkinsRealis"
 
@@ -52,18 +54,22 @@ class CreateFEMAxml:
         self.fips_lookup = excel_to_df(self.excel_path, sheet_name="FIPS Lookup")
         self.dfirm_lookup = excel_to_df(self.excel_path, sheet_name="Purchase CID Lookup")
         self.sources_lookup = self._init_sources_lookup()
-        self.extents_lookup = excel_to_df(self.excel_path, sheet_name="HUC8_Extents")
+        self.extents_lookup_draft = excel_to_df(self.excel_path, sheet_name="HUC8_Extents_DRAFT")
+        self.extents_lookup_SPCS = excel_to_df(self.excel_path, sheet_name="HUC8_Extents_SPCS")
         self.state_fips = excel_to_df(self.excel_path, sheet_name="State_FIPS_Refs")
+        self.state_fips['FIPS'] = self.state_fips['FIPS'].astype(int)
+        self.spcs_lookup = excel_to_df(self.excel_path, sheet_name="SPCS_Zone_lookup")
+        self.state_fips_code, self.state_name = None, None
+        self._init_state_refs()
 
-        print(self.sources_lookup['SOURCE_CIT'].unique().tolist())
-        unique_dates = list(
-            set(self.sources_lookup['SRC_DATE'].dropna().unique()).union(set(
-                self.sources_lookup['PUB_DATE'].dropna().unique())))
+        print(f"Sources: \n  {self.sources_lookup['SOURCE_CIT'].unique().tolist()}")
 
     def _init_sources_lookup(self):
         self.sources_lookup = excel_to_df(self.excel_path, sheet_name="SOURCE_CIT_STATEWIDE", dtype=str)
         template_row = (self.sources_lookup.loc[self.sources_lookup['AUTHOR'] == self.author]
                         .drop(columns=['SOURCE_CIT', 'DFIRM_ID']))
+        print(f"Authors: {self.sources_lookup['AUTHOR'].unique().tolist()}")
+        print(f"Autor: {self.author}")
         dfirm_dict = self.dfirm_lookup.to_dict(orient='index')
 
         print(f"Template Row: {template_row}\n {type(template_row)}")
@@ -81,6 +87,21 @@ class CreateFEMAxml:
 
         other_rows = self.sources_lookup.loc[self.sources_lookup['AUTHOR'] != self.author]
         return pd.concat([new_rows, other_rows], ignore_index=True)
+
+    def _init_state_refs(self):
+        # Get state from FIPS codes
+        fips_unique = self.purchases_df['FIPS'].unique().tolist()
+        states_unique = list(set([str(fips)[:2] for fips in fips_unique]))
+        if len(states_unique) > 1:
+            raise ValueError(f"Multiple states found in FIPS codes: {states_unique}")
+        else:
+            self.state_fips_code = int(states_unique[0])
+        print(f"State FIPS Code: {self.state_fips_code}")
+        print(f"State FIPS: {self.state_fips['FIPS'].unique().tolist()}")
+        thistate = self.state_fips[self.state_fips['FIPS'] == self.state_fips_code]
+        print(f"State FIPS: {thistate}")
+        self.state_name = thistate['State'].values[0]
+        print(f"State {self.state_fips_code}: {self.state_name}")
 
     def create_places_sub_xml(self, inf_dict, **kwargs) -> ET.ElementTree:
         place = ET.Element("place")
@@ -119,7 +140,7 @@ class CreateFEMAxml:
 
         tree_str = ET.tostring(tree.getroot(), encoding='utf-8').decode('utf-8')
         sec_element = ET.fromstring(remove_extraneous_spacing(tree_str))
-        print(f"Section 146: {ET.tostring(sec_element, encoding='utf-8')}")
+        print(f"Section 125: {ET.tostring(sec_element, encoding='utf-8')}")
 
         tree = ET.ElementTree(sec_element)
 
@@ -127,21 +148,11 @@ class CreateFEMAxml:
 
     def create_ea_info(self, ea_list: list[dict]) -> ET.ElementTree:
         eainfo = ET.Element("eainfo")
-        overview = ET.SubElement(eainfo, 'overview')
-        for ea_dict in ea_list:
-            if "enttypl" not in ea_dict and "eaover" in ea_dict:
+        ea_list_detailed = [ea_dict for ea_dict in ea_list if "enttypl" in ea_dict]
+        ea_list_overview = [ea_dict for ea_dict in ea_list if "enttypl" not in ea_dict]
 
-                eaover = ET.SubElement(overview, 'eaover')
-                eaover.text = ea_dict['eaover'].strip()
-                print(f"EA OVER: {ea_dict['eaover']}")
-                if isinstance(ea_dict.get('eadetcit'), list):
-                    for cit in ea_dict['eadetcit']:
-                        eadetcit = ET.SubElement(overview, 'eadetcit')
-                        eadetcit.text = cit.strip()
-                else:
-                    eadetcit = ET.SubElement(eaover, 'eadetcit')
-                    eadetcit.text = ea_dict.get('eadetcit', 'False')
-            elif "enttypl" in ea_dict:
+        for i, ea_dict in enumerate(ea_list_detailed):
+            if "enttypl" in ea_dict:
                 detailed = ET.SubElement(eainfo, 'detailed')
                 enttyp = ET.SubElement(detailed, 'enttyp')
                 enttypl = ET.SubElement(enttyp, 'enttypl')
@@ -152,6 +163,19 @@ class CreateFEMAxml:
                 enttypds.text = ea_dict['enttypds']
             else:
                 raise ValueError(f"Invalid EA Info: {ea_dict}")
+        overview = ET.SubElement(eainfo, 'overview')
+        for i, ea_dict in enumerate(ea_list_overview):
+            if "enttypl" not in ea_dict and "eaover" in ea_dict:
+                eaover = ET.SubElement(overview, 'eaover')
+                eaover.text = ea_dict['eaover'].strip()
+                # print(f"EA OVER: {ea_dict['eaover']}")
+                if isinstance(ea_dict.get('eadetcit'), list):
+                    for cit in ea_dict['eadetcit']:
+                        eadetcit = ET.SubElement(overview, 'eadetcit')
+                        eadetcit.text = cit.strip()
+                else:
+                    eadetcit = ET.SubElement(overview, 'eadetcit')
+                    eadetcit.text = ea_dict.get('eadetcit', 'False')
 
         return ET.ElementTree(eainfo)
 
@@ -159,17 +183,6 @@ class CreateFEMAxml:
 
         # Create a new tree with root element "lineage"
         lineage = ET.Element("lineage")
-
-        # Get state from FIPS codes
-        state_fips = None
-        fips_unique = self.purchases_df['FIPS'].unique().tolist()
-        states_unique = list(set([str(fips)[:2] for fips in fips_unique]))
-        if len(states_unique) > 1:
-            raise ValueError(f"Multiple states found in FIPS codes: {states_unique}")
-        else:
-            state_fips = int(states_unique[0])
-        state_name = self.state_fips.loc[self.state_fips['FIPS'] == state_fips, 'State'].values[0]
-        print(f"State {state_fips}: {state_name}")
 
         unique_non_study = self.sources_lookup['SOURCE_CIT'].unique().tolist()
         unique_non_study = [s for s in unique_non_study if "STUDY" not in s]
@@ -203,7 +216,7 @@ class CreateFEMAxml:
             publish.text = "Federal Emergency Management Agency"
 
             othercit = ET.SubElement(citeinfo, 'othercit')
-            othercit.text = f"Effective FIS and FIRM from State of {state_name}"  # get from MIP purchase GEOGRAPHIES
+            othercit.text = f"Effective FIS and FIRM from State of {self.state_name}"  # get from MIP purchase GEOGRAPHIES
 
             srcscale = ET.SubElement(srcinfo, 'srcscale')
             srcscale.text = row.get('srcscale', '1:24000').split(":")[1]
@@ -258,16 +271,16 @@ class CreateFEMAxml:
         start_str = "spdom"
         # Create a new tree with root element "lineage"
         root = ET.Element(start_str)
-        this_df = self.extents_lookup.loc[self.extents_lookup[field_with_area] == area_id]
+        this_df = self.extents_lookup_draft.loc[self.extents_lookup_draft[field_with_area] == area_id]
         bounding = ET.SubElement(root, 'bounding')
         westbc = ET.SubElement(bounding, 'westbc')
-        westbc.text = str(round(this_df['westbc'].values[0], 3))
-        southbc = ET.SubElement(bounding, 'southbc')
-        southbc.text = str(round(this_df['southbc'].values[0], 3))
+        westbc.text = str(round(this_df['westbc'].values[0] - 0.01, 3))
         eastbc = ET.SubElement(bounding, 'eastbc')
-        eastbc.text = str(round(this_df['eastbc'].values[0], 3))
+        eastbc.text = str(round(this_df['eastbc'].values[0] + 0.01, 3))
         northbc = ET.SubElement(bounding, 'northbc')
-        northbc.text = str(round(this_df['northbc'].values[0], 3))
+        northbc.text = str(round(this_df['northbc'].values[0] + 0.01, 3))
+        southbc = ET.SubElement(bounding, 'southbc')
+        southbc.text = str(round(this_df['southbc'].values[0] - 0.01, 3))
 
         tree = ET.ElementTree(root)
         test_tree = ET.tostring(tree.getroot(), encoding='utf-8').decode('utf-8')
@@ -278,11 +291,167 @@ class CreateFEMAxml:
 
         return ET.ElementTree(root)
 
+    def create_spcs_refs_dict(self) -> dict:
+        unique_epsgs = self.extents_lookup_SPCS['crs'].unique().tolist()
+        print(f'\nThis state: {self.state_name}')
+        state_spcs_df = self.spcs_lookup[self.spcs_lookup["State"] == self.state_name]
+        print(f"State Rows: {state_spcs_df}")
+        horizontal_crs_lookup = {epsg: {"central_meridian": None, "latitude_of_origin": None, "easting": None,
+                                        "northing": None, "spcs_code": None, "standard_parallel": None,
+                                        "horizontal_unit": None,
+                                        "spcs_grid": None, "semi_axis": None, "denflat": None} for epsg in unique_epsgs}
+        for epsg_code in unique_epsgs:
+            # Get CRS Info
+            print(f"EPSG: {epsg_code}")
+            crs_info = CRS.from_user_input(int(epsg_code))
+            print(f' CRS Info: {crs_info}')
+            print(f' CRS Name: {crs_info.name}')
+            crs_json = crs_info.to_json_dict()
+
+            # Get SPCS Code
+            zone_name, zone_number = None, None
+            cardinal_directions = ["north", "south", "east", "west"]
+            for direction in cardinal_directions:
+                print(f" Direction: {direction}, {crs_json['name']}")
+                if direction in crs_json["name"].lower():
+                    zone_name = direction.title()
+                    break
+            if zone_name:
+                for i, row in state_spcs_df.iterrows():
+                    if zone_name.lower() in row['Zone_Name'].lower():
+                        zone_name = row['Zone_Name']
+                        if row['Zone_Number'] != 0:
+                            zone_number = row['Zone_Number']
+                        break
+                    break
+
+            if zone_name:
+                horizontal_crs_lookup[epsg_code]["spcs_code"] = \
+                    state_spcs_df.loc[state_spcs_df['Zone_Name'] == zone_name, 'SPCS_ID'].values[0]
+                if zone_number:
+                    horizontal_crs_lookup[epsg_code]["spcs_code"] += f" {zone_number}"
+                print(f"  SPCS Code: {horizontal_crs_lookup[epsg_code]['spcs_code']}")
+            else:
+                horizontal_crs_lookup[epsg_code]["spcs_code"] = (
+                    state_spcs_df.loc[state_spcs_df['State'] == self.state_name, 'SPCS_ID'].values)[0]
+
+            # Get geoid
+            if "conversion" in crs_json:
+                conversion_name = crs_json["conversion"]["name"]
+                if "spcs" in conversion_name.lower():
+                    horizontal_crs_lookup[epsg_code]["grid_sys_name"] = "State Plane Coordinate System 1983"
+                if (("us " in conversion_name.lower() or "us_" in conversion_name.lower() or
+                        "survey" in conversion_name.lower()) and
+                        ("feet" in conversion_name.lower() or "foot" in conversion_name.lower())):
+                    horizontal_crs_lookup[epsg_code]["horizontal_unit"] = "survey feet"
+                elif "feet" in conversion_name.lower() or "foot" in conversion_name.lower():
+                    horizontal_crs_lookup[epsg_code]["horizontal_unit"] = "international feet"
+                elif "meter" in conversion_name.lower():
+                    horizontal_crs_lookup[epsg_code]["horizontal_unit"] = "meters"
+                if "method" in crs_json["conversion"]:
+                    method = crs_json["conversion"]["method"]
+                    for k, v in method.items():
+                        print(f"  Method: {k}, {v}")
+                    if "lambert" in method.get("name", None).lower():
+                        horizontal_crs_lookup[epsg_code]["spcs_grid"] = "lambertc"
+            if "base_crs" in crs_json:
+                if "datum" in crs_json["base_crs"]:
+                    datum = crs_json["base_crs"]["datum"]
+                    if "ellipsoid" in datum:
+                        ellipsoid = datum["ellipsoid"]
+                        if "semi_major_axis" in ellipsoid:
+                            horizontal_crs_lookup[epsg_code]["semi_axis"] = f"{ellipsoid['semi_major_axis']}"
+                        if "inverse_flattening" in ellipsoid:
+                            horizontal_crs_lookup[epsg_code]["denflat"] = f"{ellipsoid['inverse_flattening']}"
+
+            # Get parameters list
+            parameters = crs_json['conversion']['parameters']
+            for param in parameters:
+                if "longitude" in param["name"].lower() and "false" in param["name"].lower():
+                    horizontal_crs_lookup[epsg_code]['central_meridian'] = f"{param["value"]}"
+                elif "latitude" in param["name"].lower() and "false" in param["name"].lower():
+                    horizontal_crs_lookup[epsg_code]['latitude_of_origin'] = f"{param["value"]}"
+                elif "latitude" in param["name"].lower() and "standard" in param["name"].lower():
+                    any_digits = False
+                    for c in param["name"]:
+                        if c.isdigit():
+                            any_digits = True
+                            break
+                    if any_digits:
+                        if "1" in param["name"]:
+                            horizontal_crs_lookup[epsg_code]['standard_parallel'] = f"{param["value"]}"
+                    else:
+                        horizontal_crs_lookup[epsg_code]['standard_parallel'] = f"{param["value"]}"
+                elif "easting" in param["name"].lower() and "false" in param["name"].lower():
+                    horizontal_crs_lookup[epsg_code]['easting'] = str(param["value"])
+                elif "northing" in param["name"].lower() and "false" in param["name"].lower():
+                    horizontal_crs_lookup[epsg_code]['northing'] = str(param["value"])
+            print(f"SPCS Lookup: {horizontal_crs_lookup[epsg_code]}")
+
+        return horizontal_crs_lookup
+
+    def create_spcs_xml(self, epsg_code, info_dict) -> ET.ElementTree:
+        print(f'\nEPSG: {epsg_code}, {info_dict}')
+
+        # Create a new tree with root element start_str
+        root = ET.Element("horizsys")
+        planar = ET.SubElement(root, 'planar')
+
+        # Create datum model and planar sub-elements
+        # Create planar gridsys sub-element
+        gridsys = ET.SubElement(planar, 'gridsys')
+        gridsysn = ET.SubElement(gridsys, 'gridsysn')
+        gridsysn.text = info_dict.get("grid_sys_name", "State Plane Coordinate System 1983")
+        spcs = ET.SubElement(gridsys, 'spcs')
+        spcs_zone = ET.SubElement(spcs, 'spcszone')
+        spcs_zone.text = str(info_dict.get("spcs_code", None))
+
+        # Planar Coordinate Encoding Method
+        planci = ET.SubElement(planar, 'planci')
+        plance = ET.SubElement(planci, 'plance')
+        plance.text = "coordinate pair"
+        coordrep = ET.SubElement(planci, 'coordrep')
+        absres = ET.SubElement(coordrep, 'absres')
+        absres.text = "0.0025"
+        ordres = ET.SubElement(coordrep, 'ordres')
+        ordres.text = "0.0025"
+        plandu = ET.SubElement(planci, 'plandu')
+        plandu.text = info_dict.get("horizontal_unit", "survey feet")
+
+        spcs_grid_elem = ET.SubElement(spcs, info_dict.get("spcs_grid", "lambertc"))
+        # Create geodetic model sub-element
+        geodetic = ET.SubElement(root, 'geodetic')
+        horizdn = ET.SubElement(geodetic, 'horizdn')
+        horizdn.text = "North American Datum of 1983"
+        ellips = ET.SubElement(geodetic, 'ellips')
+        ellips.text = "Geodetic Reference System 80"
+        semiaxis = ET.SubElement(geodetic, 'semiaxis')
+        semiaxis.text = info_dict.get("semi_axis", None)
+        denflat = ET.SubElement(geodetic, 'denflat')
+        denflat.text = info_dict.get("denflat", None)
+
+        # Add specific SPCS elements
+        stdparll = ET.SubElement(spcs_grid_elem, 'stdparll')
+        stdparll.text = info_dict.get("standard_parallel", None)
+        longcm = ET.SubElement(spcs_grid_elem, 'longcm')
+        longcm.text = info_dict["central_meridian"]
+        latprjo = ET.SubElement(spcs_grid_elem, 'latprjo')
+        latprjo.text = info_dict["latitude_of_origin"]
+
+        feast = ET.SubElement(spcs_grid_elem, 'feast')
+        feast.text = info_dict["easting"]
+        fnorth = ET.SubElement(spcs_grid_elem, 'fnorth')
+        fnorth.text = info_dict["northing"]
+
+        tree_str = pretty_print_xml(ET.tostring(root, encoding='utf-8').decode('utf-8'))
+        print(f"Section 398: {tree_str}")
+        return ET.ElementTree(ET.fromstring(tree_str))
+
     def create_fema_metadata(self):
         w_dict = get_places_dict(self.purchases_df)
         #
         for watershed, details in w_dict.items():
-
+            print(f"\nWatershed: {watershed}")
             ea_path = f"{self.lookup_folder}EA_Info.json"
             with open(ea_path, "r") as ea:
                 ea_list = json.load(ea)
@@ -307,6 +476,7 @@ class CreateFEMAxml:
 
             matching_rows = self.dfirm_lookup.loc[self.dfirm_lookup['HUC8'] == watershed]
             if matching_rows.empty:
+                print(f"\nNo matching rows for {watershed}")
                 continue
             DFIRM_ID = matching_rows['DFIRM_ID'].values[0]
             SOURCE_CIT = matching_rows['SOURCE_CIT'].values[0]
@@ -322,17 +492,26 @@ class CreateFEMAxml:
 
             sources_tree = self.create_sources_xml(**{"DFIRM ID": DFIRM_ID,
                                                       "SOURCE_CIT": SOURCE_CIT})
-
-            extents_tree = self.create_extents_xml(watershed, "HUC8")
-            out_folder = "../extents/"
-            os.makedirs(out_folder, exist_ok=True)
-            output_file = f"{out_folder}{DFIRM_ID}_EXTENTS.xml"
-            write_xml(extents_tree, output_file)
-
             out_folder = "../source_cit/"
             os.makedirs(out_folder, exist_ok=True)
             output_file = f"{out_folder}{DFIRM_ID}_SOURCE_CIT.xml"
             write_xml(sources_tree, output_file)
+
+            # Extents
+            out_folder = "../extents/"
+            os.makedirs(out_folder, exist_ok=True)
+            extents_tree = self.create_extents_xml(watershed, "HUC8")
+            output_file = f"{out_folder}{DFIRM_ID}_EXTENTS.xml"
+            write_xml(extents_tree, output_file)
+
+            # SPCS
+            spcs_lookup = self.create_spcs_refs_dict()
+            for epsg, info_dict in spcs_lookup.items():
+                spcs_tree = self.create_spcs_xml(epsg, info_dict)
+                out_folder = "../spcs/"
+                os.makedirs(out_folder, exist_ok=True)
+                output_file = f"{out_folder}{epsg}_SPCS.xml"
+                write_xml(spcs_tree, output_file)
 
 
 if __name__ == "__main__":

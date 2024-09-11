@@ -15,6 +15,11 @@
     "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
   },
   {
+      "enttypl": "S_Gen_Struct",
+      "enttypd": "A spatial dataset consisting of lines that depict the location of flood control structures shown on the flood profile and FIRM.",
+      "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+  },
+  {
     "enttypl": "S_Submittal_Info",
     "enttypd": "A spatial dataset consisting of polygons depicting the extents of the studied area.",
     "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
@@ -42,6 +47,11 @@
   {
     "enttypl": "S_Subbasins",
     "enttypd": "A spatial dataset consisting of polygons representing watershed or subwatershed areas contributing runoff to the discharge points used in the hydrologic analysis.",
+    "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+  },
+  {
+    "enttypl": "S_Wtr_Ln",
+    "enttypd": "Location and attributes for hydrography features shown on the FIRM.",
     "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
   },
   {

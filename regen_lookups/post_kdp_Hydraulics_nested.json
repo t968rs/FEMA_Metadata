@@ -149,23 +149,14 @@
                "geogunit": false
             },
             "geodetic": {
-               "horizdn": "North American Datum of 1983",
-               "ellips": "Geodetic Reference System 80",
+               "horizdn": false,
+               "ellips": false,
                "semiaxis": false,
                "denflat": false
             },
             "planar": {
                "gridsys": {
-                  "gridsysn": "State Plane Coordinate System 1983",
-                  "spcs": {
-                     "transmer": {
-                        "sfctrmer": "0.3048006096012192"
-                     }
-                  }
-               },
-               "planci": {
-                  "plance": "coordinate pair",
-                  "plandu": "US Feet"
+                  "gridsysn": "State Plane Coordinate System 1983"
                }
             }
          },

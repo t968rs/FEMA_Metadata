@@ -7,7 +7,7 @@
         <pubdate>False</pubdate>
         <title>False</title>
         <edition>False</edition>
-        <geoform>FEMA-DCS-Hydraulics</geoform>
+        <geoform>FEMA-FIRM-Floodplain</geoform>
         <pubinfo>
           <pubplace>Washington, DC</pubplace>
           <publish>Federal Emergency Management Agency</publish>
@@ -93,10 +93,10 @@
   </idinfo>
   <dataqual>
     <attracc>
-      <attraccr>Hydraulic analysis uses all valid existing flood elevation, survey, hydrologic analysis results, and other pertinent information for the study area. FEMA approved models are used to compute water surface elevations for required flood events. Computed water surface elevations and topographic data are used to delineate flood hazard boundaries. Roughness coefficients are carefully selected to represent the conditions along stream beds and banks. Hydraulics Data Capture submittals match the model output with respect to floodplain boundaries, cross sections, and water surface elevations and their precision. Floodplain boundaries and cross sections are not cartographically modified, and the data may not necessarily agree exactly with the published regulatory FIRM, FIRM Database, flood profiles, and Floodway Data Tables.</attraccr>
+      <attraccr>The FIRM Database consists of vector files and associated attributes produced in conjunction with the hard copy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMAâ€™s requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Attribute accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM Database was also performed.</attraccr>
     </attracc>
     <logic>When FEMA revises an FIS, adjacent studies are checked to ensure agreement between flood elevations at the boundaries. Likewise, flood elevations at the confluence of streams studied independently are checked to ensure agreement at the confluence. The FIRM and the FIS are developed together and care is taken to ensure that the elevations and other features shown on the flood profiles in the FIS agree with the information shown on the FIRM. However, the elevations as shown on the FIRM may represent rounded whole-foot elevations. They must be shown so that a profile recreated from the elevations on the FIRM will match the FIS profiles within one half of one foot.</logic>
-    <complete>Hydraulic analysis provides water surface elevations at different locations along the stream and for different flooding events. Hydraulic submittal includes key physical data used in the process, model parameters and model output. Data developed in surveying and hydrologic analysis are incorporated in hydraulic analysis. Results of hydraulic analysis are used to map Special Flood Hazard Area (SFHA) boundaries. Selection of model parameters (e.g., roughness coefficients, expansion and contraction coefficients, etc) is supported by additional information (e.g., landuse, aerial photo, etc). Model boundary conditions are carefully selected and justified. Modeled velocities are checked for potential erosion.</complete>
+    <complete>Data contained in the Floodplain Mapping and Redelineation files reflect the content of the source materials. Features may have been eliminated or generalized on the source graphic, due to scale and legibility constraints. With new mapping, FEMA plans to maintain full detail in the spatial data it produces. However, older information is often transferred from existing maps where some generalization has taken place. Flood risk data are developed for communities participating in the NFIP for use in insurance rating and for floodplain management. Flood hazard areas are determined using statistical analyses of records of river flow, storm tides, and rainfall; information obtained through consultation with the communities; floodplain topographic surveys; and hydrologic and hydraulic analysis. Generally, regulatory water surface elevations andor regulatory floodways are published only for developed or developing areas of communities. For areas where little or no development is expected to occur, FEMA may generate flood risk data without published water surface elevations. Typically, only drainage areas that are greater than one square mile and with an average of one foot of flood depth or greater are studied.</complete>
     <posacc>
       <horizpa>
         <horizpar>The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FIS and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Horizontal accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM Database was also performed.</horizpar>
@@ -155,16 +155,7 @@
       <planar>
         <gridsys>
           <gridsysn>State Plane Coordinate System 1983</gridsysn>
-          <spcs>
-            <transmer>
-              <sfctrmer>0.3048006096012192</sfctrmer>
-            </transmer>
-          </spcs>
         </gridsys>
-        <planci>
-          <plance>coordinate pair</plance>
-          <plandu>US Feet</plandu>
-        </planci>
       </planar>
     </horizsys>
     <vertdef>

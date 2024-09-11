@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <spdom>
   <bounding>
-    <westbc>-93.228</westbc>
-    <southbc>42.602</southbc>
-    <eastbc>-92.283</eastbc>
-    <northbc>43.5</northbc>
+    <westbc>-93.238</westbc>
+    <eastbc>-92.273</eastbc>
+    <northbc>43.51</northbc>
+    <southbc>42.592</southbc>
   </bounding>
 </spdom>

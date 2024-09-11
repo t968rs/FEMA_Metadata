@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<horizsys>
+  <planar>
+    <gridsys>
+      <gridsysn>State Plane Coordinate System 1983</gridsysn>
+      <spcs>
+        <spcszone>1401</spcszone>
+        <lambertc>
+          <stdparll>43.2666666666667</stdparll>
+          <longcm>-93.5</longcm>
+          <latprjo>41.5</latprjo>
+          <feast>4921250</feast>
+          <fnorth>3280833.3333</fnorth>
+        </lambertc>
+      </spcs>
+    </gridsys>
+    <planci>
+      <plance>coordinate pair</plance>
+      <coordrep>
+        <absres>0.0025</absres>
+        <ordres>0.0025</ordres>
+      </coordrep>
+      <plandu>survey feet</plandu>
+    </planci>
+  </planar>
+  <geodetic>
+    <horizdn>North American Datum of 1983</horizdn>
+    <ellips>Geodetic Reference System 80</ellips>
+    <semiaxis>6378137</semiaxis>
+    <denflat>298.257222101</denflat>
+  </geodetic>
+</horizsys>

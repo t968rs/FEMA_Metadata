@@ -6,10 +6,6 @@
   <placekey>FEMA-CID MK20IA</placekey>
   <placekey>COUNTY BUCHANAN</placekey>
   <placekey>COUNTY-FIPS 19019</placekey>
-  <placekey>COUNTY CLINTON</placekey>
-  <placekey>COUNTY-FIPS 19045</placekey>
-  <placekey>COUNTY DELAWARE</placekey>
-  <placekey>COUNTY-FIPS 19055</placekey>
   <placekey>COUNTY JONES</placekey>
   <placekey>COUNTY-FIPS 19105</placekey>
   <placekey>COUNTY DUBUQUE</placekey>
@@ -18,10 +14,14 @@
   <placekey>COUNTY-FIPS 19065</placekey>
   <placekey>COUNTY LINN</placekey>
   <placekey>COUNTY-FIPS 19113</placekey>
+  <placekey>COUNTY DELAWARE</placekey>
+  <placekey>COUNTY-FIPS 19055</placekey>
   <placekey>COUNTY CLAYTON</placekey>
   <placekey>COUNTY-FIPS 19043</placekey>
   <placekey>COUNTY JACKSON</placekey>
   <placekey>COUNTY-FIPS 19097</placekey>
+  <placekey>COUNTY CLINTON</placekey>
+  <placekey>COUNTY-FIPS 19045</placekey>
   <placekey>COMMUNITY LAMONT, CITY OF</placekey>
   <placekey>COMMUNITY AURORA, CITY OF</placekey>
   <placekey>BUCHANAN COUNTY UNINCORPORATED AREAS</placekey>

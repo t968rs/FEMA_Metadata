@@ -55,7 +55,8 @@
           <themekey>structure</themekey>
           <themekey>transportation</themekey>
           <themekey>elevation</themekey>
-
+      </theme>
+      <theme>
         <themekt>FEMA NFIP Topic Category</themekt>
           <themekey>FIRM</themekey>
           <themekey>FEMA Flood Hazard Zone</themekey>
@@ -268,9 +269,10 @@
     </metc>
     <metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
     <metstdv>FGDC-STD-001-1998</metstdv>
-    <metextns>
-      <onlink>['https://www.epsg.org', 'https://www.epsg.org']</onlink>
-      <metprof>FEMA NFIP Metadata Content and Format Standard</metprof>
-    </metextns>
+        <metextns>
+            <onlink>https://hazards.fema.gov</onlink>
+            <onlink>https://www.epsg.org</onlink>
+            <metprof>FEMA NFIP Metadata Content and Format Standard</metprof>
+        </metextns>
   </metainfo>
 </metadata>

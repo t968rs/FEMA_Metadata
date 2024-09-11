@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<lineage>
+  <srcinfo>
+    <srccite>
+      <citeinfo>
+        <origin>AtkinsRealis</origin>
+        <pubdate>20240531</pubdate>
+        <title>Salt 2D BLE</title>
+        <geoform>map</geoform>
+        <pubinfo>
+          <pubplace>Calverton, MD</pubplace>
+          <publish>Federal Emergency Management Agency</publish>
+        </pubinfo>
+        <othercit>Effective FIS and FIRM from State of Nebraska</othercit>
+      </citeinfo>
+    </srccite>
+    <srcscale>24000</srcscale>
+    <typesrc>Digital</typesrc>
+    <srctime>
+      <timeinfo>
+        <sngdate>
+          <caldate>20240531</caldate>
+        </sngdate>
+      </timeinfo>
+      <srccurr>Publication</srccurr>
+    </srctime>
+    <srccitea>STUDY13</srccitea>
+    <srccontr>S_BFE, S_FLD_HAZ_AR, S_FLD_HAZ_LN, S_Subbasins, S_Submittal_Info, S_WTR_LN</srccontr>
+  </srcinfo>
+  <srcinfo>
+    <srccite>
+      <citeinfo>
+        <origin>AtkinsRealis</origin>
+        <pubdate>20230101</pubdate>
+        <title>Spillway Locations</title>
+        <geoform>map</geoform>
+        <pubinfo>
+          <pubplace>Calverton, MD</pubplace>
+          <publish>Federal Emergency Management Agency</publish>
+        </pubinfo>
+        <othercit>Effective FIS and FIRM from State of Nebraska</othercit>
+      </citeinfo>
+    </srccite>
+    <srcscale>24000</srcscale>
+    <typesrc>Disk</typesrc>
+    <srctime>
+      <timeinfo>
+        <sngdate>
+          <caldate>20230101</caldate>
+        </sngdate>
+      </timeinfo>
+      <srccurr>Publication</srccurr>
+    </srctime>
+    <srccitea>BASE2</srccitea>
+    <srccontr>Spillway Locations for floodplain mapping</srccontr>
+  </srcinfo>
+  <srcinfo>
+    <srccite>
+      <citeinfo>
+        <origin>Nebraska Department of Natural Resources</origin>
+        <pubdate>20220111</pubdate>
+        <title>Nebraska Department of Natural Resources Digital Elevation Model</title>
+        <geoform>map</geoform>
+        <pubinfo>
+          <pubplace>Nebraska DNR</pubplace>
+          <publish>Federal Emergency Management Agency</publish>
+        </pubinfo>
+        <othercit>Effective FIS and FIRM from State of Nebraska</othercit>
+      </citeinfo>
+    </srccite>
+    <srcscale>24000</srcscale>
+    <typesrc>Digital</typesrc>
+    <srctime>
+      <timeinfo>
+        <sngdate>
+          <caldate>20220111</caldate>
+        </sngdate>
+      </timeinfo>
+      <srccurr>Publication</srccurr>
+    </srctime>
+    <srccitea>TOPO1</srccitea>
+    <srccontr>Terrain Data to model flood risk</srccontr>
+  </srcinfo>
+  <procstep>
+    <procdesc>The FIRM Database is compiled in conjunction with the hardcopy FIRM and the final FIS report. The specifics of the hydrologic and hydraulic analyses performed are detailed in the FIS report. The results of these studies are submitted in digital format to FEMA. These data and unrevised data from effective FIRMs are compiled onto the base map used for FIRM publication and checked for accuracy and compliance with FEMA standards.</procdesc>
+    <procdate>20240531</procdate>
+  </procstep>
+</lineage>
