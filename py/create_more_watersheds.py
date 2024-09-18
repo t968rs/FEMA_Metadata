@@ -241,12 +241,17 @@ def open_df_and_populate_xml(excel_path, xml_path, output_loc):
         else:
             outsubfolder = f"{outfolder}{w_dict["DFIRM_ID"]}/"
             os.makedirs(outsubfolder, exist_ok=True)
-            first_cid = mip_purchase_geos.loc[mip_purchase_geos['HUC8'] == huc_code, 'CID'].values[0]
-            print(f"DFIRM, CID: {w_dict['DFIRM_ID']}, {first_cid}")
+            all_cid = mip_purchase_geos.loc[mip_purchase_geos['HUC8'] == huc_code, 'CID'].values
+            first_cid = all_cid[0]
+            if w_dict["DFIRM_ID"] in all_cid:
+                this_cid = w_dict["DFIRM_ID"]
+            else:
+                this_cid = first_cid
+            print(f"DFIRM, CID: {w_dict['DFIRM_ID']}, {this_cid}")
             if w_dict["DFIRM_ID"] not in dfirm_cid_relationship:
-                dfirm_cid_relationship[w_dict["DFIRM_ID"]] = first_cid
+                dfirm_cid_relationship[w_dict["DFIRM_ID"]] = this_cid
 
-            outxml = f"{outsubfolder}{first_cid}_{type_stage}_metadata.xml"
+            outxml = f"{outsubfolder}{this_cid}_{type_stage}_metadata.xml"
         write_xml(new_tree, outxml)
         print(f" Saved {outxml}")
 
@@ -256,7 +261,9 @@ def open_df_and_populate_xml(excel_path, xml_path, output_loc):
         print(f"Dict CIDs: {dfirm_cid_relationship}")
         df_cid_dfirm = pd.DataFrame.from_dict(dfirm_cid_relationship, orient='index', columns=["CID"])
         print(f"DF: {df_cid_dfirm}")
-        df_cid_dfirm.to_excel(f"../{output_loc}/{type_stage}/CID_DFIRM_relationships.xlsx",
+        outfolder = f"{output_loc}{type_stage}/"
+        os.makedirs(outfolder, exist_ok=True)
+        df_cid_dfirm.to_excel(f"{outfolder}CID_DFIRM_relationships.xlsx",
                               columns=["CID"], index_label="DFIRM_ID")
 
 

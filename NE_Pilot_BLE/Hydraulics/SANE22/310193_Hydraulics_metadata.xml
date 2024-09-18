@@ -4,7 +4,7 @@
     <citation>
       <citeinfo>
         <origin>AtkinsRealis</origin>
-        <pubdate>20240531</pubdate>
+        <pubdate>5/31/2024</pubdate>
         <title>Salt HUC, NE FY20/22 DISC-BLE</title>
         <edition>2.8.5.6</edition>
         <geoform>FEMA-DCS-Hydraulics</geoform>
@@ -16,7 +16,7 @@
         <lworkcit>
           <citeinfo>
             <origin>Federal Emergency Management Agency</origin>
-            <pubdate>20240531</pubdate>
+            <pubdate>5/31/2024</pubdate>
             <title>FEMA CASE 21-07-0013S</title>
           </citeinfo>
         </lworkcit>
@@ -29,7 +29,7 @@
     <timeperd>
       <timeinfo>
         <sngdate>
-          <caldate>20240531</caldate>
+          <caldate>5/31/2024</caldate>
         </sngdate>
       </timeinfo>
       <current>MIP Submission Date</current>
@@ -75,18 +75,18 @@
         <placekey>REGION 07</placekey>
         <placekey>STATE IA</placekey>
         <placekey>FEMA-CID SANE22</placekey>
-        <placekey>COUNTY BUTLER</placekey>
-        <placekey>COUNTY-FIPS 23</placekey>
-        <placekey>COUNTY CASS</placekey>
-        <placekey>COUNTY-FIPS 25</placekey>
         <placekey>COUNTY SALINE</placekey>
         <placekey>COUNTY-FIPS 151</placekey>
-        <placekey>COUNTY SAUNDERS</placekey>
-        <placekey>COUNTY-FIPS 155</placekey>
+        <placekey>COUNTY CASS</placekey>
+        <placekey>COUNTY-FIPS 25</placekey>
         <placekey>COUNTY GAGE</placekey>
         <placekey>COUNTY-FIPS 67</placekey>
+        <placekey>COUNTY SAUNDERS</placekey>
+        <placekey>COUNTY-FIPS 155</placekey>
         <placekey>COUNTY LANCASTER</placekey>
         <placekey>COUNTY-FIPS 109</placekey>
+        <placekey>COUNTY BUTLER</placekey>
+        <placekey>COUNTY-FIPS 23</placekey>
         <placekey>COUNTY SEWARD</placekey>
         <placekey>COUNTY-FIPS 159</placekey>
         <placekey>COMMUNITY VILLAGE OF ALVO, CITY OF</placekey>
@@ -196,7 +196,7 @@
     <crossref>
       <citeinfo>
         <origin>AtkinsRealis</origin>
-        <pubdate>20240531</pubdate>
+        <pubdate>5/31/2024</pubdate>
         <title>Salt HUC, NE FY20/22 DISC-BLE</title>
         <geoform>map</geoform>
         <pubinfo>
@@ -252,6 +252,33 @@
       <srcinfo>
         <srccite>
           <citeinfo>
+            <origin>AtkinsRealis</origin>
+            <pubdate>20230101</pubdate>
+            <title>Spillway Locations</title>
+            <geoform>map</geoform>
+            <pubinfo>
+              <pubplace>Calverton, MD</pubplace>
+              <publish>Federal Emergency Management Agency</publish>
+            </pubinfo>
+            <othercit>Effective FIS and FIRM from State of Nebraska</othercit>
+          </citeinfo>
+        </srccite>
+        <srcscale>24000</srcscale>
+        <typesrc>Disk</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20230101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>Publication</srccurr>
+        </srctime>
+        <srccitea>STUDY14</srccitea>
+        <srccontr>Spillway Locations for floodplain mapping</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
             <origin>Nebraska Department of Natural Resources</origin>
             <pubdate>20220111</pubdate>
             <title>Nebraska Department of Natural Resources Digital Elevation Model</title>
@@ -278,7 +305,7 @@
       </srcinfo>
       <procstep>
         <procdesc>The FIRM Database is compiled in conjunction with the hardcopy FIRM and the final FIS report. The specifics of the hydrologic and hydraulic analyses performed are detailed in the FIS report. The results of these studies are submitted in digital format to FEMA. These data and unrevised data from effective FIRMs are compiled onto the base map used for FIRM publication and checked for accuracy and compliance with FEMA standards.</procdesc>
-        <procdate>20240531</procdate>
+        <procdate>5/31/2024</procdate>
       </procstep>
     </lineage>
   </dataqual>
@@ -446,7 +473,7 @@
     </stdorder>
   </distinfo>
   <metainfo>
-    <metd>20240531</metd>
+    <metd>5/31/2024</metd>
     <metc>
       <cntinfo>
         <cntperp>

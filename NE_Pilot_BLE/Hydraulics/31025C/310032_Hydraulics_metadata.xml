@@ -4,7 +4,7 @@
     <citation>
       <citeinfo>
         <origin>AtkinsRealis</origin>
-        <pubdate>20240531</pubdate>
+        <pubdate>5/31/2024</pubdate>
         <title>Keg-Weeping Water HUC, NE FY20/22 DISC-BLE</title>
         <edition>2.8.5.6</edition>
         <geoform>FEMA-DCS-Hydraulics</geoform>
@@ -16,7 +16,7 @@
         <lworkcit>
           <citeinfo>
             <origin>Federal Emergency Management Agency</origin>
-            <pubdate>20240531</pubdate>
+            <pubdate>5/31/2024</pubdate>
             <title>FEMA CASE 21-07-0011S</title>
           </citeinfo>
         </lworkcit>
@@ -29,7 +29,7 @@
     <timeperd>
       <timeinfo>
         <sngdate>
-          <caldate>20240531</caldate>
+          <caldate>5/31/2024</caldate>
         </sngdate>
       </timeinfo>
       <current>MIP Submission Date</current>
@@ -75,14 +75,14 @@
         <placekey>REGION 07</placekey>
         <placekey>STATE IA</placekey>
         <placekey>FEMA-CID 31025C</placekey>
-        <placekey>COUNTY SARPY</placekey>
-        <placekey>COUNTY-FIPS 153</placekey>
-        <placekey>COUNTY CASS</placekey>
-        <placekey>COUNTY-FIPS 25</placekey>
-        <placekey>COUNTY OTOE</placekey>
-        <placekey>COUNTY-FIPS 131</placekey>
         <placekey>COUNTY NEMAHA</placekey>
         <placekey>COUNTY-FIPS 127</placekey>
+        <placekey>COUNTY CASS</placekey>
+        <placekey>COUNTY-FIPS 25</placekey>
+        <placekey>COUNTY SARPY</placekey>
+        <placekey>COUNTY-FIPS 153</placekey>
+        <placekey>COUNTY OTOE</placekey>
+        <placekey>COUNTY-FIPS 131</placekey>
         <placekey>COMMUNITY VILLAGE OF NEHAWKA, CITY OF</placekey>
         <placekey>COMMUNITY PLATTSMOUTH, CITY OF</placekey>
         <placekey>COMMUNITY VILLAGE OF UNION, CITY OF</placekey>
@@ -138,7 +138,7 @@
     <crossref>
       <citeinfo>
         <origin>AtkinsRealis</origin>
-        <pubdate>20240531</pubdate>
+        <pubdate>5/31/2024</pubdate>
         <title>Keg-Weeping Water HUC, NE FY20/22 DISC-BLE</title>
         <geoform>map</geoform>
         <pubinfo>
@@ -190,6 +190,33 @@
         </srctime>
         <srccitea>STUDY13</srccitea>
         <srccontr>S_BFE, S_FLD_HAZ_AR, S_FLD_HAZ_LN, S_Subbasins, S_Submittal_Info, S_WTR_LN</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>AtkinsRealis</origin>
+            <pubdate>20230101</pubdate>
+            <title>Spillway Locations</title>
+            <geoform>map</geoform>
+            <pubinfo>
+              <pubplace>Calverton, MD</pubplace>
+              <publish>Federal Emergency Management Agency</publish>
+            </pubinfo>
+            <othercit>Effective FIS and FIRM from State of Nebraska</othercit>
+          </citeinfo>
+        </srccite>
+        <srcscale>24000</srcscale>
+        <typesrc>Disk</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20230101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>Publication</srccurr>
+        </srctime>
+        <srccitea>BASE2</srccitea>
+        <srccontr>Spillway Locations for floodplain mapping</srccontr>
       </srcinfo>
       <srcinfo>
         <srccite>
@@ -388,7 +415,7 @@
     </stdorder>
   </distinfo>
   <metainfo>
-    <metd>20240531</metd>
+    <metd>5/31/2024</metd>
     <metc>
       <cntinfo>
         <cntperp>
