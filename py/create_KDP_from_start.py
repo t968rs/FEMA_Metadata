@@ -85,7 +85,7 @@ def merge_dicts(dict1, dict2):
     return new_dict
 
 
-tag_tf = json_to_dict("../regen_lookups/TAGS_TF_DRAFT_metadata.json")
+tag_tf = json_to_dict("../regen_lookups/TAGS_TF_Terrain_metadata.json")
 start_dict = json_to_dict("../static_lookups/xml_start_dict.json")
 order_lookup = create_key_order_lookup(tag_tf)
 with open(f"../regen_lookups/ORDER_unnested.json", "w") as f:
@@ -98,4 +98,4 @@ for stage, stage_dict in stage_dicts.items():
     order_lookup = create_key_order_lookup(start_dict)
     # pprint(post_kdp_dict)
     with open(f"../regen_lookups/post_KDP_{stage}_unnested.json", "w") as f:
-        json.dump(post_kdp_dict, f, indent=0)
+        json.dump(post_kdp_dict, f, indent=2)

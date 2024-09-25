@@ -6,7 +6,7 @@
 "metadata/idinfo/citation/citeinfo/geoform": false,
 "metadata/idinfo/citation/citeinfo/pubinfo/pubplace": "Washington, DC",
 "metadata/idinfo/citation/citeinfo/pubinfo/publish": "Federal Emergency Management Agency",
-"metadata/idinfo/citation/citeinfo/onlink": "https://msc.fema.gov",
+"metadata/idinfo/citation/citeinfo/onlink": false,
 "metadata/idinfo/citation/citeinfo/lworkcit/citeinfo/origin": "Federal Emergency Management Agency",
 "metadata/idinfo/citation/citeinfo/lworkcit/citeinfo/pubdate": false,
 "metadata/idinfo/citation/citeinfo/lworkcit/citeinfo/title": false,
@@ -107,6 +107,6 @@
 "metadata/metainfo/metc/cntinfo/cntemail": "fema-riskmap-ithelp@fema.dhs.gov",
 "metadata/metainfo/metstdn": "FGDC Content Standards for Digital Geospatial Metadata",
 "metadata/metainfo/metstdv": "FGDC-STD-001-1998",
-"metadata/metainfo/metextns/onlink": ["https://www.epsg.org", "https://www.epsg.org"],
+"metadata/metainfo/metextns/onlink": ["https://hazards.fema.gov", "https://www.epsg.org"],
 "metadata/metainfo/metextns/metprof": "FEMA NFIP Metadata Content and Format Standard"
 }

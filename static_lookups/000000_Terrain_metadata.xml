@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Flood County GIS Department</origin>
+        <pubdate>20211101</pubdate>
+        <title>Terrain Data Capture Submission for FLOOD COUNTY, USA</title>
+	<edition>Version 2.6.5.6</edition>
+        <geoform>FEMA-Terrain-Capture</geoform>
+        <pubinfo>
+          <pubplace>Washington, DC</pubplace>
+          <publish>Federal Emergency Management Agency</publish>
+        </pubinfo>
+        <onlink>https://hazards.fema.gov</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>Federal Emergency Management Agency</origin>
+            <pubdate>Unknown</pubdate>
+            <title>FEMA CASE 00-00-0000S</title>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Elevation data, as defined in FEMA's Guidelines and Standards for Flood Risk Analysis and Mapping, describe the digital topographic data that were used to create the data representing the terrain environment of a watershed and/or floodplain. Elevation data requirements allow for flexibility in the types of information used to produce final levation deliverables. Submission of the terrain data sources allows FEMA to account for the origins of the flood study terrain data. (Source: FEMA Guidelines and Standards for Flood Risk Analysis and Mapping.)</abstract>
+      <purpose>Elevation data are used to represent the topography of a watershed and/or floodplain environment and to extract useful information for hydraulic and hydrologic models. (Source: FEMA Guidelines and Standards for Flood Risk Analysis and Mapping)</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>20211101</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>MIP Submission Date</current>
+    </timeperd>
+    <status>
+      <progress>In work</progress>
+      <update>Unknown</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-75.8781</westbc>
+        <eastbc>-75.2487</eastbc>
+        <northbc>39.378</northbc>
+        <southbc>38.7478</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>elevation</themekey>
+      </theme>
+      <theme>
+        <themekt>FEMA NFIP Topic Category</themekt>
+        <themekey>Land Surface</themekey>
+        <themekey>Relief</themekey>
+        <themekey>Topography</themekey>
+        <themekey>Digital Elevation Model</themekey>
+        <themekey>Elevation Data</themekey>
+        <themekey>Slope</themekey>
+        <themekey>LiDAR</themekey>
+        <themekey>Breaklines</themekey>
+        <themekey>Contours</themekey>
+        <themekey>DEM</themekey>
+        <themekey>Flow Vectors</themekey>
+        <themekey>Bare Earth</themekey>
+        <themekey>TIN</themekey>
+        <themekey>Triangulated Irregular Network</themekey>
+        <themekey>Hydro Enforced DEM</themekey>
+      </theme>
+      <place>
+        <placekt>None</placekt>
+        <placekey>REGION 00</placekey>
+        <placekey>STATE ss</placekey>
+        <placekey>COUNTY name</placekey>
+        <placekey>COUNTY-FIPS 0000</placekey>
+        <placekey>COMMUNITY name</placekey>
+        <placekey>FEMA-CID 000000</placekey>
+        <placekey>HYDROLOGIC UNIT 00000000</placekey>
+      </place>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>Acknowledgement of FEMA would be appreciated in products derived from these data.  These digital data are produced for the purposes of updating/creating a FIRM Database and/or Flood Risk Products.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Federal Emergency Management Agency</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing</addrtype>
+          <address>500 C Street, S.W.</address>
+          <city>Washington</city>
+          <state>District of Columbia</state>
+          <postal>20472</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>1-877-336-2627</cntvoice>
+        <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <native>Original data development environment may vary.  The classification and quality control (QC) of LiDAR data is carried out using  TerraScan software v. 020.002 by Terrasolid Limited of Helinski, Finland. The tiling and final LAS file creation was performed using GeoCue software from GeoCue Corporation of Madison, Alabama, USA. Derivative product generation is done using Esri's ArcGIS software.</native>
+
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>(Modify as necessary) Ground classification routines are used to remove any non-ground points and generate an accurate ground surface. Non-ground points include edge of flight line points which may be geometrically un-usable.  These points are identified with the withheld bit and excluded from the automated ground routine.  The ground routine consists of three main parameters (building size, iteration angle, and iteration distance); by adjusting these parameters and running several iterations of this routine an initial ground surface is developed. The building size parameter sets a roaming window size. Each tile is loaded with neighboring points from adjacent tiles and the routine classifies the data section by section based on this roaming window size. The second most important parameter is the maximum terrain angle, which sets the highest allowed terrain angle within the model. As part of the ground routine, low noise points are classified to class 7 and high noise points are classified to class 18.  Once the ground routine has been completed a manual quality control routine is done using hillshades, cross-sections, and profiles. During the full review of the ground, bridge decks are identified and classified to class 17.  After the initial QC steps, a peer review and supervisor manual inspection is completed on a percentage of the classified tiles based on the project size and variability of the terrain. After the ground classification corrections are completed, the dataset is processed through a water classification routine that utilizes breaklines compiled for the project to automatically classify hydrographic features.  The water classification routine selects ground points within the breakline polygons and automatically classifies them as class 9, water. During this water classification routine, points which are in close proximity (1*NPS ) to the hydrographic features are moved to class 10, ignored ground. Overage points are then identified with the overlap bit.  The fully classified dataset is then processed through a comprehensive quality control program.
+
+The data are classified as follows:
+Class 1 = Unclassified.  This class includes vegetation, buildings, noise etc.
+Class 2 = Ground
+Class 7 = Low Noise
+Class 9 = Water
+Class 10 = Ignored Ground
+Class 17 = Bridge Decks
+Class 18 = High Noise
+
+3D breakline elevation attributes derived from a bare earth lidar terrain are applied to bridges and water features (streams and rivers, lakes and ponds, and tidal areas).  
+</attraccr>
+    </attracc>
+
+    <logic>Checks were performed to ensure the data files can be opened, are georeferenced properly, and cover the geographic area completely. Additionally, field survey checkpoints are obtained to evaluate the accuracy of LiDAR products. As specified in the American Society for Photogrammetry and Remote Sensing (ASPRS) Positional Accuracy Standards for Digital Geospatial Data, checkpoints in vegetated and non-vegetated areas are tested in a project area. A statistical analysis between the difference in elevations of the field survey checkpoints and LiDAR-derived, bare earth elevations at the same locations provides a quality assessment of the LiDAR data.</logic>
+    <complete>The bare earth surface data is an estimation of the bare earth surface and does not include vegetative and built features.  Likewise, it contains estimates of water edges at the time of data collection, and may not reflect current conditions. The bare earth lidar classification will contain voids where above ground features have been filtered out of the ground layer, including beneath buildings, motor vehicles, bridges etc.  Voids in the bare earth may also occur where insufficient energy was reflected from the surface to generate a valid return from the terrain.  These types of voids in the bare earth surface tend to occur in heavily vegetated areas and over water bodies. Fresh or wet asphalt, wet sand and certain types of vegetation can also cause voids or anomalous elevations.  Ground voids are interpolated in the derived terrain and DEM products, unless otherwise specified.  The data may have been further processed to reclassify points found to be within delineated water bodies.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>Only photo-identifiable checkpoints in the intensity imagery can be used to test the horizontal accuracy of the LiDAR.  Photo-identifiable checkpoints in intensity imagery typically include checkpoints located at the ends of paint stripes on concrete or asphalt surfaces or checkpoints located at 90 degree corners of different reflectivity, e.g. a sidewalk corner adjoining a grass surface.  The xy coordinates of checkpoints, as defined in the intensity imagery, are compared to surveyed xy coordinates for each photo-identifiable checkpoint.  These differences are used to compute the tested horizontal accuracy of the lidar.  As not all projects contain photo-identifiable checkpoints, the horizontal accuracy of the LiDAR cannot always be tested.</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>The vertical accuracy of the source lidar and final bare earth DEMs was tested with independent survey checkpoints.  The survey checkpoints are evenly distributed throughout the project area and are located in areas of non-vegetated terrain, including bare earth, open terrain, and urban terrain, and vegetated terrain, including forest, brush, tall weeds, crops, and high grass.  The vertical accuracy of the LiDAR is tested by comparing survey checkpoints to a triangulated irregular network (TIN) that is created from the LiDAR ground points.  The accuracy results reported for the overall project are the accuracy results of the source LiDAR.   
+
+All checkpoints located in non-vegetated terrain were used to compute the Non-vegetated Vertical Accuracy (NVA).  Project specifications required a NVA of 19.6 cm at the 95% confidence level based on RMSEz (10 cm) x 1.9600.  All checkpoints located in vegetated terrain were used to compute the Vegetated Vertical Accuracy (VVA).  Project specifications required a VVA of 29.4 cm based on the 95th percentile.</vertaccr>
+        <qvertpa>
+          <vertaccv>13.3</vertaccv>
+          <vertacce>The lidar dataset was tested to meet ASPRS Positional Accuracy Standards for Digital Geospatial Data (2014) for a 10 cm RMSEz Vertical Accuracy Class.  Actual NVA accuracy was found to be RMSEz=6.8 cm, equating to +/- 13.3 cm at 95% confidence level.</vertacce>
+        </qvertpa>
+        <qvertpa> 
+          <vertaccv>19.0</vertaccv>
+          <vertacce>This lidar dataset was tested to meet ASPRS Positional Accuracy Standards for Digital Geospatial Data (2014) for a 10 cm RMSEz Vertical Accuracy Class.  Actual VVA accuracy was found to be +/- 19.0 cm at the 95th percentile.   
+
+The 5% outliers  consisted of 6 checkpoints that are larger than the 95th percentile. These checkpoints have DZ values ranging between 19.2 cm and 23.7 cm..</vertacce>
+        </qvertpa>
+      </vertacc>
+    </posacc>
+    <lineage>
+<srcinfo> 
+ <srccite> 
+ <citeinfo> 
+<origin>Photo Science, Inc.</origin> 
+<pubdate>20200831</pubdate> 
+<title>Terrain\Bare_Earth</title> 
+</citeinfo> 
+</srccite> 
+<typesrc>External Hard Drive</typesrc> 
+ <srctime> 
+ <timeinfo> 
+ <sngdate> 
+<caldate>20200831</caldate> 
+</sngdate> 
+</timeinfo> 
+<srccurr>Publication Date</srccurr> 
+</srctime> 
+<srccitea>TOPO1</srccitea> 
+<srccontr>The lidar sensor data and survey checkpoints are the source data for all project deliverables, to include calibration points, the raw (unclassified) calibrated lidar point cloud, classified LAS file(s), breaklines, intensity imagery, low confidence polygons, contours, a Digital Surface Model, and the final Digital Elevation Model (DEM).</srccontr> 
+</srcinfo> 
+
+ <srcinfo> 
+ <srccite> 
+ <citeinfo> 
+<origin>USGS</origin> 
+<pubdate>20210201</pubdate> 
+<title>Terrain\DEM\DEM</title> 
+</citeinfo> 
+</srccite> 
+<typesrc>Online</typesrc> 
+ <srctime> 
+ <timeinfo> 
+ <sngdate> 
+<caldate>20210127</caldate> 
+</sngdate> 
+</timeinfo> 
+<srccurr>Download Date</srccurr> 
+</srctime> 
+<srccitea>TOPO2</srccitea> 
+<srccontr>1-meter DEMs downloaded from the USGS 3DEP website.</srccontr> 
+</srcinfo> 
+ <srcinfo> 
+ <srccite> 
+ <citeinfo> 
+<origin>Flood County GIS Department</origin> 
+<pubdate>20210322</pubdate> 
+<title>Terrain\Final</title> 
+</citeinfo> 
+</srccite> 
+<typesrc>Digital</typesrc> 
+ <srctime> 
+ <timeinfo> 
+ <sngdate> 
+<caldate>20210322</caldate> 
+</sngdate> 
+</timeinfo> 
+<srccurr>Publication date</srccurr> 
+</srctime> 
+<srccitea>TOPO3</srccitea> 
+<srccontr>Digital Terrain Model</srccontr> 
+</srcinfo> 
+
+      <procstep>
+        <procdesc>Elevation data used for flood risk analysis go through LiDAR preliminary processing and the unclassified point cloud data are tested as specified in the USGS National Geospatial Program Base LiDAR Specification Version 1.2 and the ASPRS Positional Accuracy Standards for Digital Geospatial Data.  Where the Mapping Activity Statement (MAS) requires bare earth post-processing of the floodplain area of interest (AOI), the elevation data are tested and comply with both the Non-vegetated Vertical Accuracy (NVA) and Vegetated Vertical Accuracy (VVA) requirements.  Where no bare earth post-processing is specified, only the NVA requirements apply for LiDAR preliminary processing.
+</procdesc>
+        <procdate>20211101</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spref>
+    <horizsys>
+      <planar>
+        <gridsys>
+          <gridsysn>Universal Transverse Mercator</gridsysn>
+          <utm>
+            <utmzone>11</utmzone>
+            <transmer>
+              <sfctrmer>0.9996</sfctrmer>
+              <longcm>-117.0</longcm>
+              <latprjo>0.0</latprjo>
+              <feast>500000</feast>
+              <fnorth>0.0</fnorth>
+            </transmer>
+          </utm>
+        </gridsys>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.000172</absres>
+            <ordres>0.000172</ordres>
+          </coordrep>
+          <plandu>meters</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>North American Datum of 1983 (2011)</horizdn>
+        <ellips>Geodetic Reference System 80</ellips>
+        <semiaxis>6378137</semiaxis>
+        <denflat>298.25</denflat>
+      </geodetic>
+    </horizsys>
+    <vertdef>
+      <altsys>
+        <altdatum>North American Vertical Datum of 1988 (Geoid 12B)</altdatum>
+        <altres>0.0001</altres>
+        <altunits>Feet</altunits>
+        <altenc>Attribute values</altenc>
+      </altsys>
+    </vertdef>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>S_Submittal_Info</enttypl>
+        <enttypd>A spatial dataset consisting of polygons depicting the extents of the studied area.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>S_Topo_Confidence</enttypl>
+        <enttypd>A spatial dataset consisting of polygons depicting areas of low confidence topographic data.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>Bare Earth DEM</enttypl>
+        <enttypd>An elevation model where bare-earth elevation values have regularly spaced intervals in latitude and longitude (x and y).</enttypd>
+        <enttypds>FEMA Guidelines and Standards for Flood Risk Analysis and Mapping (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>Classified Point Cloud Data</enttypl>
+        <enttypd>The final processing and classification of LiDAR data to the required ASPRS LAS classes, per project specifications. This includes testing for Non-vegetated Vertical Accuracy (NVA).</enttypd>
+        <enttypds>FEMA Guidelines and Standards for Flood Risk Analysis and Mapping (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>Breakline</enttypl>
+        <enttypd>A linear feature demarking a change in the smoothness or continuity of a surface such as abrupt elevation changes or a stream line.</enttypd>
+        <enttypds>FEMA Guidelines and Standards for Flood Risk Analysis and Mapping (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>HDEM</enttypl>
+        <enttypd>Hydrologically corrected DEMs</enttypd>
+        <enttypds>FEMA Guidelines and Standards for Flood Risk Analysis and Mapping (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>Tiling Index</enttypl>
+        <enttypd>A spatial dataset that describes the tiling system used for multiple files of the same type.</enttypd>
+        <enttypds>FEMA Guidelines and Standards for Flood Risk Analysis and Mapping (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)</enttypds>
+      </enttyp>
+    </detailed>
+
+    <overview>
+      <eaover>The elevation data package is made up of several data themes containing primarily spatial information. These data supplement the elevation datasets by providing additional information to aid flood risk evaluation and flood hazard area delineations.</eaover>
+      <eadetcit>FEMA's Guidelines and Standards for Flood Risk Analysis and Mapping contains a detailed description of the data themes and references to other relevant information.</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>FEMA, Mapping Information Platform</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing</addrtype>
+          <address>500 C Street, S.W.</address>
+          <city>Washington</city>
+          <state>District of Columbia</state>
+          <postal>20472</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>1-877-336-2627</cntvoice>
+        <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>No warranty expressed or implied is made by FEMA regarding the utility of the data on any other system nor shall the act of distribution constitute any such warranty.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>FEMA-Terrain-Capture</formname>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://hazards.fema.gov</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>Contact Distributor</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20211101</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>MIPHelp</cntper>
+          <cntorg>Federal Emergency Management Agency</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing</addrtype>
+          <address>500 C Street, S.W.</address>
+          <city>Washington</city>
+          <state>District of Columbia</state>
+          <postal>20472</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>1-877-336-2627</cntvoice>
+        <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <metextns>
+      <onlink>https://hazards.fema.gov</onlink>
+      <onlink>https://www.epsg.org</onlink>
+      <metprof>FEMA NFIP Metadata Content and Format Standard</metprof>
+    </metextns>
+  </metainfo>
+</metadata>
+

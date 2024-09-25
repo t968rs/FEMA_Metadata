@@ -71,19 +71,20 @@ def parse_eainfo(xml_file):
     return eainfo_list
 
 
-xml_path = "../static_lookups/_DRAFT_metadata.xml"
+xml_path = "../static_lookups/000000_Terrain_metadata.xml"
 tag_dict = parse_xml_to_dict(xml_path)
 tag_tf = parse_xml_and_identify_tags(xml_path)
 ea_info = parse_eainfo(xml_path)
 
 # Output:
-with open("../regen_lookups/TAB_lookup_H_metadata.json", "w") as f:
+task_type = xml_path.split("/")[-1].split("_")[1].split("_")[0]
+with open(f"../regen_lookups/TAB_lookup_{task_type}_metadata.json", "w") as f:
     json.dump(tag_dict, f, indent=0)
-with open("../regen_lookups/TAGS_TF_H_metadata.json", "w") as f:
+with open(f"../regen_lookups/TAGS_TF_{task_type}_metadata.json", "w") as f:
     json.dump(tag_tf, f, indent=0)
 
-with open("../regen_lookups/Tags_withValues_H_metadata.json", "w") as f:
+with open(f"../regen_lookups/Tags_withValues_{task_type}_metadata.json", "w") as f:
     json.dump({k: v for k, v in tag_tf.items() if not v}, f, indent=0)
 
-with open("../regen_lookups/EA_Info_H_metadata.json", "w") as f:
+with open(f"../regen_lookups/EA_Info_{task_type}_metadata.json", "w") as f:
     json.dump(ea_info, f, indent=0)

@@ -124,7 +124,7 @@ def open_df_and_populate_xml(excel_path, xml_path, output_loc):
             continue
         print(w_dict)
 
-        ea_path = f"../ea_info/EA.xml"
+        ea_path = f"../ea_info/{w_dict['DFIRM_ID']}_EA.xml"
         huc_code = w_dict["HUC8"]
         print(f"HUC8: {huc_code}")
         this_epsg_df = epsg_lookup[epsg_lookup['HUC8'] == huc_code]

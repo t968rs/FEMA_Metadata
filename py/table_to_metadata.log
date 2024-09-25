@@ -1,0 +1,108 @@
+2024-09-20 08:43:31,842 - table_to_metadata - DEBUG - Template Row: DFIRM_ID                                                    nan
+VERSION_ID                                              2.8.5.6
+SOURCE_CIT                                                TOPO1
+CITATION                                            NeDNR, 2022
+PUBLISHER              Nebraska Department of Natural Resources
+TITLE         Nebraska Department of Natural Resources Digit...
+AUTHOR                                                    NeDNR
+PUB_PLACE                                          Nebraska DNR
+PUB_DATE                                               20220111
+WEBLINK                                                     nan
+SRC_SCALE                                               1:24000
+MEDIA                                                   Digital
+SRC_DATE                                               20220111
+DATE_REF                                            Publication
+CONTRIB                        Terrain Data to model flood risk
+NOTES                                                       nan
+Name: 1, dtype: object
+2024-09-20 08:44:21,552 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...      NOTES
+1    2.8.5.6  ...        nan
+2    2.8.5.6  ...  Spillways
+
+[2 rows x 14 columns]
+2024-09-20 08:47:16,420 - table_to_metadata - DEBUG - Template Row:   VERSION_ID     CITATION  ...                           CONTRIB NOTES
+1    2.8.5.6  NeDNR, 2022  ...  Terrain Data to model flood risk   nan
+
+[1 rows x 14 columns]
+2024-09-20 08:48:01,800 - table_to_metadata - DEBUG - Template Row:   VERSION_ID     CITATION  ...                           CONTRIB NOTES
+1    2.8.5.6  NeDNR, 2022  ...  Terrain Data to model flood risk   nan
+
+[1 rows x 14 columns]
+2024-09-20 08:52:22,763 - table_to_metadata - DEBUG - Template Row:   VERSION_ID     CITATION  ...                           CONTRIB NOTES
+1    2.8.5.6  NeDNR, 2022  ...  Terrain Data to model flood risk   nan
+
+[1 rows x 14 columns]
+2024-09-20 08:55:03,805 - table_to_metadata - DEBUG - Template Row:   VERSION_ID     CITATION  ...                           CONTRIB NOTES
+1    2.8.5.6  NeDNR, 2022  ...  Terrain Data to model flood risk   nan
+
+[1 rows x 14 columns]
+2024-09-20 08:55:03,912 - table_to_metadata - DEBUG - Target Row:   VERSION_ID     CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.8.5.6  NeDNR, 2022  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-20 08:55:03,950 - table_to_metadata - DEBUG - Target Row:   VERSION_ID     CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  NeDNR, 2022  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-20 08:55:03,982 - table_to_metadata - DEBUG - Target Row:   VERSION_ID     CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.8.5.6  NeDNR, 2022  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-20 08:57:13,491 - table_to_metadata - DEBUG - Template Row:   VERSION_ID     CITATION  ...                           CONTRIB NOTES
+1    2.8.5.6  NeDNR, 2022  ...  Terrain Data to model flood risk   nan
+
+[1 rows x 14 columns]
+2024-09-20 08:57:27,623 - table_to_metadata - DEBUG - Template Row:   VERSION_ID     CITATION  ...                           CONTRIB NOTES
+1    2.8.5.6  NeDNR, 2022  ...  Terrain Data to model flood risk   nan
+
+[1 rows x 14 columns]
+2024-09-20 08:57:27,789 - table_to_metadata - DEBUG - Target Row:   VERSION_ID     CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.8.5.6  NeDNR, 2022  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-20 08:57:27,837 - table_to_metadata - DEBUG - Target Row:   VERSION_ID     CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  NeDNR, 2022  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-20 08:57:27,896 - table_to_metadata - DEBUG - Target Row:   VERSION_ID     CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.8.5.6  NeDNR, 2022  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-20 09:00:02,161 - table_to_metadata - DEBUG - Template Row: Empty DataFrame
+Columns: [VERSION_ID, CITATION, PUBLISHER, TITLE, AUTHOR, PUB_PLACE, PUB_DATE, WEBLINK, SRC_SCALE, MEDIA, SRC_DATE, DATE_REF, CONTRIB, NOTES]
+Index: []
+2024-09-20 09:00:02,281 - table_to_metadata - DEBUG - Target Row: Empty DataFrame
+Columns: [VERSION_ID, CITATION, PUBLISHER, TITLE, AUTHOR, PUB_PLACE, PUB_DATE, WEBLINK, SRC_SCALE, MEDIA, SRC_DATE, DATE_REF, CONTRIB, NOTES, DFIRM_ID, SOURCE_CIT]
+Index: []
+2024-09-20 09:00:39,424 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-20 09:00:39,544 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.8.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-20 09:00:39,588 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-20 09:00:39,633 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.8.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-20 09:02:49,602 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-20 09:02:49,716 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.8.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-20 09:02:49,756 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-20 09:02:49,794 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.8.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]

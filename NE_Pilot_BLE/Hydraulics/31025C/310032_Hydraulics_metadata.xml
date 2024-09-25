@@ -4,7 +4,7 @@
     <citation>
       <citeinfo>
         <origin>AtkinsRealis</origin>
-        <pubdate>5/31/2024</pubdate>
+        <pubdate>20240531</pubdate>
         <title>Keg-Weeping Water HUC, NE FY20/22 DISC-BLE</title>
         <edition>2.8.5.6</edition>
         <geoform>FEMA-DCS-Hydraulics</geoform>
@@ -16,7 +16,7 @@
         <lworkcit>
           <citeinfo>
             <origin>Federal Emergency Management Agency</origin>
-            <pubdate>5/31/2024</pubdate>
+            <pubdate>20240531</pubdate>
             <title>FEMA CASE 21-07-0011S</title>
           </citeinfo>
         </lworkcit>
@@ -29,7 +29,7 @@
     <timeperd>
       <timeinfo>
         <sngdate>
-          <caldate>5/31/2024</caldate>
+          <caldate>20240531</caldate>
         </sngdate>
       </timeinfo>
       <current>MIP Submission Date</current>
@@ -75,12 +75,12 @@
         <placekey>REGION 07</placekey>
         <placekey>STATE IA</placekey>
         <placekey>FEMA-CID 31025C</placekey>
+        <placekey>COUNTY SARPY</placekey>
+        <placekey>COUNTY-FIPS 153</placekey>
         <placekey>COUNTY NEMAHA</placekey>
         <placekey>COUNTY-FIPS 127</placekey>
         <placekey>COUNTY CASS</placekey>
         <placekey>COUNTY-FIPS 25</placekey>
-        <placekey>COUNTY SARPY</placekey>
-        <placekey>COUNTY-FIPS 153</placekey>
         <placekey>COUNTY OTOE</placekey>
         <placekey>COUNTY-FIPS 131</placekey>
         <placekey>COMMUNITY VILLAGE OF NEHAWKA, CITY OF</placekey>
@@ -138,7 +138,7 @@
     <crossref>
       <citeinfo>
         <origin>AtkinsRealis</origin>
-        <pubdate>5/31/2024</pubdate>
+        <pubdate>20240531</pubdate>
         <title>Keg-Weeping Water HUC, NE FY20/22 DISC-BLE</title>
         <geoform>map</geoform>
         <pubinfo>
@@ -194,33 +194,6 @@
       <srcinfo>
         <srccite>
           <citeinfo>
-            <origin>AtkinsRealis</origin>
-            <pubdate>20230101</pubdate>
-            <title>Spillway Locations</title>
-            <geoform>map</geoform>
-            <pubinfo>
-              <pubplace>Calverton, MD</pubplace>
-              <publish>Federal Emergency Management Agency</publish>
-            </pubinfo>
-            <othercit>Effective FIS and FIRM from State of Nebraska</othercit>
-          </citeinfo>
-        </srccite>
-        <srcscale>24000</srcscale>
-        <typesrc>Disk</typesrc>
-        <srctime>
-          <timeinfo>
-            <sngdate>
-              <caldate>20230101</caldate>
-            </sngdate>
-          </timeinfo>
-          <srccurr>Publication</srccurr>
-        </srctime>
-        <srccitea>BASE2</srccitea>
-        <srccontr>Spillway Locations for floodplain mapping</srccontr>
-      </srcinfo>
-      <srcinfo>
-        <srccite>
-          <citeinfo>
             <origin>Nebraska Department of Natural Resources</origin>
             <pubdate>20220111</pubdate>
             <title>Nebraska Department of Natural Resources Digital Elevation Model</title>
@@ -244,6 +217,33 @@
         </srctime>
         <srccitea>TOPO1</srccitea>
         <srccontr>Terrain Data to model flood risk</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>AtkinsRealis</origin>
+            <pubdate>20230101</pubdate>
+            <title>Spillway Locations</title>
+            <geoform>map</geoform>
+            <pubinfo>
+              <pubplace>Calverton, MD</pubplace>
+              <publish>Federal Emergency Management Agency</publish>
+            </pubinfo>
+            <othercit>Effective FIS and FIRM from State of Nebraska</othercit>
+          </citeinfo>
+        </srccite>
+        <srcscale>24000</srcscale>
+        <typesrc>Disk</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20230101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>Publication</srccurr>
+        </srctime>
+        <srccitea>BASE2</srccitea>
+        <srccontr>Spillway Locations for floodplain mapping</srccontr>
       </srcinfo>
       <procstep>
         <procdesc>The FIRM Database is compiled in conjunction with the hardcopy FIRM and the final FIS report. The specifics of the hydrologic and hydraulic analyses performed are detailed in the FIS report. The results of these studies are submitted in digital format to FEMA. These data and unrevised data from effective FIRMs are compiled onto the base map used for FIRM publication and checked for accuracy and compliance with FEMA standards.</procdesc>
@@ -302,20 +302,6 @@
     </detailed>
     <detailed>
       <enttyp>
-        <enttypl>S_Fld_Haz_Ar</enttypl>
-        <enttypd>Location and attributes flood risk zones shown on the FIRM.</enttypd>
-        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
-      </enttyp>
-    </detailed>
-    <detailed>
-      <enttyp>
-        <enttypl>S_Fld_Haz_Ln</enttypl>
-        <enttypd>Location and attributes for boundaries of flood risk zones shown on the FIRM.</enttypd>
-        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
-      </enttyp>
-    </detailed>
-    <detailed>
-      <enttyp>
         <enttypl>S_Gen_Struct</enttypl>
         <enttypd>A spatial dataset consisting of lines that depict the location of flood control structures shown on the flood profile and FIRM.</enttypd>
         <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
@@ -330,43 +316,8 @@
     </detailed>
     <detailed>
       <enttyp>
-        <enttypl>S_Hydro_Reach</enttypl>
-        <enttypd>Location and attributes for lines that represent the connectivity between the subbasins and flow direction between nodes within the study area.</enttypd>
-        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
-      </enttyp>
-    </detailed>
-    <detailed>
-      <enttyp>
-        <enttypl>S_Nodes</enttypl>
-        <enttypd>Location and attributes of points that depict locations of computed discharges for the 10-, 4-, 2-, 1-, and 0.2-percent-annual-chance floods.</enttypd>
-        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
-      </enttyp>
-    </detailed>
-    <detailed>
-      <enttyp>
-        <enttypl>S_Pol_Ar</enttypl>
-        <enttypd>Location and attributes for political jurisdictions shown on the FIRM.</enttypd>
-        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
-      </enttyp>
-    </detailed>
-    <detailed>
-      <enttyp>
-        <enttypl>S_Profil_Basln</enttypl>
-        <enttypd>A spatial dataset consisting of lines showing the flow path used for floodplain modeling and mapping.</enttypd>
-        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
-      </enttyp>
-    </detailed>
-    <detailed>
-      <enttyp>
         <enttypl>S_Subbasins</enttypl>
         <enttypd>A spatial dataset consisting of polygons representing watershed or subwatershed areas contributing runoff to the discharge points used in the hydrologic analysis.</enttypd>
-        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
-      </enttyp>
-    </detailed>
-    <detailed>
-      <enttyp>
-        <enttypl>S_Wtr_Ln</enttypl>
-        <enttypd>Location and attributes for hydrography features shown on the FIRM.</enttypd>
         <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
       </enttyp>
     </detailed>
@@ -415,7 +366,7 @@
     </stdorder>
   </distinfo>
   <metainfo>
-    <metd>5/31/2024</metd>
+    <metd>20240531</metd>
     <metc>
       <cntinfo>
         <cntperp>

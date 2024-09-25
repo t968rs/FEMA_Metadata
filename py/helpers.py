@@ -27,26 +27,6 @@ def remove_empty_tags(tree: ET.ElementTree) -> ET.ElementTree:
     return ET.tostring(root, encoding='unicode')
 
 
-def remove_nan_srcinfo(tree: ET.ElementTree, start_str=None) -> ET.ElementTree:
-    start_str = "lineage"
-    tree = extract_subtree_within_tag(tree, start_str)
-    root = tree.getroot()
-    start_tag = root.find(start_str)
-    if start_tag is None:
-        start_tag = ET.Element(start_str)
-        root.append(start_tag)
-
-    # Create a dictionary to map existing srcinfo elements by a unique identifier (e.g., srccitea)
-    existing_srcinfo = {srcinfo.find('srccitea').text: srcinfo for srcinfo in start_tag.findall('srcinfo')}
-
-    # Iterate over the dictionary and remove elements with "nan" srccitea
-    for key, srcinfo in existing_srcinfo.items():
-        if key in ["", " ", None, "nan", np.nan]:
-            start_tag.remove(srcinfo)
-
-    return tree
-
-
 def remove_whitespace(text):
     # Remove all whitespace, tabs, and newlines
     cleaned_text = re.sub(r'\s+', ' ', text).strip()
@@ -112,36 +92,6 @@ def clean_metadata_tree(tree) -> ET.ElementTree:
     return tree
 
 
-def consolidate_subs_trees(tree: ET.ElementTree, umbrella_tag: str, tag_bookend: str) -> ET.ElementTree:
-    root = tree.getroot()
-    umbrella = root.find(f'.//{umbrella_tag}')
-    if umbrella is None:
-        raise ValueError(umbrella_tag, " not found in the XML tree")
-
-    # Find all procstep elements
-    tag_many = umbrella.findall(tag_bookend)
-
-    if not tag_many:
-        return tree
-
-    # Create a new procstep element
-    tag_dedupe = ET.Element(tag_bookend)
-
-    # Append all child elements of the found procstep elements to the new procstep element
-    for procstep in tag_many:
-        for child in list(procstep):
-            tag_dedupe.append(child)
-
-    # Remove the old procstep elements from the XML tree
-    for procstep in tag_many:
-        umbrella.remove(procstep)
-
-    # Append the new procstep element to the XML tree
-    umbrella.append(tag_dedupe)
-
-    return tree
-
-
 def excel_to_df(excel_file, sheet_name=None, **kwargs):
     df = pd.read_excel(excel_file, sheet_name, dtype={"HUC8": str})
     df = convert_timestamps_to_strings(df)
@@ -159,7 +109,7 @@ def fill_df_with_values(df, fields_to_get: list[str], **kwargs) -> dict:
         if c in df.columns:
             missing_values_df[c] = df[c].isnull() | df[c].isin(invalid_values)
 
-    print(f"Missing Values:\n{missing_values_df}")
+    # print(f"Missing Values:\n{missing_values_df}")
 
     # Update the missing values with the provided DFIRM_ID and SOURCE_CIT from kwargs
     print(f"KWARGS: {kwargs}")
@@ -167,21 +117,6 @@ def fill_df_with_values(df, fields_to_get: list[str], **kwargs) -> dict:
         if c in df.columns:
             df.loc[missing_values_df[c], c] = kwargs.get(c)
     return df
-
-
-def update_xml_from_dict(elem, d):
-    for key, val in d.items():
-        if isinstance(val, list):
-            for item in val:
-                sub_elem = ET.SubElement(elem, key)
-                sub_elem.text = str(item)
-        else:
-            sub_elem = elem.find(f".//{key}")
-            if sub_elem is not None:
-                sub_elem.text = str(val)
-            else:
-                sub_elem = ET.SubElement(elem, key)
-                sub_elem.text = str(val)
 
 
 def extract_subtree_within_tag(tree, tag):
@@ -210,22 +145,6 @@ def extract_subtree_within_tag(tree, tag):
         new_root.append(elem)
 
     return ET.ElementTree(new_root)
-
-
-def add_parent_tag_to_tree(tree, new_parent_tag):
-    # Get the root element of the tree
-    root_element = tree.getroot()
-
-    # Create a new parent element
-    new_parent = ET.Element(new_parent_tag)
-
-    # Set the existing tree's root as a child of the new parent element
-    new_parent.append(root_element)
-
-    # Create a new tree with the new parent as the root
-    new_tree = ET.ElementTree(new_parent)
-
-    return new_tree
 
 
 def extract_all_of_tag(xml_str, tag_str):
@@ -266,18 +185,26 @@ def extract_all_of_tag(xml_str, tag_str):
 
 
 def convert_timestamps_to_strings(df):
-    date_columns = [col for col in df.columns if "date" in col.lower()]
+    date_columns = [col for col in df.columns if "date" in col.lower() and "ref" not in col.lower()]
+    # print(f'CNVRT  270, Found: {date_columns}')
+    date_columns.extend(["SRC_DATE", "COMP_DATE", "PUB_DATE",])
+    date_columns = list(set(date_columns))
     for col in date_columns:
-        if pd.api.types.is_datetime64_any_dtype(df[col]):
-            df[col] = df[col].dt.strftime('%Y%m%d')  # Convert datetime64 dtype to YYYYMMDD format
-        elif pd.api.types.is_string_dtype(df[col]):
+        if col in df.columns:
+            df[col] = df[col].astype(str)
+            # print(f"CNVRT 276: {col}")
             try:
-                df[col] = pd.to_datetime(df[col], format='%m/%d/%Y').dt.strftime(
-                    '%Y%m%d')  # Convert string dates to YYYYMMDD format
-            except ValueError:
-                continue
-        elif pd.api.types.is_datetime64_dtype(df[col]):
-            df[col] = df[col].strftime('%Y%m%d')
+                # Attempt to convert the column to datetime
+                df[col] = pd.to_datetime(df[col], errors='coerce')
+                # Convert datetime to the desired format
+                df[col] = df[col].dt.strftime('%Y%m%d')
+                # print(f"Converted {col} to string")
+                unique_dates = df[col].unique().tolist()
+                # print(f"Unique {col} values: {unique_dates}")
+            except Exception as e:
+                # If conversion fails, print the error and continue
+                print(f"Could not convert column {col}: {e}")
+
     return df
 
 
@@ -308,30 +235,6 @@ def remove_extraneous_spacing(xml_str):
     return dom.toxml()
 
 
-def stack_xml(xml_str1, xml_str2):
-    # Parse the XML strings
-    root1 = ET.fromstring(xml_str1)
-    root2 = ET.fromstring(xml_str2)
-
-    # Create a new root element
-    new_root = ET.Element("root")
-
-    # Append the root elements of both XML files to the new root element
-    new_root.append(root1)
-    new_root.append(root2)
-
-    # Convert the combined XML tree back to a string
-    return ET.tostring(new_root, encoding='unicode')
-
-
-# Function to overwrite or add elements
-def overwrite_or_add(parent, element):
-    existing = parent.find(element.tag)
-    if existing is not None:
-        parent.remove(existing)
-    parent.append(element)
-
-
 def write_xml(xml_tree, outpath):
     if os.path.exists(outpath):
         os.remove(outpath)
@@ -341,4 +244,4 @@ def write_xml(xml_tree, outpath):
     xml_str = pretty_print_xml(xml_str)
     with open(outpath, "w", encoding="utf-8") as f:
         f.write(xml_str)
-        print(f"Wrote {outpath}")
+        # print(f"Wrote {outpath}")

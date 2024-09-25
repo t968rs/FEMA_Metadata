@@ -1,0 +1,43 @@
+[
+{
+"enttypl": "S_Submittal_Info",
+"enttypd": "A spatial dataset consisting of polygons depicting the extents of the studied area.",
+"enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+},
+{
+"enttypl": "S_Topo_Confidence",
+"enttypd": "A spatial dataset consisting of polygons depicting areas of low confidence topographic data.",
+"enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+},
+{
+"enttypl": "Bare Earth DEM",
+"enttypd": "An elevation model where bare-earth elevation values have regularly spaced intervals in latitude and longitude (x and y).",
+"enttypds": "FEMA Guidelines and Standards for Flood Risk Analysis and Mapping (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)"
+},
+{
+"enttypl": "Classified Point Cloud Data",
+"enttypd": "The final processing and classification of LiDAR data to the required ASPRS LAS classes, per project specifications. This includes testing for Non-vegetated Vertical Accuracy (NVA).",
+"enttypds": "FEMA Guidelines and Standards for Flood Risk Analysis and Mapping (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)"
+},
+{
+"enttypl": "Breakline",
+"enttypd": "A linear feature demarking a change in the smoothness or continuity of a surface such as abrupt elevation changes or a stream line.",
+"enttypds": "FEMA Guidelines and Standards for Flood Risk Analysis and Mapping (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)"
+},
+{
+"enttypl": "HDEM",
+"enttypd": "Hydrologically corrected DEMs",
+"enttypds": "FEMA Guidelines and Standards for Flood Risk Analysis and Mapping (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)"
+},
+{
+"enttypl": "Tiling Index",
+"enttypd": "A spatial dataset that describes the tiling system used for multiple files of the same type.",
+"enttypds": "FEMA Guidelines and Standards for Flood Risk Analysis and Mapping (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)"
+},
+{
+"eaover": "The elevation data package is made up of several data themes containing primarily spatial information. These data supplement the elevation datasets by providing additional information to aid flood risk evaluation and flood hazard area delineations.",
+"eadetcit": [
+"FEMA's Guidelines and Standards for Flood Risk Analysis and Mapping contains a detailed description of the data themes and references to other relevant information."
+]
+}
+]

@@ -15,9 +15,9 @@
     "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
   },
   {
-      "enttypl": "S_Gen_Struct",
-      "enttypd": "A spatial dataset consisting of lines that depict the location of flood control structures shown on the flood profile and FIRM.",
-      "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+    "enttypl": "S_Gen_Struct",
+    "enttypd": "A spatial dataset consisting of lines that depict the location of flood control structures shown on the flood profile and FIRM.",
+    "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
   },
   {
     "enttypl": "S_Submittal_Info",

@@ -153,7 +153,7 @@ def convert_list_to_multiple_elements(tree):
 
     print(f'\nList Elements:')
     for k, v in list_elements.items():
-        print(f"{k}: {v}")
+        print(f"\t{k}: {v}")
 
     populated_tags = []
     for e_text, e_tag in list_elements.items():
@@ -164,6 +164,12 @@ def convert_list_to_multiple_elements(tree):
                 print(f"Parent not found for tag: {e_tag}")
                 continue
             print(f"Parent: {parent.tag} of {e_tag}: {e_text}")
+            if parent.tag in ["qvertpa"]:
+                parent_parent = root.find(f".//{parent.tag}/..")
+                new_parent = ET.SubElement(parent_parent, parent.tag)
+                new_elem = ET.SubElement(new_parent, e_tag)
+                new_elem.text = e_text
+
             existing = parent.find(f".//{e_tag}")
             if e_tag not in populated_tags:
                 populated_tags.append(e_tag)
@@ -180,7 +186,7 @@ def convert_list_to_multiple_elements(tree):
 
 
 order_dict = json_to_dict("../regen_lookups/ORDER_unnested.json")
-for stage in ["Hydraulics", "DRAFT", "Floodplain"]:
+for stage in ["Terrain"]:
     json_path = f'../regen_lookups/post_KDP_{stage}_unnested.json'
     if not os.path.exists(json_path):
         raise FileNotFoundError(f"File not found: {json_path}")

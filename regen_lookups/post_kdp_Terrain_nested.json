@@ -1,0 +1,263 @@
+{
+   "metadata": {
+      "idinfo": {
+         "citation": {
+            "citeinfo": {
+               "origin": "AtkinsRealis",
+               "pubdate": false,
+               "title": false,
+               "edition": false,
+               "geoform": "FEMA-Terrain-Capture",
+               "pubinfo": {
+                  "pubplace": "Washington, DC",
+                  "publish": "Federal Emergency Management Agency"
+               },
+               "onlink": false,
+               "lworkcit": {
+                  "citeinfo": {
+                     "origin": "Federal Emergency Management Agency",
+                     "pubdate": false,
+                     "title": false
+                  }
+               }
+            }
+         },
+         "descript": {
+            "abstract": "Elevation data, as defined in FEMA's Guidelines and Standards for Flood Risk Analysis and Mapping, describe the digital topographic data that were used to create the data representing the terrain environment of a watershed andor floodplain. Elevation data requirements allow for flexibility in the types of information used to produce final levation deliverables. Submission of the terrain data sources allows FEMA to account for the origins of the flood study terrain data. (Source: FEMA Guidelines and Standards for Flood Risk Analysis and Mapping.)",
+            "purpose": "Elevation data are used to represent the topography of a watershed andor floodplain environment and to extract useful information for hydraulic and hydrologic models. (Source: FEMA Guidelines and Standards for Flood Risk Analysis and Mapping)"
+         },
+         "timeperd": {
+            "timeinfo": {
+               "sngdate": {
+                  "caldate": false
+               }
+            },
+            "current": "MIP Submission Date"
+         },
+         "status": {
+            "progress": "In work",
+            "update": "Unknown"
+         },
+         "spdom": {
+            "bounding": {
+               "westbc": false,
+               "eastbc": false,
+               "northbc": false,
+               "southbc": false
+            }
+         },
+         "keywords": {
+            "theme": {
+               "themekt": [
+                  "ISO 19115 Topic Category",
+                  "FEMA NFIP Topic Category"
+               ],
+               "themekey": false
+            },
+            "place": {
+               "placekt": "None",
+               "placekey": false
+            }
+         },
+         "accconst": "None",
+         "useconst": "Acknowledgement of FEMA would be appreciated in products derived from these data. These digital data are produced for the purposes of updatingcreating a FIRM Database andor Flood Risk Products.",
+         "ptcontac": {
+            "cntinfo": {
+               "cntorgp": {
+                  "cntorg": "Federal Emergency Management Agency"
+               },
+               "cntaddr": {
+                  "addrtype": "mailing",
+                  "address": "500 C Street, S.W.",
+                  "city": "Washington",
+                  "state": "District of Columbia",
+                  "postal": "20472",
+                  "country": "USA"
+               },
+               "cntvoice": "1-877-336-2627",
+               "cntemail": "fema-riskmap-ithelp@fema.dhs.gov"
+            }
+         },
+         "native": "Original data development environment may vary. Finishing of the data is done using Esri's ArcGIS software.The submitted geodatabase was created using ArcGIS version 10.5",
+         "crossref": {
+            "citeinfo": {
+               "origin": "AtkinsRealis",
+               "pubdate": false,
+               "title": false,
+               "geoform": "map",
+               "pubinfo": {
+                  "pubplace": "Washington, DC",
+                  "publish": "Federal Emergency Management Agency"
+               },
+               "onlink": "https://msc.fema.gov"
+            }
+         }
+      },
+      "dataqual": {
+         "attracc": {
+            "attraccr": "(Modify as necessary) Ground classification routines are used to remove any non-ground points and generate an accurate ground surface. Non-ground points include edge of flight line points which may be geometrically un-usable. These points are identified with the withheld bit and excluded from the automated ground routine. The ground routine consists of three main parameters (building size, iteration angle, and iteration distance); by adjusting these parameters and running several iterations of this routine an initial ground surface is developed. The building size parameter sets a roaming window size. Each tile is loaded with neighboring points from adjacent tiles and the routine classifies the data section by section based on this roaming window size. The second most important parameter is the maximum terrain angle, which sets the highest allowed terrain angle within the model. As part of the ground routine, low noise points are classified to class 7 and high noise points are classified to class 18. Once the ground routine has been completed a manual quality control routine is done using hillshades, cross-sections, and profiles. During the full review of the ground, bridge decks are identified and classified to class 17. After the initial QC steps, a peer review and supervisor manual inspection is completed on a percentage of the classified tiles based on the project size and variability of the terrain. After the ground classification corrections are completed, the dataset is processed through a water classification routine that utilizes breaklines compiled for the project to automatically classify hydrographic features. The water classification routine selects ground points within the breakline polygons and automatically classifies them as class 9, water. During this water classification routine, points which are in close proximity (1*NPS ) to the hydrographic features are moved to class 10, ignored ground. Overage points are then identified with the overlap bit. The fully classified dataset is then processed through a comprehensive quality control program. The data are classified as follows: Class 1 = Unclassified. This class includes vegetation, buildings, noise etc. Class 2 = Ground Class 7 = Low Noise Class 9 = Water Class 10 = Ignored Ground Class 17 = Bridge Decks Class 18 = High Noise 3D breakline elevation attributes derived from a bare earth lidar terrain are applied to bridges and water features (streams and rivers, lakes and ponds, and tidal areas)."
+         },
+         "logic": "Checks were performed to ensure the data files can be opened, are georeferenced properly, and cover the geographic area completely. Additionally, field survey checkpoints are obtained to evaluate the accuracy of LiDAR products. As specified in the American Society for Photogrammetry and Remote Sensing (ASPRS) Positional Accuracy Standards for Digital Geospatial Data, checkpoints in vegetated and non-vegetated areas are tested in a project area. A statistical analysis between the difference in elevations of the field survey checkpoints and LiDAR-derived, bare earth elevations at the same locations provides a quality assessment of the LiDAR data.",
+         "complete": "The bare earth surface data is an estimation of the bare earth surface and does not include vegetative and built features. Likewise, it contains estimates of water edges at the time of data collection, and may not reflect current conditions. The bare earth lidar classification will contain voids where above ground features have been filtered out of the ground layer, including beneath buildings, motor vehicles, bridges etc. Voids in the bare earth may also occur where insufficient energy was reflected from the surface to generate a valid return from the terrain. These types of voids in the bare earth surface tend to occur in heavily vegetated areas and over water bodies. Fresh or wet asphalt, wet sand and certain types of vegetation can also cause voids or anomalous elevations. Ground voids are interpolated in the derived terrain and DEM products, unless otherwise specified. The data may have been further processed to reclassify points found to be within delineated water bodies.",
+         "posacc": {
+            "horizpa": {
+               "horizpar": "The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FIS and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Horizontal accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM Database was also performed."
+            },
+            "vertacc": {
+               "vertaccr": "The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Vertical accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM database was also performed.",
+               "qvertpa": {
+                  "vertaccv": [
+                     false,
+                     false
+                  ],
+                  "vertacce": [
+                     "The lidar dataset was tested to meet ASPRS Positional Accuracy Standards for Digital Geospatial Data (2014) for a 10 cm RMSEz Vertical Accuracy Class. Actual NVA accuracy was found to be ",
+                     "This lidar dataset was tested to meet ASPRS Positional Accuracy Standards for Digital Geospatial Data (2014) for a 10 cm RMSEz Vertical Accuracy Class. Actual VVA accuracy was found to be +/- 19.0 cm at the 95th percentile. The 5% outliers consisted of "
+                  ]
+               }
+            }
+         },
+         "lineage": {
+            "srcinfo": {
+               "srccite": {
+                  "citeinfo": {
+                     "origin": false,
+                     "pubdate": false,
+                     "title": false,
+                     "geoform": false,
+                     "pubinfo": {
+                        "pubplace": false,
+                        "publish": false
+                     },
+                     "othercit": false
+                  }
+               },
+               "typesrc": false,
+               "srctime": {
+                  "timeinfo": {
+                     "sngdate": {
+                        "caldate": false
+                     }
+                  },
+                  "srccurr": false
+               },
+               "srccitea": false,
+               "srccontr": false,
+               "srcscale": false
+            },
+            "procstep": {
+               "procdesc": false,
+               "procdate": false
+            }
+         }
+      },
+      "spref": {
+         "horizsys": {
+            "geodetic": {
+               "horizdn": false,
+               "ellips": "Geodetic Reference System 80",
+               "semiaxis": false,
+               "denflat": false
+            },
+            "geograph": {
+               "latres": false,
+               "longres": false,
+               "geogunit": false
+            }
+         },
+         "vertdef": {
+            "altsys": {
+               "altdatum": false,
+               "altres": false,
+               "altunits": false,
+               "altenc": false
+            }
+         }
+      },
+      "eainfo": {
+         "detailed": {
+            "enttyp": {
+               "enttypl": false,
+               "enttypd": false,
+               "enttypds": false
+            }
+         },
+         "overview": {
+            "eaover": "The FIRM Database is made up of several data themes containing both spatial and attribute information. These data together represent the current flood risk for the subject area as identified by FEMA. The attribute tables include SFHA locations, flood zone designations, BFEs, political entities, cross-section locations, FIRM panel information, and other data related to the NFIP.",
+            "eadetcit": [
+               "FEMA's FIRM Database Technical Reference contains a detailed description of each attribute code and a reference to other relevant information.",
+               "The following tables are included in this data set: L_Source_Cit  S_BFE  S_Fld_Haz_Ar  S_Fld_Haz_Ln  S_Submittal_Info"
+            ]
+         }
+      },
+      "distinfo": {
+         "distrib": {
+            "cntinfo": {
+               "cntorgp": {
+                  "cntorg": "FEMA, Flood Map Service Center"
+               },
+               "cntaddr": {
+                  "addrtype": "mailing",
+                  "address": "P.O. Box 3617",
+                  "city": "Oakton",
+                  "state": "Virginia",
+                  "postal": "22124",
+                  "country": "USA"
+               },
+               "cntvoice": "1-877-336-2627",
+               "cntemail": "fema-riskmap-ithelp@fema.dhs.gov",
+               "cntinst": "Data requests must include the full name of the community or county and the FIRM panel number(s) covered by the request."
+            }
+         },
+         "distliab": "No warranty expressed or implied is made by FEMA regarding the utility of the data on any other system nor shall the act of distribution constitute any such warranty.",
+         "stdorder": {
+            "digform": {
+               "digtinfo": {
+                  "formname": "Esri Shapefile"
+               },
+               "digtopt": {
+                  "onlinopt": {
+                     "computer": {
+                        "networka": {
+                           "networkr": "https://msc.fema.gov"
+                        }
+                     }
+                  }
+               }
+            },
+            "fees": "Contact Distributor"
+         }
+      },
+      "metainfo": {
+         "metd": false,
+         "metc": {
+            "cntinfo": {
+               "cntperp": {
+                  "cntper": "MIPHelp",
+                  "cntorg": "Federal Emergency Management Agency"
+               },
+               "cntaddr": {
+                  "addrtype": "mailing",
+                  "address": "500 C Street, S.W.",
+                  "city": "Washington",
+                  "state": "District of Columbia",
+                  "postal": "20472",
+                  "country": "USA"
+               },
+               "cntvoice": "1-877-336-2627",
+               "cntemail": "fema-riskmap-ithelp@fema.dhs.gov",
+               "cntpos": "Federal Insurance and Mitigation Administration"
+            }
+         },
+         "metstdn": "FGDC Content Standards for Digital Geospatial Metadata",
+         "metstdv": "FGDC-STD-001-1998",
+         "metextns": {
+            "onlink": [
+               "https://hazards.fema.gov",
+               "https://www.epsg.org"
+            ],
+            "metprof": "FEMA NFIP Metadata Content and Format Standard"
+         }
+      }
+   }
+}

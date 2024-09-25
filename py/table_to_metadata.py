@@ -5,11 +5,31 @@ import xml.etree.ElementTree as ET
 from xml.dom import minidom
 from pyproj import CRS
 import requests
+import logging
 import json
 from pprint import pprint
 from helpers import *
+from py.folder_to_file_list import get_file_names
 
-TO_INSERT = ["place", "lineage"]
+
+def setup_logger():
+    # Create a custom logger
+    module_name = __name__ if __name__ != "__main__" else os.path.splitext(os.path.basename(__file__))[0]
+    logger = logging.getLogger(module_name)
+    # Set the level of this logger. DEBUG is the lowest severity level.
+    logger.setLevel(logging.DEBUG)
+    # Create handlers
+    file_handler = logging.FileHandler(os.path.join(os.getcwd(), f'{module_name}.log'))
+    # Create formatters and add it to handlers
+    log_fmt = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    file_handler.setFormatter(log_fmt)
+    # Add handlers to the logger
+    logger.addHandler(file_handler)
+    return logger
+
+
+# then call this function:
+logger = setup_logger()
 
 
 def get_places_dict(df):
@@ -44,12 +64,30 @@ def get_places_dict(df):
     return watershed_dict
 
 
+def get_specfic_subfolders(root_folder, wildcard):
+    """
+    Get subfolders that contain a specific wildcard
+    :param root_folder: str
+    :param wildcard: str
+    :return: list
+    """
+    subfolders = []
+    for root, folders, files in os.walk(root_folder):
+        for folder in folders:
+            if wildcard in folder:
+                subfolders.append(os.path.join(root, folder))
+
+    return subfolders
+
+
 class CreateFEMAxml:
-    def __init__(self):
-        self.excel_path = "../NE_Metadata_Tables.xlsx"
+    def __init__(self, excelpath, spatial_root):
+        self.excel_path = excelpath
         self.lookup_folder = "../static_lookups/"
+        self.spatial_root = spatial_root
         self.author = "AtkinsRealis"
 
+        self.spatial_folders_lookup = {}
         self.purchases_df = excel_to_df(self.excel_path, sheet_name="MIP Purchase Geographies")
         self.fips_lookup = excel_to_df(self.excel_path, sheet_name="FIPS Lookup")
         self.dfirm_lookup = excel_to_df(self.excel_path, sheet_name="Purchase CID Lookup")
@@ -61,18 +99,50 @@ class CreateFEMAxml:
         self.spcs_lookup = excel_to_df(self.excel_path, sheet_name="SPCS_Zone_lookup")
         self.state_fips_code, self.state_name = None, None
         self._init_state_refs()
+        self._init_huc8_subfolders()
 
         print(f"Sources: \n  {self.sources_lookup['SOURCE_CIT'].unique().tolist()}")
 
+    def _init_huc8_subfolders(self):
+        # Find subfolders and execute
+        spatial_folders_lookup = {}
+        root_parent = self.spatial_root
+        for root_folder in os.listdir(root_parent):
+            if not os.path.isdir(os.path.join(root_parent, root_folder)):
+                continue
+
+            contains_digits = any(char.isdigit() for char in root_folder)
+            if not contains_digits:
+                continue
+            number_digits = sum(char.isdigit() for char in root_folder)
+            if not number_digits == 8:
+                continue
+            print(f"Root Folder: {root_folder}, {number_digits}, {contains_digits}")
+            huc8_id = int("".join([char for char in root_folder if char.isdigit()]))
+            # print(f" HUC8: {huc8_id}")
+            root_folder = os.path.join(root_parent, root_folder)
+            subfolders = get_specfic_subfolders(root_folder, "DRAFT_DFIRM_02")
+            # print(f" Subfolders: {subfolders}")
+            spatial_folders_lookup[huc8_id] = subfolders[0]
+            print(f" HUC8: {huc8_id}, {subfolders[0]}")
+        self.spatial_folders_lookup = spatial_folders_lookup
+
     def _init_sources_lookup(self):
         self.sources_lookup = excel_to_df(self.excel_path, sheet_name="SOURCE_CIT_STATEWIDE", dtype=str)
-        template_row = (self.sources_lookup.loc[self.sources_lookup['AUTHOR'] == self.author]
-                        .drop(columns=['SOURCE_CIT', 'DFIRM_ID']))
-        print(f"Authors: {self.sources_lookup['AUTHOR'].unique().tolist()}")
-        print(f"Autor: {self.author}")
+        template_row = self.sources_lookup.loc[(self.sources_lookup['AUTHOR'] == self.author)].loc[:1]
+        template_row = template_row.drop(columns=['SOURCE_CIT', 'DFIRM_ID'])
+        logger.debug(f"Template Row: {template_row}")
+        print(f"Authors: {self.sources_lookup['AUTHOR'].tolist()}")
+        print(f"Author: {self.author}")
         dfirm_dict = self.dfirm_lookup.to_dict(orient='index')
+        print(f"DFIRM Dict: {len(dfirm_dict)}")
 
-        print(f"Template Row: {template_row}\n {type(template_row)}")
+        date_cols = ['PUB_DATE', 'SRC_DATE', "COMP_DATE"]
+        for col in date_cols:
+            if col in self.sources_lookup.columns:
+                unique_dates = self.sources_lookup[col].unique().tolist()
+                print(f"{col}: {unique_dates}, {self.sources_lookup[col].dtype}")
+        # print(f"Template Row: {template_row}\n {type(template_row)}")
         # populate rows for all watersheds
         new_rows = pd.DataFrame(columns=template_row.columns)
         for i, row_dict in dfirm_dict.items():
@@ -85,8 +155,15 @@ class CreateFEMAxml:
             # Append the new row to new_rows using pd.concat
             new_rows = pd.concat([new_rows, new_row], ignore_index=True)
 
-        other_rows = self.sources_lookup.loc[self.sources_lookup['AUTHOR'] != self.author]
-        return pd.concat([new_rows, other_rows], ignore_index=True)
+        other_rows = self.sources_lookup.loc[(self.sources_lookup['AUTHOR'] != self.author) |
+                                             (~self.sources_lookup['SOURCE_CIT'].str.contains("STUDY") &
+                                              pd.notna(self.sources_lookup['SOURCE_CIT']) &
+                                              (self.sources_lookup['SOURCE_CIT'] != 'nan'))]
+        other_rows["DFIRM_ID"] = np.nan
+        print(f"Other Rows: {other_rows['SOURCE_CIT'].tolist()}\n")
+        all_rows = pd.concat([new_rows, other_rows], ignore_index=True)
+        print(f"All Rows: {all_rows['SOURCE_CIT'].tolist()}\n")
+        return all_rows
 
     def _init_state_refs(self):
         # Get state from FIPS codes
@@ -96,10 +173,10 @@ class CreateFEMAxml:
             raise ValueError(f"Multiple states found in FIPS codes: {states_unique}")
         else:
             self.state_fips_code = int(states_unique[0])
-        print(f"State FIPS Code: {self.state_fips_code}")
-        print(f"State FIPS: {self.state_fips['FIPS'].unique().tolist()}")
+        # print(f"State FIPS Code: {self.state_fips_code}")
+        # print(f"State FIPS: {self.state_fips['FIPS'].unique().tolist()}")
         thistate = self.state_fips[self.state_fips['FIPS'] == self.state_fips_code]
-        print(f"State FIPS: {thistate}")
+        # print(f"State FIPS: {thistate}")
         self.state_name = thistate['State'].values[0]
         print(f"State {self.state_fips_code}: {self.state_name}")
 
@@ -140,7 +217,7 @@ class CreateFEMAxml:
 
         tree_str = ET.tostring(tree.getroot(), encoding='utf-8').decode('utf-8')
         sec_element = ET.fromstring(remove_extraneous_spacing(tree_str))
-        print(f"Section 125: {ET.tostring(sec_element, encoding='utf-8')}")
+        # print(f"Section 125: {ET.tostring(sec_element, encoding='utf-8')}")
 
         tree = ET.ElementTree(sec_element)
 
@@ -184,11 +261,16 @@ class CreateFEMAxml:
         # Create a new tree with root element "lineage"
         lineage = ET.Element("lineage")
 
-        unique_non_study = self.sources_lookup['SOURCE_CIT'].unique().tolist()
-        unique_non_study = [s for s in unique_non_study if "STUDY" not in s]
+        all_sources = self.sources_lookup['SOURCE_CIT'].tolist()
+        self.sources_lookup.to_excel(f"ALL_SOURCES_{kwargs.get("DFIRM ID", 1)}.xlsx", index=False)
+        print(f"Sources: {all_sources}")
+        unique_non_study = [s for s in all_sources if "STUDY" not in s and s != "nan"]
         target_row = self.sources_lookup.loc[self.sources_lookup['SOURCE_CIT'] == kwargs.get("SOURCE_CIT")]
+        logger.debug(f"Target Row: {target_row}")
         other_rows = self.sources_lookup.loc[self.sources_lookup['SOURCE_CIT'].isin(unique_non_study)]
         sources_to_add = pd.concat([target_row, other_rows], ignore_index=True)
+        print(f"Adding {sources_to_add['SOURCE_CIT'].tolist()}")
+        sources_to_add.to_excel(f"SOURCES_to_add_{kwargs.get("DFIRM ID", 1)}.xlsx", index=False)
 
         for index, row in sources_to_add.iterrows():
             srcinfo = ET.SubElement(lineage, 'srcinfo')
@@ -261,7 +343,7 @@ class CreateFEMAxml:
         tree = ET.ElementTree(lineage)
         tree_str = ET.tostring(tree.getroot(), encoding='utf-8').decode('utf-8')
         sec_element = ET.fromstring(remove_extraneous_spacing(tree_str))
-        print(f"Section 264: {ET.tostring(sec_element, encoding='utf-8')}")
+        # print(f"Section 264: {ET.tostring(sec_element, encoding='utf-8')}")
 
         tree = ET.ElementTree(sec_element)
 
@@ -286,7 +368,7 @@ class CreateFEMAxml:
         test_tree = ET.tostring(tree.getroot(), encoding='utf-8').decode('utf-8')
         xml_str = remove_extraneous_spacing(test_tree)
         xml_str = pretty_print_xml(xml_str)
-        print(f"Section 292: {xml_str}")
+        # print(f"Section 292: {xml_str}")
         pprint(xml_str)
 
         return ET.ElementTree(root)
@@ -312,7 +394,7 @@ class CreateFEMAxml:
             zone_name, zone_number = None, None
             cardinal_directions = ["north", "south", "east", "west"]
             for direction in cardinal_directions:
-                print(f" Direction: {direction}, {crs_json['name']}")
+                # print(f" Direction: {direction}, {crs_json['name']}")
                 if direction in crs_json["name"].lower():
                     zone_name = direction.title()
                     break
@@ -341,7 +423,7 @@ class CreateFEMAxml:
                 if "spcs" in conversion_name.lower():
                     horizontal_crs_lookup[epsg_code]["grid_sys_name"] = "State Plane Coordinate System 1983"
                 if (("us " in conversion_name.lower() or "us_" in conversion_name.lower() or
-                        "survey" in conversion_name.lower()) and
+                     "survey" in conversion_name.lower()) and
                         ("feet" in conversion_name.lower() or "foot" in conversion_name.lower())):
                     horizontal_crs_lookup[epsg_code]["horizontal_unit"] = "survey feet"
                 elif "feet" in conversion_name.lower() or "foot" in conversion_name.lower():
@@ -386,7 +468,7 @@ class CreateFEMAxml:
                     horizontal_crs_lookup[epsg_code]['easting'] = str(param["value"])
                 elif "northing" in param["name"].lower() and "false" in param["name"].lower():
                     horizontal_crs_lookup[epsg_code]['northing'] = str(param["value"])
-            print(f"SPCS Lookup: {horizontal_crs_lookup[epsg_code]}")
+            # print(f"SPCS Lookup: {horizontal_crs_lookup[epsg_code]}")
 
         return horizontal_crs_lookup
 
@@ -444,18 +526,51 @@ class CreateFEMAxml:
         fnorth.text = info_dict["northing"]
 
         tree_str = pretty_print_xml(ET.tostring(root, encoding='utf-8').decode('utf-8'))
-        print(f"Section 398: {tree_str}")
+        # print(f"Section 484: {tree_str}")
         return ET.ElementTree(ET.fromstring(tree_str))
 
     def create_fema_metadata(self):
         w_dict = get_places_dict(self.purchases_df)
         #
         for watershed, details in w_dict.items():
+            # Get watershed info
             print(f"\nWatershed: {watershed}")
+            matching_rows = self.dfirm_lookup.loc[self.dfirm_lookup['HUC8'] == watershed]
+            if matching_rows.empty:
+                print(f"\nNo matching rows for {watershed}")
+                continue
+            DFIRM_ID = matching_rows['DFIRM_ID'].values[0]
+            SOURCE_CIT = matching_rows['SOURCE_CIT'].values[0]
+            print(f'\n{watershed}: {DFIRM_ID}, {SOURCE_CIT}')
+
+            # Fill out missing values into DF
+            self.sources_lookup = fill_df_with_values(self.sources_lookup, ["DFIRM_ID", "SOURCE_CIT"],
+                                                      **{"DFIRM_ID": DFIRM_ID, "SOURCE_CIT": SOURCE_CIT})
+
+            # Get spatial files, if folder provided
+            spatial_subfolder = self.spatial_folders_lookup.get(int(watershed), "")
+            print(f"\nSpatial Subfolder: {spatial_subfolder}")
+            spatial_files = None
+            if spatial_subfolder and os.path.exists(spatial_subfolder):
+                spatial_files = get_file_names(spatial_subfolder, ".shp")
+                print(f"Spatial Files: {spatial_files}")
+
             ea_path = f"{self.lookup_folder}EA_Info.json"
             with open(ea_path, "r") as ea:
                 ea_list = json.load(ea)
             if ea_list:
+                # Remove entries not in spatial files
+                if spatial_files:
+                    new_ea_list = []
+                    for ea_dict in ea_list:
+                        # print(f"EA Dict: {ea_dict}")
+                        if "enttypl" in ea_dict:
+                            if ea_dict['enttypl'] in spatial_files:
+                                new_ea_list.append(ea_dict)
+                        else:
+                            new_ea_list.append(ea_dict)
+                    ea_list = new_ea_list
+
                 cleaned_ea_list = []
                 for ea_dict in ea_list:
                     new_dict = {}
@@ -472,20 +587,10 @@ class CreateFEMAxml:
                 eainfo_tree = self.create_ea_info(cleaned_ea_list)
                 out_folder = "../ea_info/"
                 os.makedirs(out_folder, exist_ok=True)
-                write_xml(eainfo_tree, f"{out_folder}EA.xml")
-
-            matching_rows = self.dfirm_lookup.loc[self.dfirm_lookup['HUC8'] == watershed]
-            if matching_rows.empty:
-                print(f"\nNo matching rows for {watershed}")
-                continue
-            DFIRM_ID = matching_rows['DFIRM_ID'].values[0]
-            SOURCE_CIT = matching_rows['SOURCE_CIT'].values[0]
-            print(f'\n{watershed}: {DFIRM_ID}, {SOURCE_CIT}')
-            self.sources_lookup = fill_df_with_values(self.sources_lookup, ["DFIRM_ID", "SOURCE_CIT"],
-                                                      **{"DFIRM_ID": DFIRM_ID, "SOURCE_CIT": SOURCE_CIT})
+                write_xml(eainfo_tree, f"{out_folder}{DFIRM_ID}_EA.xml")
 
             place_tree = self.create_places_sub_xml(details, **{"DFIRM ID": DFIRM_ID})
-            print(f"Section: {ET.tostring(place_tree.getroot(), encoding='utf-8')}")
+            # print(f"Section: {ET.tostring(place_tree.getroot(), encoding='utf-8')}")
             out_folder = "../places/"
             out_xml = out_folder + f"{DFIRM_ID}_PLACES.xml"
             write_xml(place_tree, out_xml)
@@ -515,5 +620,7 @@ class CreateFEMAxml:
 
 
 if __name__ == "__main__":
-    fema_xml = CreateFEMAxml()
+    excel_path = "../NE_Metadata_Tables.xlsx"
+    spatial_files_root = r"E:\nebraska_BLE\03_delivered"
+    fema_xml = CreateFEMAxml(excel_path, spatial_files_root)
     fema_xml.create_fema_metadata()
