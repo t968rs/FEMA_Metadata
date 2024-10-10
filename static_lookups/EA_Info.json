@@ -20,6 +20,11 @@
     "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
   },
   {
+    "enttypl": "S_Levee",
+    "enttypd": "A spatial dataset consisting of lines that represent the centerlines of levees.",
+    "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."
+  },
+  {
     "enttypl": "S_Submittal_Info",
     "enttypd": "A spatial dataset consisting of polygons depicting the extents of the studied area.",
     "enttypds": "FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site)."

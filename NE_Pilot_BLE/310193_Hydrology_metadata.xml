@@ -5,8 +5,8 @@
       <citeinfo>
         <origin>AtkinsRealis</origin>
         <pubdate>20240630</pubdate>
-        <title>DCS Hydrology Submission for Little Nemaha HUC8 (10240006)</title>
-        <edition>Version 2.8.5.6</edition>
+        <title>Salt HUC, NE FY20/22 DISC-BLE</title>
+        <edition>2.7.5.6</edition>
         <geoform>FEMA-DCS-Hydrology</geoform>
         <pubinfo>
           <pubplace>Washington, DC</pubplace>
@@ -17,7 +17,7 @@
           <citeinfo>
             <origin>Federal Emergency Management Agency</origin>
             <pubdate>20240630</pubdate>
-            <title>FEMA CASE 21-07-0012S</title>
+            <title>FEMA CASE 21-07-0013S</title>
           </citeinfo>
         </lworkcit>
       </citeinfo>
@@ -40,164 +40,134 @@
     </status>
     <spdom>
       <bounding>
-        <westbc>-96.577078</westbc>
-        <eastbc>-95.636155</eastbc>
-        <northbc>40.843929</northbc>
-        <southbc>40.225014</southbc>
+        <westbc>-97.053</westbc>
+        <eastbc>-96.275</eastbc>
+        <northbc>41.441</northbc>
+        <southbc>40.512</southbc>
       </bounding>
     </spdom>
     <keywords>
       <theme>
         <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>hydrology</themekey>
         <themekey>environment</themekey>
         <themekey>inlandWaters</themekey>
+        <themekey>structure</themekey>
+        <themekey>transportation</themekey>
+        <themekey>elevation</themekey>
       </theme>
       <theme>
         <themekt>FEMA NFIP Topic Category</themekt>
         <themekey>Hydrology</themekey>
         <themekey>Flood Insurance Rate Map</themekey>
-        <themekey>FIRM</themekey>
-        <themekey>Flood Hazard Data</themekey>
-        <themekey>0.2-Percent-Annual-Chance Flood</themekey>
-        <themekey>10-Percent-Annual-Chance Flood</themekey>
-        <themekey>1-Percent-Annual-Chance Flood</themekey>
-        <themekey>2-Percent-Annual-Chance Flood</themekey>
-        <themekey>4-Percent-Annual-Chance Flood</themekey>
-        <themekey>Channel</themekey>
-        <themekey>Floodflow-Frequency Curve</themekey>
-        <themekey>Hydrograph</themekey>
-        <themekey>Regression Equation</themekey>
-        <themekey>Stage</themekey>
-        <themekey>Flow Gage</themekey>
-        <themekey>Precipitation Gage</themekey>
-        <themekey>Imperviousness</themekey>
-        <themekey>Soil Type</themekey>
-        <themekey>Landuse</themekey>
-        <themekey>Link</themekey>
-        <themekey>Node</themekey>
-        <themekey>Precipitation Gage</themekey>
-        <themekey>Soil</themekey>
-        <themekey>Stream</themekey>
-        <themekey>Water Body</themekey>
-        <themekey>Watershed/Basin</themekey>
-        <themekey>Hydrologic Reach</themekey>
-        <themekey>2D Model</themekey>
+        <themekey>Riverine Flooding</themekey>
+        <themekey>Coastal Flooding</themekey>
+        <themekey>NFIP</themekey>
+        <themekey>Base Flood Elevation</themekey>
+        <themekey>SFHA</themekey>
+        <themekey>Floodway</themekey>
       </theme>
       <place>
         <placekt>None</placekt>
-        <placekey>Region 07</placekey>
-        <placekey>STATE NE</placekey>
-		<placekey>County Butler</placekey>
-        <placekey>FEMA-FIPS 310</placekey>
-        <placekey>Community Butler County</placekey>
-        <placekey>FEMA-CID 31023</placekey>
-		<placekey>Community Butler County</placekey>
-        <placekey>FEMA-CID 310025</placekey>
-        <placekey>Community Village of Dwight</placekey>
-        <placekey>FEMA-CID 310273</placekey>
-        <placekey>Community Village of Brainard</placekey>
-        <placekey>FEMA-CID 315531</placekey>
-        <placekey>County Cass</placekey>
-        <placekey>FEMA-FIPS 310</placekey>
-        <placekey>Community Cass County</placekey>
-        <placekey>FEMA-CID 31025</placekey>
-		<placekey>Community Village of Alvo</placekey>
+        <placekey>REGION 07</placekey>
+        <placekey>STATE IA</placekey>
+        <placekey>FEMA-CID SANE22</placekey>
+        <placekey>COUNTY CASS</placekey>
+        <placekey>COUNTY-FIPS 25</placekey>
+        <placekey>COUNTY BUTLER</placekey>
+        <placekey>COUNTY-FIPS 23</placekey>
+        <placekey>COUNTY LANCASTER</placekey>
+        <placekey>COUNTY-FIPS 109</placekey>
+        <placekey>COUNTY GAGE</placekey>
+        <placekey>COUNTY-FIPS 67</placekey>
+        <placekey>COUNTY SAUNDERS</placekey>
+        <placekey>COUNTY-FIPS 155</placekey>
+        <placekey>COUNTY SEWARD</placekey>
+        <placekey>COUNTY-FIPS 159</placekey>
+        <placekey>COUNTY SALINE</placekey>
+        <placekey>COUNTY-FIPS 151</placekey>
+        <placekey>COMMUNITY ALVO, VILLAGE OF</placekey>
+        <placekey>COMMUNITY MURDOCK, VILLAGE OF</placekey>
+        <placekey>COMMUNITY PANAMA, VILLAGE OF</placekey>
+        <placekey>COMMUNITY CRETE, CITY OF</placekey>
+        <placekey>COMMUNITY BEE, VILLAGE OF</placekey>
+        <placekey>BUTLER COUNTY UNINCORPORATED AREAS</placekey>
+        <placekey>COMMUNITY DWIGHT, VILLAGE OF</placekey>
+        <placekey>COMMUNITY BRAINARD, VILLAGE OF</placekey>
+        <placekey>COMMUNITY EAGLE, VILLAGE OF</placekey>
+        <placekey>COMMUNITY GREENWOOD, VILLAGE OF</placekey>
+        <placekey>CASS COUNTY UNINCORPORATED AREAS</placekey>
+        <placekey>GAGE COUNTY UNINCORPORATED AREAS</placekey>
+        <placekey>LANCASTER COUNTY UNINCORPORATED AREAS</placekey>
+        <placekey>COMMUNITY HICKMAN, CITY OF</placekey>
+        <placekey>COMMUNITY RAYMOND, VILLAGE OF</placekey>
+        <placekey>COMMUNITY ROCA, VILLAGE OF</placekey>
+        <placekey>COMMUNITY WAVERLY, CITY OF</placekey>
+        <placekey>COMMUNITY CERESCO, VILLAGE OF</placekey>
+        <placekey>COMMUNITY SPRAGUE, VILLAGE OF</placekey>
+        <placekey>COMMUNITY DAVEY, VILLAGE OF</placekey>
+        <placekey>COMMUNITY DENTON, VILLAGE OF</placekey>
+        <placekey>COMMUNITY HALLAM, VILLAGE OF</placekey>
+        <placekey>COMMUNITY MALCOLM, VILLAGE OF</placekey>
+        <placekey>SALINE COUNTY UNINCORPORATED AREAS</placekey>
+        <placekey>SAUNDERS COUNTY UNINCORPORATED AREAS</placekey>
+        <placekey>COMMUNITY ASHLAND, CITY OF</placekey>
+        <placekey>COMMUNITY ITHACA, VILLAGE OF</placekey>
+        <placekey>COMMUNITY MALMO, VILLAGE OF</placekey>
+        <placekey>COMMUNITY MEMPHIS, VILLAGE OF</placekey>
+        <placekey>COMMUNITY PRAGUE, VILLAGE OF</placekey>
+        <placekey>COMMUNITY VALPARAISO, VILLAGE OF</placekey>
+        <placekey>COMMUNITY WAHOO, CITY OF</placekey>
+        <placekey>COMMUNITY WESTON, VILLAGE OF</placekey>
+        <placekey>COMMUNITY MORSE BLUFF, VILLAGE OF</placekey>
+        <placekey>COMMUNITY COLON, VILLAGE OF</placekey>
+        <placekey>COMMUNITY MEAD, VILLAGE OF</placekey>
+        <placekey>COMMUNITY CEDAR BLUFFS, VILLAGE OF</placekey>
+        <placekey>COMMUNITY YUTAN, CITY OF</placekey>
+        <placekey>COMMUNITY PLEASANT DALE, VILLAGE OF</placekey>
+        <placekey>SEWARD COUNTY UNINCORPORATED AREAS</placekey>
+        <placekey>COMMUNITY GARLAND, VILLAGE OF</placekey>
         <placekey>FEMA-CID 310193</placekey>
-		<placekey>Community Village of Murdock</placekey>
         <placekey>FEMA-CID 310212</placekey>
-        <placekey>Community Village of Eagle</placekey>
-        <placekey>FEMA-CID 310274</placekey>
-		<placekey>Community Village of Greenwood</placekey>
-        <placekey>FEMA-CID 310374</placekey>
-        <placekey>Community Cass County</placekey>
-        <placekey>FEMA-CID 310407</placekey>
-        <placekey>County Gage</placekey>
-        <placekey>FEMA-FIPS 310</placekey>
-        <placekey>Community Gage County</placekey>
-        <placekey>FEMA-CID 31067</placekey>
-        <placekey>Community Gage County</placekey>
-        <placekey>FEMA-CID 310088</placekey>
-        <placekey>County Lancaster</placekey>
-        <placekey>FEMA-FIPS 311</placekey>
-        <placekey>Community Lancaster County</placekey>
-        <placekey>FEMA-CID 31109</placekey>
-        <placekey>Community Village of Panama</placekey>
         <placekey>FEMA-CID 310501</placekey>
-        <placekey>Community Lancaster County</placekey>
-        <placekey>FEMA-CID 310134</placekey>
-		<placekey>Community City of Hickman</placekey>
-        <placekey>FEMA-CID 310136</placekey>
-		<placekey>Community Village of Raymond</placekey>
-        <placekey>FEMA-CID 310138</placekey>
-		<placekey>Community Village of Roca</placekey>
-        <placekey>FEMA-CID 310139</placekey>
-        <placekey>Community City of Waverly</placekey>
-        <placekey>FEMA-CID 310140</placekey>
-		<placekey>Community Village of Ceresco</placekey>
-        <placekey>FEMA-CID 310197</placekey>
-		<placekey>Community Village of Sprague</placekey>
-		<placekey>FEMA-CID 310495</placekey>
-		<placekey>Community Village of Davey</placekey>
-		<placekey>FEMA-CID 310497</placekey>
-		<placekey>Community Village of Denton</placekey>
-		<placekey>FEMA-CID 310498</placekey>
-		<placekey>Community Village of Hallam</placekey>
-		<placekey>FEMA-CID 310499</placekey>
-		<placekey>Community Village of Malcolm</placekey>
-		<placekey>FEMA-CID 310500</placekey>
-		<placekey>County Saline</placekey>
-        <placekey>FEMA-FIPS 311</placekey>
-        <placekey>Community Saline County</placekey>
-        <placekey>FEMA-CID 31151</placekey>
-        <placekey>Community City of Crete</placekey>
         <placekey>FEMA-CID 310186</placekey>
-        <placekey>Community Saline County</placekey>
-        <placekey>FEMA-CID 310472</placekey>
-        <placekey>County Saunders</placekey>
-        <placekey>FEMA-FIPS 311</placekey>
-        <placekey>Community Saunders County</placekey>
-        <placekey>FEMA-CID 31155</placekey>
-        <placekey>Community Saunders County</placekey>
-        <placekey>FEMA-CID 310195</placekey>
-        <placekey>Community City of Ashland</placekey>
-        <placekey>FEMA-CID 310196</placekey>
-        <placekey>Community Village of Ithaca</placekey>
-        <placekey>FEMA-CID 310198</placekey>
-        <placekey>Community Village of Malmo</placekey>
-        <placekey>FEMA-CID 310200</placekey>
-        <placekey>Community Village of Memphis</placekey>
-        <placekey>FEMA-CID 310201</placekey>
-		<placekey>Community Village of Prague</placekey>
-        <placekey>FEMA-CID 310202</placekey>
-        <placekey>Community Village of Valparaiso</placekey>
-        <placekey>FEMA-CID 310203</placekey>
-        <placekey>Community City of Wahoo</placekey>
-        <placekey>FEMA-CID 310204</placekey>
-        <placekey>Community Village of Weston</placekey>
-        <placekey>FEMA-CID 310205</placekey>
-        <placekey>Community Village of Morse Bluff</placekey>
-        <placekey>FEMA-CID 310285</placekey>
-		<placekey>Community Village of Colon</placekey>
-        <placekey>FEMA-CID 310290</placekey>
-        <placekey>Community Village of Mead</placekey>
-        <placekey>FEMA-CID 310301</placekey>
-        <placekey>Community Village of Cedar Bluffs</placekey>
-        <placekey>FEMA-CID 310356</placekey>
-        <placekey>Community City of Yutan</placekey>
-        <placekey>FEMA-CID 310406</placekey>
-        <placekey>County Seward</placekey>
-        <placekey>FEMA-FIPS 311</placekey>
-        <placekey>Community Seward County</placekey>
-        <placekey>FEMA-CID 31159</placekey>
-        <placekey>Community Village of Bee</placekey>
         <placekey>FEMA-CID 310556</placekey>
-        <placekey>Community Village of Pleasant Dale</placekey>
+        <placekey>FEMA-CID 310025</placekey>
+        <placekey>FEMA-CID 310273</placekey>
+        <placekey>FEMA-CID 315531</placekey>
+        <placekey>FEMA-CID 310274</placekey>
+        <placekey>FEMA-CID 310374</placekey>
+        <placekey>FEMA-CID 310407</placekey>
+        <placekey>FEMA-CID 310088</placekey>
+        <placekey>FEMA-CID 310134</placekey>
+        <placekey>FEMA-CID 310136</placekey>
+        <placekey>FEMA-CID 310138</placekey>
+        <placekey>FEMA-CID 310139</placekey>
+        <placekey>FEMA-CID 310140</placekey>
+        <placekey>FEMA-CID 310197</placekey>
+        <placekey>FEMA-CID 310495</placekey>
+        <placekey>FEMA-CID 310497</placekey>
+        <placekey>FEMA-CID 310498</placekey>
+        <placekey>FEMA-CID 310499</placekey>
+        <placekey>FEMA-CID 310500</placekey>
+        <placekey>FEMA-CID 310472</placekey>
+        <placekey>FEMA-CID 310195</placekey>
+        <placekey>FEMA-CID 310196</placekey>
+        <placekey>FEMA-CID 310198</placekey>
+        <placekey>FEMA-CID 310200</placekey>
+        <placekey>FEMA-CID 310201</placekey>
+        <placekey>FEMA-CID 310202</placekey>
+        <placekey>FEMA-CID 310203</placekey>
+        <placekey>FEMA-CID 310204</placekey>
+        <placekey>FEMA-CID 310205</placekey>
+        <placekey>FEMA-CID 310285</placekey>
+        <placekey>FEMA-CID 310290</placekey>
+        <placekey>FEMA-CID 310301</placekey>
+        <placekey>FEMA-CID 310356</placekey>
+        <placekey>FEMA-CID 310406</placekey>
         <placekey>FEMA-CID 310309</placekey>
-        <placekey>Community Seward County</placekey>
         <placekey>FEMA-CID 310474</placekey>
-        <placekey>Community Village of Garland</placekey>
         <placekey>FEMA-CID 310558</placekey>
-        <placekey>HYDROLOGIC UNIT 10200203</placekey>
       </place>
     </keywords>
     <accconst>None</accconst>
@@ -212,10 +182,10 @@
     <complete>Flows are computed at different locations of the study area.  The method(s) and/or models(s) are described in the FIS Report.  Assumptions and special considerations are also clearly stated in the report.  Flows previously determined in other studies or hydrologic investigations are used for comparison.  Computed flows are compared with historic flooding data.  Submittal of hydrologic data in accordance with FEMA's Data Capture Technical Reference ensures completeness of the Hydrology Study submittal.  </complete>
     <posacc>
       <horizpa>
-        <horizpar>The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Horizontal accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM Database was also performed.</horizpar>
+        <horizpar>The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FIS and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Horizontal accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM Database was also performed.</horizpar>
       </horizpa>
       <vertacc>
-        <vertaccr>The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Vertical accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM Database was also performed.</vertaccr>
+        <vertaccr>The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Vertical accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM database was also performed.</vertaccr>
       </vertacc>
     </posacc>
     <lineage>
@@ -224,10 +194,17 @@
           <citeinfo>
             <origin>AtkinsRealis</origin>
             <pubdate>20240630</pubdate>
-            <title>Hydrology Submittal for Base Level Engineering (BLE) study for Little Nemaha HUC8 (10240006) in Nebraska</title>
+            <title>Salt HUC, NE FY20/22 DISC-BLE</title>
+            <geoform>map</geoform>
+            <pubinfo>
+              <pubplace>Calverton, MD</pubplace>
+              <publish>Federal Emergency Management Agency</publish>
+            </pubinfo>
+            <othercit>Effective FIS and FIRM from State of Nebraska</othercit>
           </citeinfo>
         </srccite>
-        <typesrc>online</typesrc>
+        <srcscale>24000</srcscale>
+        <typesrc>Digital</typesrc>
         <srctime>
           <timeinfo>
             <sngdate>
@@ -236,7 +213,7 @@
           </timeinfo>
           <srccurr>Publication</srccurr>
         </srctime>
-        <srccitea>STUDY12</srccitea>
+        <srccitea>STUDY14</srccitea>
         <srccontr>S_BFE, S_FLD_HAZ_AR, S_FLD_HAZ_LN, S_Subbasins, S_Submittal_Info, S_WTR_LN</srccontr>
       </srcinfo>
       <srcinfo>
@@ -366,25 +343,26 @@
     <distrib>
       <cntinfo>
         <cntorgp>
-          <cntorg>FEMA, Mapping Information Platform</cntorg>
+          <cntorg>FEMA, Flood Map Service Center</cntorg>
         </cntorgp>
         <cntaddr>
-          <addrtype>mailing address</addrtype>
-          <address>500 C Street, S.W.</address>
-          <city>Washington</city>
-          <state>District of Columbia</state>
-          <postal>20472</postal>
+          <addrtype>mailing</addrtype>
+          <address>P.O. Box 3617</address>
+          <city>Oakton</city>
+          <state>Virginia</state>
+          <postal>22124</postal>
           <country>USA</country>
         </cntaddr>
         <cntvoice>1-877-336-2627</cntvoice>
-        <cntemail>miphelp@riskmapcds.com</cntemail>
+        <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
+        <cntinst>Data requests must include the full name of the community or county and the FIRM panel number(s) covered by the request.</cntinst>
       </cntinfo>
     </distrib>
     <distliab>No warranty expressed or implied is made by FEMA regarding the utility of the data on any other system nor shall the act of distribution constitute any such warranty.</distliab>
     <stdorder>
       <digform>
         <digtinfo>
-          <formname>FEMA-DCS_Hydrology</formname>
+          <formname>Esri Shapefile</formname>
         </digtinfo>
         <digtopt>
           <onlinopt>
@@ -404,22 +382,23 @@
     <metc>
       <cntinfo>
         <cntperp>
-          <cntper>Mike Schlesener</cntper>
-          <cntorg>Atkins North America</cntorg>
+          <cntper>MIPHelp</cntper>
+          <cntorg>Federal Emergency Management Agency</cntorg>
         </cntperp>
+        <cntpos>Federal Insurance and Mitigation Administration</cntpos>
         <cntaddr>
-          <addrtype>mailing address</addrtype>
-          <address>4400 College Boulevard, Suite 212</address>
-          <city>Overland Park</city>
-          <state>KS</state>
-          <postal>66211</postal>
+          <addrtype>mailing</addrtype>
+          <address>500 C Street, S.W.</address>
+          <city>Washington</city>
+          <state>District of Columbia</state>
+          <postal>20472</postal>
           <country>USA</country>
         </cntaddr>
-        <cntvoice>1-816-235-3466</cntvoice>
-        <cntemail>mike.schlesener@atkinsglobal.com</cntemail>
+        <cntvoice>1-877-336-2627</cntvoice>
+        <cntemail>fema-riskmap-ithelp@fema.dhs.gov</cntemail>
       </cntinfo>
     </metc>
-    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
     <metstdv>FGDC-STD-001-1998</metstdv>
     <metextns>
       <onlink>https://hazards.fema.gov</onlink>

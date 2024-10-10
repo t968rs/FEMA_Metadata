@@ -4,9 +4,9 @@
     <citation>
       <citeinfo>
         <origin>AtkinsRealis</origin>
-        <pubdate>20240531</pubdate>
+        <pubdate>20240630</pubdate>
         <title>Little Nemaha HUC, NE FY20 DISC-BLE</title>
-        <edition>2.8.5.6</edition>
+        <edition>2.7.5.6</edition>
         <geoform>FEMA-FIRM-Floodplain</geoform>
         <pubinfo>
           <pubplace>Washington, DC</pubplace>
@@ -16,7 +16,7 @@
         <lworkcit>
           <citeinfo>
             <origin>Federal Emergency Management Agency</origin>
-            <pubdate>20240531</pubdate>
+            <pubdate>20240630</pubdate>
             <title>FEMA CASE 21-07-0012S</title>
           </citeinfo>
         </lworkcit>
@@ -29,7 +29,7 @@
     <timeperd>
       <timeinfo>
         <sngdate>
-          <caldate>20240531</caldate>
+          <caldate>20240630</caldate>
         </sngdate>
       </timeinfo>
       <current>MIP Submission Date</current>
@@ -77,39 +77,39 @@
         <placekey>FEMA-CID 31127C</placekey>
         <placekey>COUNTY CASS</placekey>
         <placekey>COUNTY-FIPS 25</placekey>
-        <placekey>COUNTY RICHARDSON</placekey>
-        <placekey>COUNTY-FIPS 147</placekey>
+        <placekey>COUNTY LANCASTER</placekey>
+        <placekey>COUNTY-FIPS 109</placekey>
         <placekey>COUNTY OTOE</placekey>
         <placekey>COUNTY-FIPS 131</placekey>
+        <placekey>COUNTY RICHARDSON</placekey>
+        <placekey>COUNTY-FIPS 147</placekey>
         <placekey>COUNTY JOHNSON</placekey>
         <placekey>COUNTY-FIPS 97</placekey>
         <placekey>COUNTY NEMAHA</placekey>
         <placekey>COUNTY-FIPS 127</placekey>
-        <placekey>COUNTY LANCASTER</placekey>
-        <placekey>COUNTY-FIPS 109</placekey>
-        <placekey>COMMUNITY VILLAGE OF EAGLE, CITY OF</placekey>
+        <placekey>COMMUNITY EAGLE, VILLAGE OF</placekey>
         <placekey>CASS COUNTY UNINCORPORATED AREAS</placekey>
         <placekey>JOHNSON COUNTY UNINCORPORATED AREAS</placekey>
-        <placekey>COMMUNITY VILLAGE OF COOK, CITY OF</placekey>
+        <placekey>COMMUNITY COOK, VILLAGE OF</placekey>
         <placekey>LANCASTER COUNTY UNINCORPORATED AREAS</placekey>
         <placekey>COMMUNITY BENNET, CITY OF</placekey>
-        <placekey>COMMUNITY VILLAGE OF PANAMA, CITY OF</placekey>
+        <placekey>COMMUNITY PANAMA, VILLAGE OF</placekey>
         <placekey>COMMUNITY AUBURN, CITY OF</placekey>
-        <placekey>COMMUNITY VILLAGE OF BROCK, CITY OF</placekey>
-        <placekey>COMMUNITY VILLAGE OF NEMAHA, CITY OF</placekey>
+        <placekey>COMMUNITY BROCK, VILLAGE OF</placekey>
+        <placekey>COMMUNITY NEMAHA, VILLAGE OF</placekey>
         <placekey>NEMAHA COUNTY UNINCORPORATED AREAS</placekey>
-        <placekey>COMMUNITY VILLAGE OF JOHNSON, CITY OF</placekey>
-        <placekey>COMMUNITY VILLAGE OF BURR, CITY OF</placekey>
-        <placekey>COMMUNITY VILLAGE OF DOUGLAS, CITY OF</placekey>
-        <placekey>COMMUNITY VILLAGE OF DUNBAR, CITY OF</placekey>
-        <placekey>COMMUNITY VILLAGE OF OTOE, CITY OF</placekey>
-        <placekey>COMMUNITY VILLAGE OF PALMYRA, CITY OF</placekey>
+        <placekey>COMMUNITY JOHNSON, VILLAGE OF</placekey>
+        <placekey>COMMUNITY BURR, VILLAGE OF</placekey>
+        <placekey>COMMUNITY DOUGLAS, VILLAGE OF</placekey>
+        <placekey>COMMUNITY DUNBAR, VILLAGE OF</placekey>
+        <placekey>COMMUNITY OTOE, VILLAGE OF</placekey>
+        <placekey>COMMUNITY PALMYRA, VILLAGE OF</placekey>
         <placekey>COMMUNITY SYRACUSE, CITY OF</placekey>
-        <placekey>COMMUNITY VILLAGE OF TALMAGE, CITY OF</placekey>
-        <placekey>COMMUNITY VILLAGE OF UNADILLA, CITY OF</placekey>
+        <placekey>COMMUNITY TALMAGE, VILLAGE OF</placekey>
+        <placekey>COMMUNITY UNADILLA, VILLAGE OF</placekey>
         <placekey>OTOE COUNTY UNINCORPORATED AREAS</placekey>
-        <placekey>COMMUNITY VILLAGE OF LORTON, CITY OF</placekey>
-        <placekey>COMMUNITY VILLAGE OF SHUBERT, CITY OF</placekey>
+        <placekey>COMMUNITY LORTON, VILLAGE OF</placekey>
+        <placekey>COMMUNITY SHUBERT, VILLAGE OF</placekey>
         <placekey>RICHARDSON COUNTY UNINCORPORATED AREAS</placekey>
         <placekey>FEMA-CID 310274</placekey>
         <placekey>FEMA-CID 310407</placekey>
@@ -160,8 +160,8 @@
         <srccite>
           <citeinfo>
             <origin>AtkinsRealis</origin>
-            <pubdate>20240531</pubdate>
-            <title>Salt 2D BLE</title>
+            <pubdate>20240630</pubdate>
+            <title>Little Nemaha HUC, NE FY20 DISC-BLE</title>
             <geoform>map</geoform>
             <pubinfo>
               <pubplace>Calverton, MD</pubplace>
@@ -175,7 +175,7 @@
         <srctime>
           <timeinfo>
             <sngdate>
-              <caldate>20240531</caldate>
+              <caldate>20240630</caldate>
             </sngdate>
           </timeinfo>
           <srccurr>Publication</srccurr>
@@ -210,36 +210,9 @@
         <srccitea>TOPO1</srccitea>
         <srccontr>Terrain Data to model flood risk</srccontr>
       </srcinfo>
-      <srcinfo>
-        <srccite>
-          <citeinfo>
-            <origin>AtkinsRealis</origin>
-            <pubdate>20230101</pubdate>
-            <title>Spillway Locations</title>
-            <geoform>map</geoform>
-            <pubinfo>
-              <pubplace>Calverton, MD</pubplace>
-              <publish>Federal Emergency Management Agency</publish>
-            </pubinfo>
-            <othercit>Effective FIS and FIRM from State of Nebraska</othercit>
-          </citeinfo>
-        </srccite>
-        <srcscale>24000</srcscale>
-        <typesrc>Disk</typesrc>
-        <srctime>
-          <timeinfo>
-            <sngdate>
-              <caldate>20230101</caldate>
-            </sngdate>
-          </timeinfo>
-          <srccurr>Publication</srccurr>
-        </srctime>
-        <srccitea>BASE2</srccitea>
-        <srccontr>Spillway Locations for floodplain mapping</srccontr>
-      </srcinfo>
       <procstep>
         <procdesc>The FIRM Database is compiled in conjunction with the hardcopy FIRM and the final FIS report. The specifics of the hydrologic and hydraulic analyses performed are detailed in the FIS report. The results of these studies are submitted in digital format to FEMA. These data and unrevised data from effective FIRMs are compiled onto the base map used for FIRM publication and checked for accuracy and compliance with FEMA standards.</procdesc>
-        <procdate>20240531</procdate>
+        <procdate>20240630</procdate>
       </procstep>
     </lineage>
   </dataqual>
@@ -294,6 +267,20 @@
     </detailed>
     <detailed>
       <enttyp>
+        <enttypl>S_Fld_Haz_Ar</enttypl>
+        <enttypd>Location and attributes flood risk zones shown on the FIRM.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>S_Fld_Haz_Ln</enttypl>
+        <enttypd>Location and attributes for boundaries of flood risk zones shown on the FIRM.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
         <enttypl>S_Submittal_Info</enttypl>
         <enttypd>A spatial dataset consisting of polygons depicting the extents of the studied area.</enttypd>
         <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
@@ -303,6 +290,13 @@
       <enttyp>
         <enttypl>S_Subbasins</enttypl>
         <enttypd>A spatial dataset consisting of polygons representing watershed or subwatershed areas contributing runoff to the discharge points used in the hydrologic analysis.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>S_Wtr_Ln</enttypl>
+        <enttypd>Location and attributes for hydrography features shown on the FIRM.</enttypd>
         <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
       </enttyp>
     </detailed>
@@ -351,7 +345,7 @@
     </stdorder>
   </distinfo>
   <metainfo>
-    <metd>20240531</metd>
+    <metd>20240630</metd>
     <metc>
       <cntinfo>
         <cntperp>

@@ -4,8 +4,8 @@
     <srccite>
       <citeinfo>
         <origin>AtkinsRealis</origin>
-        <pubdate>20240830</pubdate>
-        <title>Iowa Statewide 2D BLE - Area 1A</title>
+        <pubdate>20240831</pubdate>
+        <title>BLE AREA 1A, IA FY20/21 DISC-BLE</title>
         <geoform>map</geoform>
         <pubinfo>
           <pubplace>Calverton, MD</pubplace>
@@ -19,7 +19,7 @@
     <srctime>
       <timeinfo>
         <sngdate>
-          <caldate>20240830</caldate>
+          <caldate>20240831</caldate>
         </sngdate>
       </timeinfo>
       <srccurr>Publication date</srccurr>
@@ -56,6 +56,6 @@
   </srcinfo>
   <procstep>
     <procdesc>The FIRM Database is compiled in conjunction with the hardcopy FIRM and the final FIS report. The specifics of the hydrologic and hydraulic analyses performed are detailed in the FIS report. The results of these studies are submitted in digital format to FEMA. These data and unrevised data from effective FIRMs are compiled onto the base map used for FIRM publication and checked for accuracy and compliance with FEMA standards.</procdesc>
-    <procdate>20240830</procdate>
+    <procdate>20240831</procdate>
   </procstep>
 </lineage>

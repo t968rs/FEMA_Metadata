@@ -4,14 +4,14 @@
     <srccite>
       <citeinfo>
         <origin>AtkinsRealis</origin>
-        <pubdate>20240531</pubdate>
-        <title>Salt 2D BLE</title>
+        <pubdate>20240930</pubdate>
+        <title>BLE Area 3 Big Sioux, Iowa FY22 DISC-BLE</title>
         <geoform>map</geoform>
         <pubinfo>
           <pubplace>Calverton, MD</pubplace>
           <publish>Federal Emergency Management Agency</publish>
         </pubinfo>
-        <othercit>Effective FIS and FIRM from State of Nebraska</othercit>
+        <othercit>Effective FIS and FIRM from State of Iowa</othercit>
       </citeinfo>
     </srccite>
     <srcscale>24000</srcscale>
@@ -19,66 +19,39 @@
     <srctime>
       <timeinfo>
         <sngdate>
-          <caldate>20240531</caldate>
+          <caldate>20240930</caldate>
         </sngdate>
       </timeinfo>
-      <srccurr>Publication</srccurr>
+      <srccurr>Publication date</srccurr>
     </srctime>
-    <srccitea>STUDY13</srccitea>
-    <srccontr>S_BFE, S_FLD_HAZ_AR, S_FLD_HAZ_LN, S_Subbasins, S_Submittal_Info, S_WTR_LN</srccontr>
+    <srccitea>STUDY33</srccitea>
+    <srccontr>S_BFE, S_FLD_HAZ_AR, S_FLD_HAZ_LN, S_Hydro_Reach, S_Nodes, S_PROFIL_BASLN, S_Subbasins, S_Submittal_Info</srccontr>
   </srcinfo>
   <srcinfo>
     <srccite>
       <citeinfo>
-        <origin>Nebraska Department of Natural Resources</origin>
-        <pubdate>20220111</pubdate>
-        <title>Nebraska Department of Natural Resources Digital Elevation Model</title>
+        <origin>Iowa Department of Transportation</origin>
+        <pubdate>20240304</pubdate>
+        <title>Political Area Boundaries</title>
         <geoform>map</geoform>
         <pubinfo>
-          <pubplace>Nebraska DNR</pubplace>
+          <pubplace>Des Moines, IA</pubplace>
           <publish>Federal Emergency Management Agency</publish>
         </pubinfo>
-        <othercit>Effective FIS and FIRM from State of Nebraska</othercit>
+        <othercit>Effective FIS and FIRM from State of Iowa</othercit>
       </citeinfo>
     </srccite>
     <srcscale>24000</srcscale>
-    <typesrc>Digital</typesrc>
+    <typesrc>online</typesrc>
     <srctime>
       <timeinfo>
         <sngdate>
-          <caldate>20220111</caldate>
+          <caldate>20240304</caldate>
         </sngdate>
       </timeinfo>
-      <srccurr>Publication</srccurr>
+      <srccurr>Download Date</srccurr>
     </srctime>
-    <srccitea>TOPO1</srccitea>
-    <srccontr>Terrain Data to model flood risk</srccontr>
-  </srcinfo>
-  <srcinfo>
-    <srccite>
-      <citeinfo>
-        <origin>AtkinsRealis</origin>
-        <pubdate>20230101</pubdate>
-        <title>Spillway Locations</title>
-        <geoform>map</geoform>
-        <pubinfo>
-          <pubplace>Calverton, MD</pubplace>
-          <publish>Federal Emergency Management Agency</publish>
-        </pubinfo>
-        <othercit>Effective FIS and FIRM from State of Nebraska</othercit>
-      </citeinfo>
-    </srccite>
-    <srcscale>24000</srcscale>
-    <typesrc>Disk</typesrc>
-    <srctime>
-      <timeinfo>
-        <sngdate>
-          <caldate>20230101</caldate>
-        </sngdate>
-      </timeinfo>
-      <srccurr>Publication</srccurr>
-    </srctime>
-    <srccitea>BASE2</srccitea>
-    <srccontr>Spillway Locations for floodplain mapping</srccontr>
+    <srccitea>BASE1</srccitea>
+    <srccontr>Spatial and attribute information for S_Pol_Ar</srccontr>
   </srcinfo>
 </lineage>

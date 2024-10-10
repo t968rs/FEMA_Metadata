@@ -1,5 +1,6 @@
 from xml.dom import minidom
 import pandas as pd
+import geopandas as gpd
 import os
 import numpy as np
 import xml.etree.ElementTree as ET
@@ -8,6 +9,14 @@ import re
 
 TAG_KEYWORDS = {"srcinfo": ["STUDY", "BASE", "TOPO", "FIRM"]}
 
+
+def get_unique_values(df, field):
+    return df[field].unique().tolist()
+
+def shp_to_df(shp_file, **kwargs):
+    gdf = gpd.read_file(shp_file, **kwargs)
+    df = gdf.drop(columns="geometry")
+    return df
 
 def remove_empty_tags(tree: ET.ElementTree) -> ET.ElementTree:
     root = tree.getroot()
@@ -191,14 +200,14 @@ def convert_timestamps_to_strings(df):
     date_columns = list(set(date_columns))
     for col in date_columns:
         if col in df.columns:
-            df[col] = df[col].astype(str)
-            # print(f"CNVRT 276: {col}")
+            # df[col] = df[col].astype(str)
+            print(f"\tCNVRT 195: {col}: {df[col].values}")
             try:
                 # Attempt to convert the column to datetime
                 df[col] = pd.to_datetime(df[col], errors='coerce')
                 # Convert datetime to the desired format
                 df[col] = df[col].dt.strftime('%Y%m%d')
-                # print(f"Converted {col} to string")
+                print(f"\t\tConverted {col}: {df[col].values}")
                 unique_dates = df[col].unique().tolist()
                 # print(f"Unique {col} values: {unique_dates}")
             except Exception as e:

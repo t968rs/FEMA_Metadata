@@ -106,3 +106,1103 @@ Index: []
 1    2.8.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
 
 [1 rows x 16 columns]
+2024-09-25 17:29:34,824 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-25 17:29:34,980 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.8.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-25 17:29:35,027 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-25 17:29:35,074 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.8.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-25 17:34:22,283 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-25 17:34:22,410 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.8.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-25 17:34:22,457 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-25 17:34:22,502 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.8.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-25 17:43:28,962 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-25 17:43:29,077 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.8.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-25 17:43:29,118 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-25 17:43:29,158 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.8.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-25 17:48:01,288 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-25 17:48:01,404 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.8.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-25 17:48:01,443 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-25 17:48:01,481 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.8.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-25 17:52:44,709 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-25 17:52:44,829 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-25 17:52:44,875 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-25 17:52:44,921 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-25 18:10:22,959 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-25 18:10:23,074 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-25 18:10:23,115 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-25 18:10:23,178 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-25 18:13:07,591 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-25 18:13:31,234 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-25 18:13:31,352 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-25 18:13:31,393 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-25 18:13:31,431 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-25 18:14:45,431 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-25 18:14:45,546 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-25 18:14:45,588 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-25 18:14:45,628 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-25 18:23:57,531 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-25 18:23:57,654 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-25 18:23:57,701 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-25 18:23:57,746 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-26 08:51:51,725 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-26 08:51:51,844 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-26 08:51:51,888 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-26 08:51:51,931 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-26 08:54:41,372 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-26 08:54:41,485 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-26 08:54:41,526 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-26 08:54:41,564 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-26 08:55:14,441 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-26 08:55:14,565 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-26 08:55:14,607 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-26 08:55:14,648 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-26 08:55:50,136 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-26 08:55:50,249 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-26 08:55:50,290 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-26 08:55:50,328 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-26 08:56:26,717 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-26 08:56:26,830 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-26 08:56:26,871 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-26 08:56:26,911 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-26 08:59:32,185 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-26 08:59:32,310 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-26 08:59:32,357 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-26 08:59:32,402 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-26 08:59:42,154 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-26 08:59:42,267 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-26 08:59:42,308 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-26 08:59:42,346 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-26 09:00:51,210 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-26 09:00:51,331 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-26 09:00:51,378 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-26 09:00:51,422 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-26 09:08:25,178 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-26 09:08:25,306 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-26 09:08:25,347 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-26 09:08:25,394 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-26 09:29:39,646 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-26 09:29:39,778 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-26 09:29:39,836 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-26 09:29:39,884 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-26 09:31:41,353 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-26 09:31:41,477 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-26 09:31:41,522 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-26 09:31:41,566 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-27 13:09:41,773 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-27 13:09:41,914 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-27 13:09:41,939 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-27 13:09:41,962 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-27 16:46:04,156 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-27 16:46:04,262 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-27 16:46:04,288 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-27 16:46:04,312 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-27 17:03:48,394 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-27 17:03:56,804 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-27 17:04:01,431 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-27 17:04:02,564 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-09-27 17:05:54,207 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+0    2.7.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 14 columns]
+2024-09-27 17:06:02,673 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+2    2.7.5.6  AtkinsRealis, 2024  ...   SANE22    STUDY14
+
+[1 rows x 16 columns]
+2024-09-27 17:06:07,263 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.7.5.6  AtkinsRealis, 2024  ...   31127C    STUDY12
+
+[1 rows x 16 columns]
+2024-09-27 17:06:08,350 - table_to_metadata - DEBUG - Target Row:   VERSION_ID            CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.7.5.6  AtkinsRealis, 2024  ...   31025C    STUDY13
+
+[1 rows x 16 columns]
+2024-10-01 14:28:41,453 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-01 14:29:45,564 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-01 14:30:26,426 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-01 14:30:26,567 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis 2024  ...   AP20IA    STUDY31
+
+[1 rows x 17 columns]
+2024-10-01 14:30:26,595 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+6    2.8.5.6  AtkinsRealis 2024  ...   CY20IA    STUDY14
+
+[1 rows x 17 columns]
+2024-10-01 14:30:26,626 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+5    2.8.5.6  AtkinsRealis 2024  ...   CD20IA    STUDY38
+
+[1 rows x 17 columns]
+2024-10-01 14:30:26,653 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+8    2.8.5.6  AtkinsRealis 2024  ...   GLM2IA    STUDY37
+
+[1 rows x 17 columns]
+2024-10-01 14:30:26,682 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+10    2.8.5.6  AtkinsRealis 2024  ...   LC20IA    STUDY21
+
+[1 rows x 17 columns]
+2024-10-01 14:30:26,710 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+14    2.8.5.6  AtkinsRealis 2024  ...   LW20IA    STUDY19
+
+[1 rows x 17 columns]
+2024-10-01 14:30:26,739 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+17    2.8.5.6  AtkinsRealis 2024  ...   MK20IA    STUDY17
+
+[1 rows x 17 columns]
+2024-10-01 14:30:26,768 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+22    2.8.5.6  AtkinsRealis 2024  ...   TK20IA    STUDY16
+
+[1 rows x 17 columns]
+2024-10-01 14:30:26,796 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+23    2.8.5.6  AtkinsRealis 2024  ...   UC20IA    STUDY32
+
+[1 rows x 17 columns]
+2024-10-01 14:30:26,823 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+24    2.8.5.6  AtkinsRealis 2024  ...   UI20IA    STUDY15
+
+[1 rows x 17 columns]
+2024-10-01 14:30:26,852 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+25    2.8.5.6  AtkinsRealis 2024  ...   UW20IA    STUDY18
+
+[1 rows x 17 columns]
+2024-10-01 14:34:34,860 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-01 14:34:34,984 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis 2024  ...   AP20IA    STUDY31
+
+[1 rows x 17 columns]
+2024-10-01 14:34:35,011 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+6    2.8.5.6  AtkinsRealis 2024  ...   CY20IA    STUDY14
+
+[1 rows x 17 columns]
+2024-10-01 14:34:35,037 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+5    2.8.5.6  AtkinsRealis 2024  ...   CD20IA    STUDY38
+
+[1 rows x 17 columns]
+2024-10-01 14:34:35,063 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+8    2.8.5.6  AtkinsRealis 2024  ...   GLM2IA    STUDY37
+
+[1 rows x 17 columns]
+2024-10-01 14:34:35,090 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+10    2.8.5.6  AtkinsRealis 2024  ...   LC20IA    STUDY21
+
+[1 rows x 17 columns]
+2024-10-01 14:34:35,117 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+14    2.8.5.6  AtkinsRealis 2024  ...   LW20IA    STUDY19
+
+[1 rows x 17 columns]
+2024-10-01 14:34:35,146 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+17    2.8.5.6  AtkinsRealis 2024  ...   MK20IA    STUDY17
+
+[1 rows x 17 columns]
+2024-10-01 14:34:35,172 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+22    2.8.5.6  AtkinsRealis 2024  ...   TK20IA    STUDY16
+
+[1 rows x 17 columns]
+2024-10-01 14:34:35,199 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+23    2.8.5.6  AtkinsRealis 2024  ...   UC20IA    STUDY32
+
+[1 rows x 17 columns]
+2024-10-01 14:34:35,225 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+24    2.8.5.6  AtkinsRealis 2024  ...   UI20IA    STUDY15
+
+[1 rows x 17 columns]
+2024-10-01 14:34:35,254 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+25    2.8.5.6  AtkinsRealis 2024  ...   UW20IA    STUDY18
+
+[1 rows x 17 columns]
+2024-10-01 14:37:28,071 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-01 14:37:28,194 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis 2024  ...   AP20IA    STUDY31
+
+[1 rows x 17 columns]
+2024-10-01 14:37:28,220 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+6    2.8.5.6  AtkinsRealis 2024  ...   CY20IA    STUDY14
+
+[1 rows x 17 columns]
+2024-10-01 14:37:28,248 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+5    2.8.5.6  AtkinsRealis 2024  ...   CD20IA    STUDY38
+
+[1 rows x 17 columns]
+2024-10-01 14:37:28,273 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+8    2.8.5.6  AtkinsRealis 2024  ...   GLM2IA    STUDY37
+
+[1 rows x 17 columns]
+2024-10-01 14:37:28,301 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+10    2.8.5.6  AtkinsRealis 2024  ...   LC20IA    STUDY21
+
+[1 rows x 17 columns]
+2024-10-01 14:37:28,327 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+14    2.8.5.6  AtkinsRealis 2024  ...   LW20IA    STUDY19
+
+[1 rows x 17 columns]
+2024-10-01 14:37:28,355 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+17    2.8.5.6  AtkinsRealis 2024  ...   MK20IA    STUDY17
+
+[1 rows x 17 columns]
+2024-10-01 14:37:28,384 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+22    2.8.5.6  AtkinsRealis 2024  ...   TK20IA    STUDY16
+
+[1 rows x 17 columns]
+2024-10-01 14:37:28,412 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+23    2.8.5.6  AtkinsRealis 2024  ...   UC20IA    STUDY32
+
+[1 rows x 17 columns]
+2024-10-01 14:37:28,438 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+24    2.8.5.6  AtkinsRealis 2024  ...   UI20IA    STUDY15
+
+[1 rows x 17 columns]
+2024-10-01 14:37:28,467 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+25    2.8.5.6  AtkinsRealis 2024  ...   UW20IA    STUDY18
+
+[1 rows x 17 columns]
+2024-10-01 14:37:30,329 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+7    2.8.5.6  AtkinsRealis 2024  ...   FL22IA    STUDY26
+
+[1 rows x 17 columns]
+2024-10-01 14:38:43,764 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-01 14:38:43,886 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis 2024  ...   AP20IA    STUDY31
+
+[1 rows x 17 columns]
+2024-10-01 14:38:43,914 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+6    2.8.5.6  AtkinsRealis 2024  ...   CY20IA    STUDY14
+
+[1 rows x 17 columns]
+2024-10-01 14:38:43,941 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+5    2.8.5.6  AtkinsRealis 2024  ...   CD20IA    STUDY38
+
+[1 rows x 17 columns]
+2024-10-01 14:38:43,966 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+8    2.8.5.6  AtkinsRealis 2024  ...   GLM2IA    STUDY37
+
+[1 rows x 17 columns]
+2024-10-01 14:38:43,994 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+10    2.8.5.6  AtkinsRealis 2024  ...   LC20IA    STUDY21
+
+[1 rows x 17 columns]
+2024-10-01 14:38:44,020 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+14    2.8.5.6  AtkinsRealis 2024  ...   LW20IA    STUDY19
+
+[1 rows x 17 columns]
+2024-10-01 14:38:44,049 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+17    2.8.5.6  AtkinsRealis 2024  ...   MK20IA    STUDY17
+
+[1 rows x 17 columns]
+2024-10-01 14:38:44,078 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+22    2.8.5.6  AtkinsRealis 2024  ...   TK20IA    STUDY16
+
+[1 rows x 17 columns]
+2024-10-01 14:38:44,105 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+23    2.8.5.6  AtkinsRealis 2024  ...   UC20IA    STUDY32
+
+[1 rows x 17 columns]
+2024-10-01 14:38:44,131 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+24    2.8.5.6  AtkinsRealis 2024  ...   UI20IA    STUDY15
+
+[1 rows x 17 columns]
+2024-10-01 14:38:44,160 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+25    2.8.5.6  AtkinsRealis 2024  ...   UW20IA    STUDY18
+
+[1 rows x 17 columns]
+2024-10-01 14:38:46,053 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+7    2.8.5.6  AtkinsRealis 2024  ...   FL22IA    STUDY26
+
+[1 rows x 17 columns]
+2024-10-01 14:43:44,951 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-01 14:43:45,079 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis 2024  ...   AP20IA    STUDY31
+
+[1 rows x 17 columns]
+2024-10-01 14:43:45,106 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+6    2.8.5.6  AtkinsRealis 2024  ...   CY20IA    STUDY14
+
+[1 rows x 17 columns]
+2024-10-01 14:43:45,132 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+5    2.8.5.6  AtkinsRealis 2024  ...   CD20IA    STUDY38
+
+[1 rows x 17 columns]
+2024-10-01 14:43:45,158 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+8    2.8.5.6  AtkinsRealis 2024  ...   GLM2IA    STUDY37
+
+[1 rows x 17 columns]
+2024-10-01 14:43:45,185 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+10    2.8.5.6  AtkinsRealis 2024  ...   LC20IA    STUDY21
+
+[1 rows x 17 columns]
+2024-10-01 14:43:45,214 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+14    2.8.5.6  AtkinsRealis 2024  ...   LW20IA    STUDY19
+
+[1 rows x 17 columns]
+2024-10-01 14:43:45,243 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+17    2.8.5.6  AtkinsRealis 2024  ...   MK20IA    STUDY17
+
+[1 rows x 17 columns]
+2024-10-01 14:43:45,274 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+22    2.8.5.6  AtkinsRealis 2024  ...   TK20IA    STUDY16
+
+[1 rows x 17 columns]
+2024-10-01 14:43:45,302 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+23    2.8.5.6  AtkinsRealis 2024  ...   UC20IA    STUDY32
+
+[1 rows x 17 columns]
+2024-10-01 14:43:45,328 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+24    2.8.5.6  AtkinsRealis 2024  ...   UI20IA    STUDY15
+
+[1 rows x 17 columns]
+2024-10-01 14:43:45,356 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+25    2.8.5.6  AtkinsRealis 2024  ...   UW20IA    STUDY18
+
+[1 rows x 17 columns]
+2024-10-01 14:43:47,203 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+7    2.8.5.6  AtkinsRealis 2024  ...   FL22IA    STUDY26
+
+[1 rows x 17 columns]
+2024-10-01 14:46:18,630 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-01 14:46:56,524 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-01 14:48:03,596 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-01 14:48:26,142 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-01 14:48:26,278 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis 2024  ...   AP20IA    STUDY31
+
+[1 rows x 17 columns]
+2024-10-01 14:48:26,305 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+6    2.8.5.6  AtkinsRealis 2024  ...   CY20IA    STUDY14
+
+[1 rows x 17 columns]
+2024-10-01 14:48:26,332 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+5    2.8.5.6  AtkinsRealis 2024  ...   CD20IA    STUDY38
+
+[1 rows x 17 columns]
+2024-10-01 14:48:26,358 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+8    2.8.5.6  AtkinsRealis 2024  ...   GLM2IA    STUDY37
+
+[1 rows x 17 columns]
+2024-10-01 14:48:26,387 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+10    2.8.5.6  AtkinsRealis 2024  ...   LC20IA    STUDY21
+
+[1 rows x 17 columns]
+2024-10-01 14:48:26,414 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+14    2.8.5.6  AtkinsRealis 2024  ...   LW20IA    STUDY19
+
+[1 rows x 17 columns]
+2024-10-01 14:48:26,443 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+17    2.8.5.6  AtkinsRealis 2024  ...   MK20IA    STUDY17
+
+[1 rows x 17 columns]
+2024-10-01 14:48:26,471 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+22    2.8.5.6  AtkinsRealis 2024  ...   TK20IA    STUDY16
+
+[1 rows x 17 columns]
+2024-10-01 14:48:26,499 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+23    2.8.5.6  AtkinsRealis 2024  ...   UC20IA    STUDY32
+
+[1 rows x 17 columns]
+2024-10-01 14:48:26,525 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+24    2.8.5.6  AtkinsRealis 2024  ...   UI20IA    STUDY15
+
+[1 rows x 17 columns]
+2024-10-01 14:48:26,554 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+25    2.8.5.6  AtkinsRealis 2024  ...   UW20IA    STUDY18
+
+[1 rows x 17 columns]
+2024-10-01 14:48:28,567 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+7    2.8.5.6  AtkinsRealis 2024  ...   FL22IA    STUDY26
+
+[1 rows x 17 columns]
+2024-10-01 14:52:26,342 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-01 14:52:26,475 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis 2024  ...   AP20IA    STUDY31
+
+[1 rows x 17 columns]
+2024-10-01 14:52:26,503 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+6    2.8.5.6  AtkinsRealis 2024  ...   CY20IA    STUDY14
+
+[1 rows x 17 columns]
+2024-10-01 14:52:26,530 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+5    2.8.5.6  AtkinsRealis 2024  ...   CD20IA    STUDY38
+
+[1 rows x 17 columns]
+2024-10-01 14:52:26,556 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+8    2.8.5.6  AtkinsRealis 2024  ...   GLM2IA    STUDY37
+
+[1 rows x 17 columns]
+2024-10-01 14:52:26,585 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+10    2.8.5.6  AtkinsRealis 2024  ...   LC20IA    STUDY21
+
+[1 rows x 17 columns]
+2024-10-01 14:52:26,613 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+14    2.8.5.6  AtkinsRealis 2024  ...   LW20IA    STUDY19
+
+[1 rows x 17 columns]
+2024-10-01 14:52:26,643 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+17    2.8.5.6  AtkinsRealis 2024  ...   MK20IA    STUDY17
+
+[1 rows x 17 columns]
+2024-10-01 14:52:26,671 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+22    2.8.5.6  AtkinsRealis 2024  ...   TK20IA    STUDY16
+
+[1 rows x 17 columns]
+2024-10-01 14:52:26,699 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+23    2.8.5.6  AtkinsRealis 2024  ...   UC20IA    STUDY32
+
+[1 rows x 17 columns]
+2024-10-01 14:52:26,725 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+24    2.8.5.6  AtkinsRealis 2024  ...   UI20IA    STUDY15
+
+[1 rows x 17 columns]
+2024-10-01 14:52:26,755 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+25    2.8.5.6  AtkinsRealis 2024  ...   UW20IA    STUDY18
+
+[1 rows x 17 columns]
+2024-10-01 14:52:28,693 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+7    2.8.5.6  AtkinsRealis 2024  ...   FL22IA    STUDY26
+
+[1 rows x 17 columns]
+2024-10-01 16:16:29,113 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-01 16:16:44,629 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-01 16:16:44,767 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis 2024  ...   AP20IA    STUDY31
+
+[1 rows x 17 columns]
+2024-10-01 16:16:44,794 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+6    2.8.5.6  AtkinsRealis 2024  ...   CY20IA    STUDY14
+
+[1 rows x 17 columns]
+2024-10-01 16:16:44,821 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+5    2.8.5.6  AtkinsRealis 2024  ...   CD20IA    STUDY38
+
+[1 rows x 17 columns]
+2024-10-01 16:16:44,847 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+8    2.8.5.6  AtkinsRealis 2024  ...   GLM2IA    STUDY37
+
+[1 rows x 17 columns]
+2024-10-01 16:16:44,875 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+10    2.8.5.6  AtkinsRealis 2024  ...   LC20IA    STUDY21
+
+[1 rows x 17 columns]
+2024-10-01 16:16:44,902 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+14    2.8.5.6  AtkinsRealis 2024  ...   LW20IA    STUDY19
+
+[1 rows x 17 columns]
+2024-10-01 16:16:44,929 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+17    2.8.5.6  AtkinsRealis 2024  ...   MK20IA    STUDY17
+
+[1 rows x 17 columns]
+2024-10-01 16:16:44,956 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+22    2.8.5.6  AtkinsRealis 2024  ...   TK20IA    STUDY16
+
+[1 rows x 17 columns]
+2024-10-01 16:16:44,983 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+23    2.8.5.6  AtkinsRealis 2024  ...   UC20IA    STUDY32
+
+[1 rows x 17 columns]
+2024-10-01 16:16:45,008 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+24    2.8.5.6  AtkinsRealis 2024  ...   UI20IA    STUDY15
+
+[1 rows x 17 columns]
+2024-10-01 16:16:45,036 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+25    2.8.5.6  AtkinsRealis 2024  ...   UW20IA    STUDY18
+
+[1 rows x 17 columns]
+2024-10-01 16:16:45,063 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+7    2.8.5.6  AtkinsRealis 2024  ...   FL22IA    STUDY26
+
+[1 rows x 17 columns]
+2024-10-01 16:39:57,678 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-01 16:39:57,810 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis 2024  ...   AP20IA    STUDY31
+
+[1 rows x 17 columns]
+2024-10-01 16:39:57,837 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+6    2.8.5.6  AtkinsRealis 2024  ...   CY20IA    STUDY14
+
+[1 rows x 17 columns]
+2024-10-01 16:39:57,862 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+5    2.8.5.6  AtkinsRealis 2024  ...   CD20IA    STUDY38
+
+[1 rows x 17 columns]
+2024-10-01 16:39:57,887 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+8    2.8.5.6  AtkinsRealis 2024  ...   GLM2IA    STUDY37
+
+[1 rows x 17 columns]
+2024-10-01 16:39:57,914 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+10    2.8.5.6  AtkinsRealis 2024  ...   LC20IA    STUDY21
+
+[1 rows x 17 columns]
+2024-10-01 16:39:57,941 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+14    2.8.5.6  AtkinsRealis 2024  ...   LW20IA    STUDY19
+
+[1 rows x 17 columns]
+2024-10-01 16:39:57,968 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+17    2.8.5.6  AtkinsRealis 2024  ...   MK20IA    STUDY17
+
+[1 rows x 17 columns]
+2024-10-01 16:39:57,995 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+22    2.8.5.6  AtkinsRealis 2024  ...   TK20IA    STUDY16
+
+[1 rows x 17 columns]
+2024-10-01 16:39:58,021 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+23    2.8.5.6  AtkinsRealis 2024  ...   UC20IA    STUDY32
+
+[1 rows x 17 columns]
+2024-10-01 16:39:58,045 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+24    2.8.5.6  AtkinsRealis 2024  ...   UI20IA    STUDY15
+
+[1 rows x 17 columns]
+2024-10-01 16:39:58,073 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+25    2.8.5.6  AtkinsRealis 2024  ...   UW20IA    STUDY18
+
+[1 rows x 17 columns]
+2024-10-01 16:39:58,099 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+7    2.8.5.6  AtkinsRealis 2024  ...   FL22IA    STUDY26
+
+[1 rows x 17 columns]
+2024-10-07 08:46:59,789 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-07 08:47:00,006 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis 2024  ...   AP20IA    STUDY31
+
+[1 rows x 17 columns]
+2024-10-07 08:47:00,041 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+6    2.8.5.6  AtkinsRealis 2024  ...   CY20IA    STUDY14
+
+[1 rows x 17 columns]
+2024-10-07 08:47:00,087 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+5    2.8.5.6  AtkinsRealis 2024  ...   CD20IA    STUDY38
+
+[1 rows x 17 columns]
+2024-10-07 08:47:00,166 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+8    2.8.5.6  AtkinsRealis 2024  ...   GLM2IA    STUDY37
+
+[1 rows x 17 columns]
+2024-10-07 08:47:00,214 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+10    2.8.5.6  AtkinsRealis 2024  ...   LC20IA    STUDY21
+
+[1 rows x 17 columns]
+2024-10-07 08:47:00,246 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+14    2.8.5.6  AtkinsRealis 2024  ...   LW20IA    STUDY19
+
+[1 rows x 17 columns]
+2024-10-07 08:47:00,288 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+17    2.8.5.6  AtkinsRealis 2024  ...   MK20IA    STUDY17
+
+[1 rows x 17 columns]
+2024-10-07 08:47:00,322 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+22    2.8.5.6  AtkinsRealis 2024  ...   TK20IA    STUDY16
+
+[1 rows x 17 columns]
+2024-10-07 08:47:00,357 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+23    2.8.5.6  AtkinsRealis 2024  ...   UC20IA    STUDY32
+
+[1 rows x 17 columns]
+2024-10-07 08:47:00,395 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+24    2.8.5.6  AtkinsRealis 2024  ...   UI20IA    STUDY15
+
+[1 rows x 17 columns]
+2024-10-07 08:47:00,427 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+25    2.8.5.6  AtkinsRealis 2024  ...   UW20IA    STUDY18
+
+[1 rows x 17 columns]
+2024-10-07 08:47:00,463 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+7    2.8.5.6  AtkinsRealis 2024  ...   FL22IA    STUDY26
+
+[1 rows x 17 columns]
+2024-10-07 08:47:00,506 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.8.5.6  AtkinsRealis 2024  ...   BPMH22    STUDY35
+
+[1 rows x 17 columns]
+2024-10-07 08:47:00,551 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+4    2.8.5.6  AtkinsRealis 2024  ...   BY22IA    STUDY30
+
+[1 rows x 17 columns]
+2024-10-07 08:47:00,599 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+13    2.8.5.6  AtkinsRealis 2024  ...   LS22IA    STUDY27
+
+[1 rows x 17 columns]
+2024-10-07 08:47:00,640 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+15    2.8.5.6  AtkinsRealis 2024  ...   MH22IA    STUDY29
+
+[1 rows x 17 columns]
+2024-10-07 08:47:00,677 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+16    2.8.5.6  AtkinsRealis 2024  ...   MHDH22    STUDY28
+
+[1 rows x 17 columns]
+2024-10-07 08:47:00,712 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+19    2.8.5.6  AtkinsRealis 2024  ...   RK22IA    STUDY33
+
+[1 rows x 17 columns]
+2024-10-08 12:24:55,899 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-08 12:24:56,084 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis 2024  ...   AP20IA    STUDY31
+
+[1 rows x 17 columns]
+2024-10-08 12:24:56,114 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+6    2.8.5.6  AtkinsRealis 2024  ...   CY20IA    STUDY14
+
+[1 rows x 17 columns]
+2024-10-08 12:24:56,144 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+5    2.8.5.6  AtkinsRealis 2024  ...   CD20IA    STUDY38
+
+[1 rows x 17 columns]
+2024-10-08 12:24:56,173 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+8    2.8.5.6  AtkinsRealis 2024  ...   GLM2IA    STUDY37
+
+[1 rows x 17 columns]
+2024-10-08 12:24:56,204 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+10    2.8.5.6  AtkinsRealis 2024  ...   LC20IA    STUDY21
+
+[1 rows x 17 columns]
+2024-10-08 12:24:56,234 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+14    2.8.5.6  AtkinsRealis 2024  ...   LW20IA    STUDY19
+
+[1 rows x 17 columns]
+2024-10-08 12:24:56,265 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+17    2.8.5.6  AtkinsRealis 2024  ...   MK20IA    STUDY17
+
+[1 rows x 17 columns]
+2024-10-08 12:24:56,297 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+22    2.8.5.6  AtkinsRealis 2024  ...   TK20IA    STUDY16
+
+[1 rows x 17 columns]
+2024-10-08 12:24:56,327 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+23    2.8.5.6  AtkinsRealis 2024  ...   UC20IA    STUDY32
+
+[1 rows x 17 columns]
+2024-10-08 12:24:56,357 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+24    2.8.5.6  AtkinsRealis 2024  ...   UI20IA    STUDY15
+
+[1 rows x 17 columns]
+2024-10-08 12:24:56,388 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+25    2.8.5.6  AtkinsRealis 2024  ...   UW20IA    STUDY18
+
+[1 rows x 17 columns]
+2024-10-08 12:24:58,551 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+7    2.8.5.6  AtkinsRealis 2024  ...   FL22IA    STUDY26
+
+[1 rows x 17 columns]
+2024-10-08 12:24:59,668 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.8.5.6  AtkinsRealis 2024  ...   BPMH22    STUDY35
+
+[1 rows x 17 columns]
+2024-10-08 12:24:59,699 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+4    2.8.5.6  AtkinsRealis 2024  ...   BY22IA    STUDY30
+
+[1 rows x 17 columns]
+2024-10-08 12:24:59,730 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+13    2.8.5.6  AtkinsRealis 2024  ...   LS22IA    STUDY27
+
+[1 rows x 17 columns]
+2024-10-08 12:24:59,759 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+15    2.8.5.6  AtkinsRealis 2024  ...   MH22IA    STUDY29
+
+[1 rows x 17 columns]
+2024-10-08 12:24:59,786 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+16    2.8.5.6  AtkinsRealis 2024  ...   MHDH22    STUDY28
+
+[1 rows x 17 columns]
+2024-10-08 12:24:59,815 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+19    2.8.5.6  AtkinsRealis 2024  ...   RK22IA    STUDY33
+
+[1 rows x 17 columns]
+2024-10-09 22:07:25,285 - table_to_metadata - DEBUG - Template Row:   VERSION_ID  ...                                              NOTES
+1    2.8.5.6  ...  The FIRM Database is compiled in conjunction w...
+
+[1 rows x 15 columns]
+2024-10-09 22:07:25,481 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+0    2.8.5.6  AtkinsRealis 2024  ...   AP20IA    STUDY31
+
+[1 rows x 17 columns]
+2024-10-09 22:07:25,511 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+6    2.8.5.6  AtkinsRealis 2024  ...   CY20IA    STUDY14
+
+[1 rows x 17 columns]
+2024-10-09 22:07:25,540 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+5    2.8.5.6  AtkinsRealis 2024  ...   CD20IA    STUDY38
+
+[1 rows x 17 columns]
+2024-10-09 22:07:25,568 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+8    2.8.5.6  AtkinsRealis 2024  ...   GLM2IA    STUDY37
+
+[1 rows x 17 columns]
+2024-10-09 22:07:25,597 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+10    2.8.5.6  AtkinsRealis 2024  ...   LC20IA    STUDY21
+
+[1 rows x 17 columns]
+2024-10-09 22:07:25,626 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+14    2.8.5.6  AtkinsRealis 2024  ...   LW20IA    STUDY19
+
+[1 rows x 17 columns]
+2024-10-09 22:07:25,659 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+17    2.8.5.6  AtkinsRealis 2024  ...   MK20IA    STUDY17
+
+[1 rows x 17 columns]
+2024-10-09 22:07:25,692 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+22    2.8.5.6  AtkinsRealis 2024  ...   TK20IA    STUDY16
+
+[1 rows x 17 columns]
+2024-10-09 22:07:25,723 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+23    2.8.5.6  AtkinsRealis 2024  ...   UC20IA    STUDY32
+
+[1 rows x 17 columns]
+2024-10-09 22:07:25,754 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+24    2.8.5.6  AtkinsRealis 2024  ...   UI20IA    STUDY15
+
+[1 rows x 17 columns]
+2024-10-09 22:07:25,786 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+25    2.8.5.6  AtkinsRealis 2024  ...   UW20IA    STUDY18
+
+[1 rows x 17 columns]
+2024-10-09 22:07:28,012 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+7    2.8.5.6  AtkinsRealis 2024  ...   FL22IA    STUDY26
+
+[1 rows x 17 columns]
+2024-10-09 22:07:29,103 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+1    2.8.5.6  AtkinsRealis 2024  ...   BPMH22    STUDY35
+
+[1 rows x 17 columns]
+2024-10-09 22:07:29,131 - table_to_metadata - DEBUG - Target Row:   VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+4    2.8.5.6  AtkinsRealis 2024  ...   BY22IA    STUDY30
+
+[1 rows x 17 columns]
+2024-10-09 22:07:29,162 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+13    2.8.5.6  AtkinsRealis 2024  ...   LS22IA    STUDY27
+
+[1 rows x 17 columns]
+2024-10-09 22:07:30,603 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+15    2.8.5.6  AtkinsRealis 2024  ...   MH22IA    STUDY29
+
+[1 rows x 17 columns]
+2024-10-09 22:07:30,630 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+16    2.8.5.6  AtkinsRealis 2024  ...   MHDH22    STUDY28
+
+[1 rows x 17 columns]
+2024-10-09 22:07:30,659 - table_to_metadata - DEBUG - Target Row:    VERSION_ID           CITATION  ... DFIRM_ID SOURCE_CIT
+19    2.8.5.6  AtkinsRealis 2024  ...   RK22IA    STUDY33
+
+[1 rows x 17 columns]

@@ -155,10 +155,6 @@ def open_df_and_populate_xml(excel_path, xml_path, output_loc):
         all_sources = pd.concat([this_source, other_sources], ignore_index=True)
         all_sources['DFIRM_ID'] = row['DFIRM_ID']
 
-        # Get the date
-        date = all_sources.loc[all_sources['SOURCE_CIT'] == w_dict['SOURCE_CIT'], 'SRC_DATE'].values[0]
-        w_dict['pubdate'] = date
-
         # Insert project-specific values into the XML
         # Insert the title and pubdate
         citation = new_root.find('.//citation')
@@ -171,11 +167,11 @@ def open_df_and_populate_xml(excel_path, xml_path, output_loc):
             if title is not None:
                 title.text = w_dict["CASE_DESC"]
             pubdate = cit_section.find('.//pubdate')
-            if pubdate is not None:
-                pubdate.text = w_dict["pubdate"]
+            pubdate.text = w_dict.get("COMP_DATE", "Unknown")
             edition = cit_section.find('.//edition')
+            version_id = this_source['VERSION_ID'].values[0]
             if edition is not None:
-                edition.text = "2.8.5.6"
+                edition.text = version_id
         else:
             raise ValueError("No citation section found in the template XML")
 
@@ -186,23 +182,22 @@ def open_df_and_populate_xml(excel_path, xml_path, output_loc):
             if title is not None:
                 title.text = f'FEMA CASE {w_dict["CASE_NO"]}'
             pubdate = lworks.find('.//pubdate')
-            if pubdate is not None:
-                pubdate.text = w_dict["pubdate"]
+            pubdate.text = w_dict.get("COMP_DATE", "Unknown")
 
         # Crossref section
         crossref = new_root.find('.//crossref')
-        if crossref:
+        if crossref is not None:
             origin = crossref.find('.//origin')
             origin.text = w_dict["SUBMIT_BY"]
             title = crossref.find('.//title')
             title.text = w_dict["CASE_DESC"]
             pubdate = crossref.find('.//pubdate')
-            pubdate.text = w_dict["pubdate"]
+            pubdate.text = w_dict.get("COMP_DATE", "Unknown")
 
         # Update the metad info section
         metainfo = new_root.find('.//metainfo')
         metad = metainfo.find('.//metd')
-        metad.text = w_dict["pubdate"]
+        metad.text = w_dict.get("COMP_DATE", "Unknown")
 
         # Update the metstdn section
         # metextns = new_root.find('.//metextns')
@@ -210,7 +205,7 @@ def open_df_and_populate_xml(excel_path, xml_path, output_loc):
         # Update time period section
         timeperd = new_root.find('.//timeperd')
         caldate = timeperd.find('.//caldate')
-        caldate.text = w_dict["pubdate"]
+        caldate.text = w_dict.get("COMP_DATE", "Unknown")
 
         # Insert the source_cit and place sections
         source_cit_tree = ET.parse(sources_path)
@@ -268,9 +263,9 @@ def open_df_and_populate_xml(excel_path, xml_path, output_loc):
 
 
 # Load the watersheds DataFrame
-excelpath = "../NE_Metadata_Tables.xlsx"
-output_folder = "../NE_Pilot_BLE/"
+excelpath = "../Iowa_BLE_Purchase_Geographies.xlsx"
+output_folder = "../IA_Statewide_BLE/"
 
-for kdp in ["DRAFT", "Hydraulics", "Floodplain"]:
+for kdp in ["Hydraulics", "Floodplain", "DRAFT", ]:
     template_xml = f"../static_lookups/_{kdp}_metadata.xml"
     open_df_and_populate_xml(excelpath, template_xml, output_folder)

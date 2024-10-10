@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<lineage>
+  <srcinfo>
+    <srccite>
+      <citeinfo>
+        <origin>AtkinsRealis</origin>
+        <pubdate>20240930</pubdate>
+        <title>BLE Area 3 MO-Little Sioux, Iowa FY22 DISC-BLE</title>
+        <geoform>map</geoform>
+        <pubinfo>
+          <pubplace>Calverton, MD</pubplace>
+          <publish>Federal Emergency Management Agency</publish>
+        </pubinfo>
+        <othercit>Effective FIS and FIRM from State of Iowa</othercit>
+      </citeinfo>
+    </srccite>
+    <srcscale>24000</srcscale>
+    <typesrc>Digital</typesrc>
+    <srctime>
+      <timeinfo>
+        <sngdate>
+          <caldate>20240930</caldate>
+        </sngdate>
+      </timeinfo>
+      <srccurr>Publication date</srccurr>
+    </srctime>
+    <srccitea>STUDY35</srccitea>
+    <srccontr>S_BFE, S_FLD_HAZ_AR, S_FLD_HAZ_LN, S_Hydro_Reach, S_Nodes, S_PROFIL_BASLN, S_Subbasins, S_Submittal_Info</srccontr>
+  </srcinfo>
+  <procstep>
+    <procdesc>The FIRM Database is compiled in conjunction with the hardcopy FIRM and the final FIS report. The specifics of the hydrologic and hydraulic analyses performed are detailed in the FIS report. The results of these studies are submitted in digital format to FEMA. These data and unrevised data from effective FIRMs are compiled onto the base map used for FIRM publication and checked for accuracy and compliance with FEMA standards.</procdesc>
+    <procdate>20240930</procdate>
+  </procstep>
+</lineage>

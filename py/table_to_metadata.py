@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
+
+from dask.array import unique
 from pyproj import CRS
 import requests
 import logging
@@ -43,6 +45,9 @@ def get_places_dict(df):
         cid = row['CID']
         if "unincorporated" in row['Community'].lower():
             community = row['Community'].upper()
+        elif "village" in row['Community'].lower():
+            community = row['Community'].upper()
+            community = f"COMMUNITY {community.replace('VILLAGE OF ', '')}, VILLAGE OF"
         else:
             community = row['Community'].upper()
             community = f"COMMUNITY {community.replace('CITY OF ', '')}, CITY OF"
@@ -80,11 +85,27 @@ def get_specfic_subfolders(root_folder, wildcard):
     return subfolders
 
 
+def get_all_sources_from_spatial(folder, filenames):
+    shp_paths = []
+    for file in filenames:
+        shp_path = os.path.join(folder, file + ".shp")
+        if os.path.exists(shp_path):
+            shp_paths.append(shp_path)
+
+    uniques_source_cits = set()
+    for path in shp_paths:
+        df = shp_to_df(path)
+        unique_vals = get_unique_values(df, 'SOURCE_CIT')
+        uniques_source_cits.update(unique_vals)
+    return list(uniques_source_cits)
+
+
 class CreateFEMAxml:
-    def __init__(self, excelpath, spatial_root):
+    def __init__(self, excelpath, spatial_root, wildcard, **kwargs):
         self.excel_path = excelpath
         self.lookup_folder = "../static_lookups/"
         self.spatial_root = spatial_root
+        self.spatial_wildcard = wildcard
         self.author = "AtkinsRealis"
 
         self.spatial_folders_lookup = {}
@@ -118,13 +139,14 @@ class CreateFEMAxml:
             if not number_digits == 8:
                 continue
             print(f"Root Folder: {root_folder}, {number_digits}, {contains_digits}")
-            huc8_id = int("".join([char for char in root_folder if char.isdigit()]))
+            huc8_id = "".join([char for char in root_folder if char.isdigit()])
             # print(f" HUC8: {huc8_id}")
             root_folder = os.path.join(root_parent, root_folder)
-            subfolders = get_specfic_subfolders(root_folder, "DRAFT_DFIRM_02")
+            subfolders = get_specfic_subfolders(root_folder, self.spatial_wildcard)
             # print(f" Subfolders: {subfolders}")
-            spatial_folders_lookup[huc8_id] = subfolders[0]
-            print(f" HUC8: {huc8_id}, {subfolders[0]}")
+            if subfolders:
+                spatial_folders_lookup[huc8_id] = subfolders[0]
+                print(f" HUC8: {huc8_id}, {subfolders[0]}")
         self.spatial_folders_lookup = spatial_folders_lookup
 
     def _init_sources_lookup(self):
@@ -135,26 +157,27 @@ class CreateFEMAxml:
         print(f"Authors: {self.sources_lookup['AUTHOR'].tolist()}")
         print(f"Author: {self.author}")
         dfirm_dict = self.dfirm_lookup.to_dict(orient='index')
-        print(f"DFIRM Dict: {len(dfirm_dict)}")
+        print(f"DFIRM Dict: {dfirm_dict}")
 
-        date_cols = ['PUB_DATE', 'SRC_DATE', "COMP_DATE"]
-        for col in date_cols:
-            if col in self.sources_lookup.columns:
-                unique_dates = self.sources_lookup[col].unique().tolist()
-                print(f"{col}: {unique_dates}, {self.sources_lookup[col].dtype}")
         # print(f"Template Row: {template_row}\n {type(template_row)}")
         # populate rows for all watersheds
         new_rows = pd.DataFrame(columns=template_row.columns)
         for i, row_dict in dfirm_dict.items():
             dfirm_id = row_dict['DFIRM_ID']
             source_cit = row_dict['SOURCE_CIT']
+            title = row_dict['CASE_DESC']
             new_row = template_row.copy()
             new_row['DFIRM_ID'] = dfirm_id
             new_row['SOURCE_CIT'] = source_cit
+            new_row['TITLE'] = title
+            new_row['PUB_DATE'] = row_dict['COMP_DATE']
+            new_row["SRC_DATE"] = row_dict['COMP_DATE']
 
             # Append the new row to new_rows using pd.concat
             new_rows = pd.concat([new_rows, new_row], ignore_index=True)
 
+        dates = new_rows['PUB_DATE'].tolist() + new_rows['SRC_DATE'].tolist()
+        print(f"Dates: {dates}")
         other_rows = self.sources_lookup.loc[(self.sources_lookup['AUTHOR'] != self.author) |
                                              (~self.sources_lookup['SOURCE_CIT'].str.contains("STUDY") &
                                               pd.notna(self.sources_lookup['SOURCE_CIT']) &
@@ -173,10 +196,7 @@ class CreateFEMAxml:
             raise ValueError(f"Multiple states found in FIPS codes: {states_unique}")
         else:
             self.state_fips_code = int(states_unique[0])
-        # print(f"State FIPS Code: {self.state_fips_code}")
-        # print(f"State FIPS: {self.state_fips['FIPS'].unique().tolist()}")
         thistate = self.state_fips[self.state_fips['FIPS'] == self.state_fips_code]
-        # print(f"State FIPS: {thistate}")
         self.state_name = thistate['State'].values[0]
         print(f"State {self.state_fips_code}: {self.state_name}")
 
@@ -223,10 +243,42 @@ class CreateFEMAxml:
 
         return tree
 
-    def create_ea_info(self, ea_list: list[dict]) -> ET.ElementTree:
+    def create_ea_info(self, ea_list: list[dict], spatial_list) -> ET.ElementTree:
+
+        # Clean up the EA list whitespace
+        cleaned_ea_list = []
+        for ea_dict in ea_list:
+            new_dict = {}
+            for k, v in ea_dict.items():
+                if isinstance(v, list):
+                    clean_list = []
+                    for item in v:
+                        clean_list.append(remove_whitespace(item))
+                    new_dict[k] = clean_list
+                else:
+                    clean_string = remove_whitespace(v)
+                    new_dict[k] = clean_string
+            cleaned_ea_list.append(new_dict)
+
         eainfo = ET.Element("eainfo")
         ea_list_detailed = [ea_dict for ea_dict in ea_list if "enttypl" in ea_dict]
         ea_list_overview = [ea_dict for ea_dict in ea_list if "enttypl" not in ea_dict]
+
+        # Pre-Process EA based on spatial files
+        # Remove entries not in spatial files
+        if spatial_list:
+            spatial_list_lower = [s.lower().replace(" ", "") for s in spatial_list]
+            new_ea_list = []
+            for ea_dict in ea_list_detailed:
+                # print(f"EA Dict: {ea_dict}")
+                if "enttypl" in ea_dict:
+                    sname = ea_dict.get('enttypl', "None")
+                    sname = sname.lower().replace(" ", "")
+                    if sname in spatial_list_lower:
+                        new_ea_list.append(ea_dict)
+                else:
+                    new_ea_list.append(ea_dict)
+            ea_list_detailed = new_ea_list
 
         for i, ea_dict in enumerate(ea_list_detailed):
             if "enttypl" in ea_dict:
@@ -254,15 +306,19 @@ class CreateFEMAxml:
                     eadetcit = ET.SubElement(overview, 'eadetcit')
                     eadetcit.text = ea_dict.get('eadetcit', 'False')
 
-        return ET.ElementTree(eainfo)
+        return ET.ElementTree(eainfo), spatial_list
 
     def create_sources_xml(self, **kwargs) -> ET.ElementTree:
 
         # Create a new tree with root element "lineage"
         lineage = ET.Element("lineage")
 
-        all_sources = self.sources_lookup['SOURCE_CIT'].tolist()
-        self.sources_lookup.to_excel(f"ALL_SOURCES_{kwargs.get("DFIRM ID", 1)}.xlsx", index=False)
+        used_source_cit = kwargs.get("used")
+        if used_source_cit:
+            all_sources = [s for s in self.sources_lookup['SOURCE_CIT'].tolist() if s in used_source_cit or "TOPO" in s]
+        else:
+            all_sources = self.sources_lookup['SOURCE_CIT'].tolist()
+        # self.sources_lookup.to_excel(f"ALL_SOURCES_{kwargs.get("DFIRM ID", 1)}.xlsx", index=False)
         print(f"Sources: {all_sources}")
         unique_non_study = [s for s in all_sources if "STUDY" not in s and s != "nan"]
         target_row = self.sources_lookup.loc[self.sources_lookup['SOURCE_CIT'] == kwargs.get("SOURCE_CIT")]
@@ -270,7 +326,12 @@ class CreateFEMAxml:
         other_rows = self.sources_lookup.loc[self.sources_lookup['SOURCE_CIT'].isin(unique_non_study)]
         sources_to_add = pd.concat([target_row, other_rows], ignore_index=True)
         print(f"Adding {sources_to_add['SOURCE_CIT'].tolist()}")
-        sources_to_add.to_excel(f"SOURCES_to_add_{kwargs.get("DFIRM ID", 1)}.xlsx", index=False)
+        # sources_to_add.to_excel(f"SOURCES_to_add_{kwargs.get("DFIRM ID", 1)}.xlsx", index=False)
+
+        if kwargs.get("spatial_files"):
+            spatial_files = kwargs.get("spatial_files")
+            if spatial_files:
+                target_row['CONTRIB'] = ", ".join(spatial_files)
 
         for index, row in sources_to_add.iterrows():
             srcinfo = ET.SubElement(lineage, 'srcinfo')
@@ -548,43 +609,20 @@ class CreateFEMAxml:
                                                       **{"DFIRM_ID": DFIRM_ID, "SOURCE_CIT": SOURCE_CIT})
 
             # Get spatial files, if folder provided
-            spatial_subfolder = self.spatial_folders_lookup.get(int(watershed), "")
+            spatial_subfolder = self.spatial_folders_lookup.get(watershed, "")
             print(f"\nSpatial Subfolder: {spatial_subfolder}")
             spatial_files = None
+            SOURCE_CIT_used = []
             if spatial_subfolder and os.path.exists(spatial_subfolder):
                 spatial_files = get_file_names(spatial_subfolder, ".shp")
+                SOURCE_CIT_used = get_all_sources_from_spatial(spatial_subfolder, spatial_files)
                 print(f"Spatial Files: {spatial_files}")
 
+            # EA Info
             ea_path = f"{self.lookup_folder}EA_Info.json"
             with open(ea_path, "r") as ea:
                 ea_list = json.load(ea)
-            if ea_list:
-                # Remove entries not in spatial files
-                if spatial_files:
-                    new_ea_list = []
-                    for ea_dict in ea_list:
-                        # print(f"EA Dict: {ea_dict}")
-                        if "enttypl" in ea_dict:
-                            if ea_dict['enttypl'] in spatial_files:
-                                new_ea_list.append(ea_dict)
-                        else:
-                            new_ea_list.append(ea_dict)
-                    ea_list = new_ea_list
-
-                cleaned_ea_list = []
-                for ea_dict in ea_list:
-                    new_dict = {}
-                    for k, v in ea_dict.items():
-                        if isinstance(v, list):
-                            clean_list = []
-                            for item in v:
-                                clean_list.append(remove_whitespace(item))
-                            new_dict[k] = clean_list
-                        else:
-                            clean_string = remove_whitespace(v)
-                            new_dict[k] = clean_string
-                    cleaned_ea_list.append(new_dict)
-                eainfo_tree = self.create_ea_info(cleaned_ea_list)
+                eainfo_tree, spatial_list = self.create_ea_info(ea_list, spatial_files)
                 out_folder = "../ea_info/"
                 os.makedirs(out_folder, exist_ok=True)
                 write_xml(eainfo_tree, f"{out_folder}{DFIRM_ID}_EA.xml")
@@ -596,7 +634,8 @@ class CreateFEMAxml:
             write_xml(place_tree, out_xml)
 
             sources_tree = self.create_sources_xml(**{"DFIRM ID": DFIRM_ID,
-                                                      "SOURCE_CIT": SOURCE_CIT})
+                                                      "SOURCE_CIT": SOURCE_CIT, "used": SOURCE_CIT_used,
+                                                      "spatial_files": spatial_files})
             out_folder = "../source_cit/"
             os.makedirs(out_folder, exist_ok=True)
             output_file = f"{out_folder}{DFIRM_ID}_SOURCE_CIT.xml"
@@ -620,7 +659,8 @@ class CreateFEMAxml:
 
 
 if __name__ == "__main__":
-    excel_path = "../NE_Metadata_Tables.xlsx"
-    spatial_files_root = r"E:\nebraska_BLE\03_delivered"
-    fema_xml = CreateFEMAxml(excel_path, spatial_files_root)
+    excel_path = "../Iowa_BLE_Purchase_Geographies.xlsx"
+    spatial_files_root = r"E:\Iowa_3B\03_delivery"
+    spatial_wildcard = "DRAFT"
+    fema_xml = CreateFEMAxml(excel_path, spatial_files_root, spatial_wildcard)
     fema_xml.create_fema_metadata()

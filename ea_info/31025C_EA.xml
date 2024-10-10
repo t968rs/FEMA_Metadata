@@ -9,6 +9,20 @@
   </detailed>
   <detailed>
     <enttyp>
+      <enttypl>S_Fld_Haz_Ar</enttypl>
+      <enttypd>Location and attributes flood risk zones shown on the FIRM.</enttypd>
+      <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+    </enttyp>
+  </detailed>
+  <detailed>
+    <enttyp>
+      <enttypl>S_Fld_Haz_Ln</enttypl>
+      <enttypd>Location and attributes for boundaries of flood risk zones shown on the FIRM.</enttypd>
+      <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+    </enttyp>
+  </detailed>
+  <detailed>
+    <enttyp>
       <enttypl>S_Gen_Struct</enttypl>
       <enttypd>A spatial dataset consisting of lines that depict the location of flood control structures shown on the flood profile and FIRM.</enttypd>
       <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
@@ -31,6 +45,6 @@
   <overview>
     <eaover>The FIRM Database is made up of several data themes containing both spatial and attribute information. These data together represent the current flood risk for the subject area as identified by FEMA. The attribute tables include SFHA locations, flood zone designations, BFEs, political entities, cross-section locations, FIRM panel information, and other data related to the NFIP.</eaover>
     <eadetcit>FEMA's FIRM Database Technical Reference contains a detailed description of each attribute code and a reference to other relevant information.</eadetcit>
-    <eadetcit>The following tables are included in this data set: L_Source_Cit S_BFE S_Fld_Haz_Ar S_Fld_Haz_Ln S_Submittal_Info</eadetcit>
+    <eadetcit>The following tables are included in this data set: L_Source_Cit  S_BFE  S_Fld_Haz_Ar  S_Fld_Haz_Ln  S_Submittal_Info</eadetcit>
   </overview>
 </eainfo>
