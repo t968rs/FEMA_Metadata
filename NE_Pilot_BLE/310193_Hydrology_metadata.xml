@@ -1,0 +1,430 @@
+<?xml version="1.0" ?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>AtkinsRealis</origin>
+        <pubdate>20240630</pubdate>
+        <title>DCS Hydrology Submission for Little Nemaha HUC8 (10240006)</title>
+        <edition>Version 2.8.5.6</edition>
+        <geoform>FEMA-DCS-Hydrology</geoform>
+        <pubinfo>
+          <pubplace>Washington, DC</pubplace>
+          <publish>Federal Emergency Management Agency</publish>
+        </pubinfo>
+        <onlink>https://hazards.fema.gov</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>Federal Emergency Management Agency</origin>
+            <pubdate>20240630</pubdate>
+            <title>FEMA CASE 21-07-0012S</title>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Hydrology data include spatial datasets and data tables necessary for documenting the hydrologic procedures for estimating flood discharges for a Flood Insurance Study, which include the hydrologic data expected by FEMA for new riverine studies. (Source: FEMA Guidelines and Standards for Flood Risk Analysis and Mapping)</abstract>
+      <purpose>The objective of this Hydrology data submission is to archive the hydrologic data for a study in a database such that it can be revised and used with the minimum effort in future Flood Insurance Studies or map revisions. </purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>20240630</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>MIP Submission Date</current>
+    </timeperd>
+    <status>
+      <progress>In work</progress>
+      <update>Unknown</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-96.577078</westbc>
+        <eastbc>-95.636155</eastbc>
+        <northbc>40.843929</northbc>
+        <southbc>40.225014</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>environment</themekey>
+        <themekey>inlandWaters</themekey>
+      </theme>
+      <theme>
+        <themekt>FEMA NFIP Topic Category</themekt>
+        <themekey>Hydrology</themekey>
+        <themekey>Flood Insurance Rate Map</themekey>
+        <themekey>FIRM</themekey>
+        <themekey>Flood Hazard Data</themekey>
+        <themekey>0.2-Percent-Annual-Chance Flood</themekey>
+        <themekey>10-Percent-Annual-Chance Flood</themekey>
+        <themekey>1-Percent-Annual-Chance Flood</themekey>
+        <themekey>2-Percent-Annual-Chance Flood</themekey>
+        <themekey>4-Percent-Annual-Chance Flood</themekey>
+        <themekey>Channel</themekey>
+        <themekey>Floodflow-Frequency Curve</themekey>
+        <themekey>Hydrograph</themekey>
+        <themekey>Regression Equation</themekey>
+        <themekey>Stage</themekey>
+        <themekey>Flow Gage</themekey>
+        <themekey>Precipitation Gage</themekey>
+        <themekey>Imperviousness</themekey>
+        <themekey>Soil Type</themekey>
+        <themekey>Landuse</themekey>
+        <themekey>Link</themekey>
+        <themekey>Node</themekey>
+        <themekey>Precipitation Gage</themekey>
+        <themekey>Soil</themekey>
+        <themekey>Stream</themekey>
+        <themekey>Water Body</themekey>
+        <themekey>Watershed/Basin</themekey>
+        <themekey>Hydrologic Reach</themekey>
+        <themekey>2D Model</themekey>
+      </theme>
+      <place>
+        <placekt>None</placekt>
+        <placekey>Region 07</placekey>
+        <placekey>STATE NE</placekey>
+		<placekey>County Butler</placekey>
+        <placekey>FEMA-FIPS 310</placekey>
+        <placekey>Community Butler County</placekey>
+        <placekey>FEMA-CID 31023</placekey>
+		<placekey>Community Butler County</placekey>
+        <placekey>FEMA-CID 310025</placekey>
+        <placekey>Community Village of Dwight</placekey>
+        <placekey>FEMA-CID 310273</placekey>
+        <placekey>Community Village of Brainard</placekey>
+        <placekey>FEMA-CID 315531</placekey>
+        <placekey>County Cass</placekey>
+        <placekey>FEMA-FIPS 310</placekey>
+        <placekey>Community Cass County</placekey>
+        <placekey>FEMA-CID 31025</placekey>
+		<placekey>Community Village of Alvo</placekey>
+        <placekey>FEMA-CID 310193</placekey>
+		<placekey>Community Village of Murdock</placekey>
+        <placekey>FEMA-CID 310212</placekey>
+        <placekey>Community Village of Eagle</placekey>
+        <placekey>FEMA-CID 310274</placekey>
+		<placekey>Community Village of Greenwood</placekey>
+        <placekey>FEMA-CID 310374</placekey>
+        <placekey>Community Cass County</placekey>
+        <placekey>FEMA-CID 310407</placekey>
+        <placekey>County Gage</placekey>
+        <placekey>FEMA-FIPS 310</placekey>
+        <placekey>Community Gage County</placekey>
+        <placekey>FEMA-CID 31067</placekey>
+        <placekey>Community Gage County</placekey>
+        <placekey>FEMA-CID 310088</placekey>
+        <placekey>County Lancaster</placekey>
+        <placekey>FEMA-FIPS 311</placekey>
+        <placekey>Community Lancaster County</placekey>
+        <placekey>FEMA-CID 31109</placekey>
+        <placekey>Community Village of Panama</placekey>
+        <placekey>FEMA-CID 310501</placekey>
+        <placekey>Community Lancaster County</placekey>
+        <placekey>FEMA-CID 310134</placekey>
+		<placekey>Community City of Hickman</placekey>
+        <placekey>FEMA-CID 310136</placekey>
+		<placekey>Community Village of Raymond</placekey>
+        <placekey>FEMA-CID 310138</placekey>
+		<placekey>Community Village of Roca</placekey>
+        <placekey>FEMA-CID 310139</placekey>
+        <placekey>Community City of Waverly</placekey>
+        <placekey>FEMA-CID 310140</placekey>
+		<placekey>Community Village of Ceresco</placekey>
+        <placekey>FEMA-CID 310197</placekey>
+		<placekey>Community Village of Sprague</placekey>
+		<placekey>FEMA-CID 310495</placekey>
+		<placekey>Community Village of Davey</placekey>
+		<placekey>FEMA-CID 310497</placekey>
+		<placekey>Community Village of Denton</placekey>
+		<placekey>FEMA-CID 310498</placekey>
+		<placekey>Community Village of Hallam</placekey>
+		<placekey>FEMA-CID 310499</placekey>
+		<placekey>Community Village of Malcolm</placekey>
+		<placekey>FEMA-CID 310500</placekey>
+		<placekey>County Saline</placekey>
+        <placekey>FEMA-FIPS 311</placekey>
+        <placekey>Community Saline County</placekey>
+        <placekey>FEMA-CID 31151</placekey>
+        <placekey>Community City of Crete</placekey>
+        <placekey>FEMA-CID 310186</placekey>
+        <placekey>Community Saline County</placekey>
+        <placekey>FEMA-CID 310472</placekey>
+        <placekey>County Saunders</placekey>
+        <placekey>FEMA-FIPS 311</placekey>
+        <placekey>Community Saunders County</placekey>
+        <placekey>FEMA-CID 31155</placekey>
+        <placekey>Community Saunders County</placekey>
+        <placekey>FEMA-CID 310195</placekey>
+        <placekey>Community City of Ashland</placekey>
+        <placekey>FEMA-CID 310196</placekey>
+        <placekey>Community Village of Ithaca</placekey>
+        <placekey>FEMA-CID 310198</placekey>
+        <placekey>Community Village of Malmo</placekey>
+        <placekey>FEMA-CID 310200</placekey>
+        <placekey>Community Village of Memphis</placekey>
+        <placekey>FEMA-CID 310201</placekey>
+		<placekey>Community Village of Prague</placekey>
+        <placekey>FEMA-CID 310202</placekey>
+        <placekey>Community Village of Valparaiso</placekey>
+        <placekey>FEMA-CID 310203</placekey>
+        <placekey>Community City of Wahoo</placekey>
+        <placekey>FEMA-CID 310204</placekey>
+        <placekey>Community Village of Weston</placekey>
+        <placekey>FEMA-CID 310205</placekey>
+        <placekey>Community Village of Morse Bluff</placekey>
+        <placekey>FEMA-CID 310285</placekey>
+		<placekey>Community Village of Colon</placekey>
+        <placekey>FEMA-CID 310290</placekey>
+        <placekey>Community Village of Mead</placekey>
+        <placekey>FEMA-CID 310301</placekey>
+        <placekey>Community Village of Cedar Bluffs</placekey>
+        <placekey>FEMA-CID 310356</placekey>
+        <placekey>Community City of Yutan</placekey>
+        <placekey>FEMA-CID 310406</placekey>
+        <placekey>County Seward</placekey>
+        <placekey>FEMA-FIPS 311</placekey>
+        <placekey>Community Seward County</placekey>
+        <placekey>FEMA-CID 31159</placekey>
+        <placekey>Community Village of Bee</placekey>
+        <placekey>FEMA-CID 310556</placekey>
+        <placekey>Community Village of Pleasant Dale</placekey>
+        <placekey>FEMA-CID 310309</placekey>
+        <placekey>Community Seward County</placekey>
+        <placekey>FEMA-CID 310474</placekey>
+        <placekey>Community Village of Garland</placekey>
+        <placekey>FEMA-CID 310558</placekey>
+        <placekey>HYDROLOGIC UNIT 10200203</placekey>
+      </place>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>Acknowledgement of FEMA would be appreciated in products derived from these data. These digital data are produced for the purposes of updating/creating a FIRM Database.</useconst>
+    <native>The hydrologic modeling was performed by 2D rain-on-grid models using HECRAS 6.2.</native>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Attribute accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control and testing of the FIRM Database was also performed.</attraccr>
+    </attracc>
+    <logic>Proven hydrologic methods and/or FEMA approved models are used to compute flows at different locations and for different recurrence intervals (e.g. 1-percent-annual-chance (100-year) event, the 10-percent-annual-chance (10-year), 4-percent-annual chance (25-year), 2-percent-annual-chance (50-year), and the 0.2-percent-annual-chance (500-year) event).  Computated flows are compared with historic data and flows established in previous hydrologic investigations to ensure reasonableness.  Flows at the confluence are checked for the possibility of coincident peaks.  Flows exiting the system and regulated by dams are carefully analyzed.  At a given location flows for longer recurrence intervals are larger.  </logic>
+    <complete>Flows are computed at different locations of the study area.  The method(s) and/or models(s) are described in the FIS Report.  Assumptions and special considerations are also clearly stated in the report.  Flows previously determined in other studies or hydrologic investigations are used for comparison.  Computed flows are compared with historic flooding data.  Submittal of hydrologic data in accordance with FEMA's Data Capture Technical Reference ensures completeness of the Hydrology Study submittal.  </complete>
+    <posacc>
+      <horizpa>
+        <horizpar>The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Horizontal accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM Database was also performed.</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>The FIRM Database consists of vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and FIRM Database are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Standards for Flood Risk Analysis and Mapping. Vertical accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of the FIRM Database was also performed.</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>AtkinsRealis</origin>
+            <pubdate>20240630</pubdate>
+            <title>Hydrology Submittal for Base Level Engineering (BLE) study for Little Nemaha HUC8 (10240006) in Nebraska</title>
+          </citeinfo>
+        </srccite>
+        <typesrc>online</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20240630</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>Publication</srccurr>
+        </srctime>
+        <srccitea>STUDY12</srccitea>
+        <srccontr>S_BFE, S_FLD_HAZ_AR, S_FLD_HAZ_LN, S_Subbasins, S_Submittal_Info, S_WTR_LN</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Nebraska Department of Natural Resources</origin>
+            <pubdate>20220111</pubdate>
+            <title>Nebraska Department of Natural Resources Digital Elevation Model</title>
+            <geoform>map</geoform>
+            <pubinfo>
+              <pubplace>Nebraska DNR</pubplace>
+              <publish>Federal Emergency Management Agency</publish>
+            </pubinfo>
+            <othercit>Effective FIS and FIRM from State of Nebraska</othercit>
+          </citeinfo>
+        </srccite>
+        <srcscale>24000</srcscale>
+        <typesrc>Digital</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20220111</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>Publication</srccurr>
+        </srctime>
+        <srccitea>TOPO1</srccitea>
+        <srccontr>Terrain Data to model flood risk</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>The FIRM Database is compiled in conjunction with the hardcopy FIRM and the final FIS report. The specifics of the hydrologic and hydraulic analyses performed are detailed in the FIS report. The results of these studies are submitted in digital format to FEMA. These data and unrevised data from effective FIRMs are compiled onto the base map used for FIRM publication and checked for accuracy and compliance with FEMA standards.</procdesc>
+        <procdate>20240630</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spref>
+    <horizsys>
+      <planar>
+        <gridsys>
+          <gridsysn>State Plane Coordinate System 1983</gridsysn>
+          <spcs>
+            <spcszone>2600</spcszone>
+            <lambertc>
+              <stdparll>43</stdparll>
+              <longcm>-100</longcm>
+              <latprjo>39.8333333333333</latprjo>
+              <feast>1640416.6667</feast>
+              <fnorth>0</fnorth>
+            </lambertc>
+          </spcs>
+        </gridsys>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0025</absres>
+            <ordres>0.0025</ordres>
+          </coordrep>
+          <plandu>survey feet</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>North American Datum of 1983</horizdn>
+        <ellips>Geodetic Reference System 80</ellips>
+        <semiaxis>6378137</semiaxis>
+        <denflat>298.257222101</denflat>
+      </geodetic>
+    </horizsys>
+    <vertdef>
+      <altsys>
+        <altdatum>North American Vertical Datum of 1988</altdatum>
+        <altres>0.0001000000</altres>
+        <altunits>Foot</altunits>
+        <altenc>Implicit coordinate</altenc>
+      </altsys>
+    </vertdef>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>S_BFE</enttypl>
+        <enttypd>Location and attributes for base flood elevation lines shown on the FIRM.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>S_Fld_Haz_Ar</enttypl>
+        <enttypd>Location and attributes flood risk zones shown on the FIRM.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>S_Fld_Haz_Ln</enttypl>
+        <enttypd>Location and attributes for boundaries of flood risk zones shown on the FIRM.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>S_Submittal_Info</enttypl>
+        <enttypd>A spatial dataset consisting of polygons depicting the extents of the studied area.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>S_Subbasins</enttypl>
+        <enttypd>A spatial dataset consisting of polygons representing watershed or subwatershed areas contributing runoff to the discharge points used in the hydrologic analysis.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>S_Wtr_Ln</enttypl>
+        <enttypd>Location and attributes for hydrography features shown on the FIRM.</enttypd>
+        <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/guidelines-and-standards-flood-risk-analysis-and-mapping and on the FEMA Risk MAP Knowledge Sharing Site).</enttypds>
+      </enttyp>
+    </detailed>
+    <overview>
+      <eaover>The FIRM Database is made up of several data themes containing both spatial and attribute information. These data together represent the current flood risk for the subject area as identified by FEMA. The attribute tables include SFHA locations, flood zone designations, BFEs, political entities, cross-section locations, FIRM panel information, and other data related to the NFIP.</eaover>
+      <eadetcit>FEMA's FIRM Database Technical Reference contains a detailed description of each attribute code and a reference to other relevant information.</eadetcit>
+      <eadetcit>The following tables are included in this data set: L_Source_Cit S_BFE S_Fld_Haz_Ar S_Fld_Haz_Ln S_Submittal_Info</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>FEMA, Mapping Information Platform</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>500 C Street, S.W.</address>
+          <city>Washington</city>
+          <state>District of Columbia</state>
+          <postal>20472</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>1-877-336-2627</cntvoice>
+        <cntemail>miphelp@riskmapcds.com</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>No warranty expressed or implied is made by FEMA regarding the utility of the data on any other system nor shall the act of distribution constitute any such warranty.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>FEMA-DCS_Hydrology</formname>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://hazards.fema.gov</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>Contact Distributor</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20240630</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Mike Schlesener</cntper>
+          <cntorg>Atkins North America</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>4400 College Boulevard, Suite 212</address>
+          <city>Overland Park</city>
+          <state>KS</state>
+          <postal>66211</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>1-816-235-3466</cntvoice>
+        <cntemail>mike.schlesener@atkinsglobal.com</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <metextns>
+      <onlink>https://hazards.fema.gov</onlink>
+      <onlink>https://www.epsg.org</onlink>
+      <metprof>FEMA NFIP Metadata Content and Format Standard</metprof>
+    </metextns>
+  </metainfo>
+</metadata>
